@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link rel="icon"  href="assets/favicon.ico">
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="w3.css">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	
+	<!--Title-->	
+	<title>HRMIS | FAQs</title>
+</head>
+<body onload="typeWriter()">
+	
+<!--navbar-->
+  <nav class="navbar sticky-top " style="background: rgb(58, 134, 206);">
+	<div class="container-fluid">
+	  <a class="navbar-brand" href="#"><img src="assets/logo.png" alt="logo" width="30" height="30"> 
+		</a>
+	</div>
+  </nav>
+  
+
+  <!--Content-->
+  <!--Header-->
+<div class="content">
+<div class="header-img">
+<div class="img-border">
+<img src="assets/logo.png" alt="logo" style="width: 50px; height: 50px;">
+</div>
+</div>
+<div class="header-Text">
+<h2 style="color: rgb(58, 114, 179);">How can we help you?</h2>
+
+<!--ToastMessage-->
+<div class="position-fixed bottom-0 end-0 p-3" style="z-index: 5">
+<div role="alert" aria-live="assertive" aria-atomic="true" class="toast" data-bs-autohide="false">
+	<div class="toast-header">
+	  <img src="assets/logo.png" class="rounded me-2" alt="..." style="width: 20px; height: 20px;">
+	  <strong class="me-auto">DOST</strong>
+	  <small>FAQs</small>
+	  <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+	</div>
+	<div class="toast-body" id="text-body">
+	</div>
+  </div>
+</div>
+
+<!--SearchBar-->
+<div class="form-floating mb-3" style="width: 50%; margin: auto;">
+	<input type="text" list="datalistOptions" class="form-control" id="floatingInput" placeholder="Search">
+	<label for="floatingInput"><i class="fa fa-search"></i> Search...</label>
+	<datalist id="datalistOptions">
+		<option value="Business Request">
+		<option value="Leave Request">
+		<option value="Travel Order Request">
+	  </datalist>
+</div>
+</div>
+
+
+<!--Content-->
+	<div class="accordion-content" style="margin: auto;">
+<div class="accordion accordion-flush" id="accordionFlushExample">
+	
+	<!--1-->
+	<div class="accordion-item">
+	  <h2 class="accordion-header" id="flush-headingOne">
+		<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+			How do I manage Official Business requests?
+		</button>
+	  </h2>
+	  <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+		<div class="accordion-body">
+			<p>1. Click the <strong> Request </strong> sub-section on the left side of the Notification section to view the Request page.</p>
+			
+			<!--imgRequestPage-->
+			<div class="w3-container city w3-animate-opacity">
+			<div class="img-content">
+				<img src="assets/FAQ images/Request.PNG" alt="" class="center">
+			</div>	
+			</div>
+			<p style="font-size: 12px; text-align: center;"><b>Request Page</b></p>
+
+			<p>2. To view details of the Request, click the <b>Print Preview</b> link opposite the corresponding request to view. </p>
+			
+			<!--Print Preview-->
+			<div class="w3-container city w3-animate-right">
+			<div class="img-content">
+				<img src="assets/FAQ images/printPreview.PNG" alt="" class="center" style="width: 50%;">
+            </div>
+
+			<div class="img-content">
+				<img src="assets/FAQ images/RequestDetails.PNG" alt="" class="center" style="width: 50%; height: 30%; margin-top: 10px;">	
+            </div>
+		</div>
+		<p style="font-size: 12px; text-align: center;"><b>Request Details</b></p>
+			<p>3. Type in <b>Remarks</b> (if there is any) on the entry box provided.</b> link opposite the corresponding request to view. </p>
+			<p>4. When done, click <b>Certify button</b> <img src="assets/FAQ images/certifyBtn.PNG" style="width: 50px;"> to certify the request. </p>
+		</div>
+	  </div>
+	</div>
+	
+<!--2-->
+	<div class="accordion-item">
+	  <h2 class="accordion-header" id="flush-headingTwo">
+		<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+			How do I manage Leave requests?
+		</button>
+	  </h2>
+	  <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+		<div class="accordion-body">
+			<p>1. Click the <b>Leave Request</b> sub-section on the left side of the Notification section to view the Leave Request page.</p>
+
+			<!--imgLeavePage-->
+			<div class="w3-container city w3-animate-opacity">
+			<div class="img-content">
+				<img src="assets/FAQ images/LeaveRequest.PNG" alt="" class="center">
+			</div>
+		</div>
+		<p style="font-size: 12px; text-align: center;"><b>Leave Request Details</b></p>
+			
+			<p>2. To view details of the Leave Request, click the <b>View Details</b> link opposite the corresponding request to view.</p>
+			<!--imgLeaveDetails-->
+			<div class="w3-container city w3-animate-right">
+			<div class="img-content">
+				<img src="assets/FAQ images/LeaveDetails.PNG" alt="" class="center" style="width: 50%; height: 30%;">
+			</div>
+		</div>
+		<p style="font-size: 12px; text-align: center;"><b>Update Leave Request Details</b></p>
+			
+		<p>3. Type in <b>Remarks</b> (if there is any) on the entry box provided. </p>
+			<p>4. When done, click <b>Certify button</b> <img src="assets/FAQ images/certifyBtn.PNG" style="width: 50px;"> to certify the leave request. </p>
+
+		</div>
+	  </div>
+	</div>
+	
+<!--3-->
+	<div class="accordion-item">
+	  <h2 class="accordion-header" id="flush-headingThree">
+		<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+			 How do I manage Travel Order requests?
+		</button>
+	  </h2>
+	  <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+		<div class="accordion-body">
+			<p>1. Click the <b>Travel Order Request </b> sub-section on the left side of the Notification section to view the Travel Order page.</p>
+		
+			<!--imgTravelPage-->
+			<div class="w3-container city w3-animate-opacity">
+			<div class="img-content">
+				<img src="assets/FAQ images/TravelRequest.PNG" alt="" class="center">
+			</div>
+		</div>
+		<p style="font-size: 12px; text-align: center;"><b>Travel Order Request Page</b></p>
+
+			<p>2. To view details of the Travel Order Request, click the <b>View Details</b> link opposite the corresponding request to view.
+			</p>
+
+			<!--imgTravelDetails-->
+			<div class="w3-container city w3-animate-right">
+			<div class="img-content">
+				<img src="assets/FAQ images/TravelRequestDetails.PNG" alt="" class="center" style="width: 50%; height: 30%;">
+			</div>
+		</div>
+		<p style="font-size: 12px; text-align: center;"><b>Update Travel Order Request Details</b></p>
+
+			<p>3. Type in Remarks (if there is any) on the entry box provided.</p>
+			<p>4. When done, click <b>Certify button</b> <img src="assets/FAQ images/certifyBtn.PNG" style="width: 50px;"> to certify the Travel Order request.  </p>
+		</div>
+	  </div>
+	</div>
+	
+<!--4-->
+	<div class="accordion-item">
+		<h2 class="accordion-header" id="flush-headingFour">
+		  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+			How do I manage Update PDS requests?
+		  </button>
+		</h2>
+		<div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
+		  <div class="accordion-body">
+			
+			<p>1. Click the <b>Update PDS Request </b> sub-section on the left side of the Notification section to view the Update PDS Request page.</p>
+		
+			<!--imgPDSPage-->
+			<div class="w3-container city w3-animate-opacity">
+			<div class="img-content">
+				<img src="assets/FAQ images/PDSupdate.png" alt="" class="center">
+			</div>
+		</div>
+		<p style="font-size: 12px; text-align: center;"><b>Update PDS Request Page</b></p>
+
+		
+			<p>2. To view details of the Update PDS Request, click the <b>View Details</b> link opposite the corresponding request to view.
+			</p>
+
+			<!--imgPDSDetails-->
+			<div class="w3-container city w3-animate-right">
+			<div class="img-content">
+				<img src="assets/FAQ images/PDSdetails.PNG" alt="" class="center" style="width: 50%; height: 30%;">
+			</div>
+		</div>
+		<p style="font-size: 12px; text-align: center;"><b>Update Personal Information Update details</b></p>
+			
+		<!--Alert-->
+			<div class="alert alert-warning alert-dismissible fade show" role="alert" style="font-size: 10px;">
+				<strong>Note:</strong> Previous employee information is compared with the update requested by the employee.
+				<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+			  </div>
+
+			  <p>3. To choose the action for the request, specify to <b>Recommend</b>, <b>Certify</b>, <b>Approve</b> or <b>Disapprove</b> from.
+			  </p>
+			  <p>4. Type in <b>Remarks</b> (if there is any) on the entry box provided.
+			  </p>
+			  <p>5. When done, click <b>Certify button</b> <img src="assets/FAQ images/certifyBtn.PNG" style="width: 50px;"> to Update PDS. 
+			  </p>
+		  </div>
+		</div>
+	  </div>
+	 
+<!--5-->
+	  <div class="accordion-item">
+		<h2 class="accordion-header" id="flush-headingFive">
+		  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
+			 How do I manage Update Report requests?
+		  </button>
+		</h2>
+		<div id="flush-collapseFive" class="accordion-collapse collapse" aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
+		  <div class="accordion-body">
+			  
+			--------
+		 
+		</div>
+		</div>
+	  </div>
+
+<!--6-->
+  <div class="accordion-item">
+	<h2 class="accordion-header" id="flush-headingSix">
+	  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSix" aria-expanded="false" aria-controls="flush-collapseSix">
+		How do I manage Training requests?
+	  </button>
+	</h2>
+	<div id="flush-collapseSix" class="accordion-collapse collapse" aria-labelledby="flush-headingSix" data-bs-parent="#accordionFlushExample">
+	  <div class="accordion-body">
+		  --------
+	  </div>
+	</div>
+  </div>
+	
+<!--7-->
+  <div class="accordion-item">
+	<h2 class="accordion-header" id="flush-headingSeven">
+	  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSeven" aria-expanded="false" aria-controls="flush-collapseSeven">
+		How do I manage Leave Monetization requests?
+	  </button>
+	</h2>
+	<div id="flush-collapseSeven" class="accordion-collapse collapse" aria-labelledby="flush-headingSeven" data-bs-parent="#accordionFlushExample">
+	  <div class="accordion-body">
+		<p>1. Click the <b>Monetization</b> sub-section on the left side of the Notification section to view the Leave Monetization page.
+		</p>
+
+		<!--imgLeaveMonetizationPage-->
+		<div class="w3-container city w3-animate-opacity">
+		<div class="img-content">
+			<img src="assets/FAQ images/LeaveMonetization.png" alt="" class="center">
+		</div>
+	</div>
+	<p style="font-size: 12px; text-align: center;"><b>Leave Monetization page</b></p>
+		
+	<p>2. To view details of the Leave Monetization Request, click the View <b>Details</b> link opposite the corresponding request to view.
+		</p>
+
+		<!--imgLeaveMonetizationPage-->
+		<div class="w3-container city w3-animate-right">
+		<div class="img-content">
+			<img src="assets/FAQ images/LeaveMonetizationDetails.PNG" alt="" class="center" style="width: 50%; height: 30%;">
+		</div>
+	</div>
+	<p style="font-size: 12px; text-align: center;"><b>Leave Monetization Details</b></p>
+
+		<p>3. To approve Leave Monetization, click <b>Certify</b> button. <img src="assets/FAQ images/certifyBtn.PNG" style="width: 50px;"></p>
+		<p>4. To disapprove Leave Monetization request, click <b>Disapprove</b> button. <img src="assets/FAQ images/Disapprovebtn.PNG" style="width: 50px;"></p>
+	  </div>
+	</div>
+  </div>
+
+  <!--8-->
+<div class="accordion-item">
+	<h2 class="accordion-header" id="flush-headingEight">
+	  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseEight" aria-expanded="false" aria-controls="flush-collapseEight">
+		How do I manage Leave Commutation requests?
+	  </button>
+	</h2>
+	<div id="flush-collapseEight" class="accordion-collapse collapse" aria-labelledby="flush-headingEight" data-bs-parent="#accordionFlushExample">
+	  <div class="accordion-body">
+		  ----------
+	  </div>
+	</div>
+  </div>
+
+  <!--9-->
+  <div class="accordion-item">
+	<h2 class="accordion-header" id="flush-headingNine">
+	  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseNine" aria-expanded="false" aria-controls="flush-collapseNine">
+		How do I manage Step Increment?
+	  </button>
+	</h2>
+	<div id="flush-collapseNine" class="accordion-collapse collapse" aria-labelledby="flush-headingNine" data-bs-parent="#accordionFlushExample">
+	  <div class="accordion-body">
+		  ----------
+	  </div>
+	</div>
+  </div>
+
+<!--10-->
+<div class="accordion-item">
+	<h2 class="accordion-header" id="flush-headingTen">
+	  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTen" aria-expanded="false" aria-controls="flush-collapseTen">
+		How do I manage Update 201 Requests?
+	  </button>
+	</h2>
+	<div id="flush-collapseTen" class="accordion-collapse collapse" aria-labelledby="flush-headingTen" data-bs-parent="#accordionFlushExample">
+	  <div class="accordion-body">
+		  <p>1. Click the <b>Update 201</b> sub-section on the left side of the Notification section to view the Update 201 page.</p>
+
+		  <!--Alert-->
+			<div class="alert alert-warning alert-dismissible fade show" role="alert" style="font-size: 10px;">
+				<strong>Note:</strong> Update 201 requests appear when the Records Management Section sends an Update 201 request to the Personnel Division through the DOST-CO ERMS.
+				<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+			  </div>
+
+		<!--img201Page-->
+		<div class="img-content">
+			<img src="assets/FAQ images/201page.png" alt="" class="center">
+			<p style="font-size: 12px;"><b>201 File page</b></p>
+		</div>
+
+	  </div>
+	</div>
+  </div>
+
+  <!--11-->
+  <div class="accordion-item">
+	<h2 class="accordion-header" id="flush-headingEleven">
+	  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseEleven" aria-expanded="false" aria-controls="flush-collapseEleven">
+		How can I add new employee?
+	  </button>
+	</h2>
+	<div id="flush-collapseEleven" class="accordion-collapse collapse" aria-labelledby="flush-headingEleven" data-bs-parent="#accordionFlushExample">
+	  <div class="accordion-body">
+		  <p>1. Click the <b>Add Employee</b> link on the center of 201 File page to view the Add New Employee page.</p>
+
+		  <!--img201Page-->
+		  <div class="w3-container city w3-animate-opacity">
+		<div class="img-content">
+			<img src="assets/FAQ images/AddEmployee.png" alt="" class="center">
+		</div>
+		</div>
+		<p style="font-size: 12px; text-align: center;"><b>201 File page</b></p>
+
+		  <p>2. To add new employee, fill-up the entry boxes that constitute the parameters for adding new employee.</p>
+
+		   <!--Alert-->
+		 <div class="alert alert-warning alert-dismissible fade show" role="alert" style="font-size: 10px;">
+			<strong>Note:</strong> The Surname, First Name and Middle Name of the employee are required in order to add new employee.
+			<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+		  </div>
+
+		   <!--imgAddEmployeeForm-->
+		   <div class="w3-container city w3-animate-right">
+		<div class="img-content">
+			<img src="assets/FAQ images/AddEmployeeDetails.PNG" alt="" class="center" style="width: 50%; height: 30%;">
+		</div>
+	</div>
+	<p style="font-size: 12px; text-align: center;"><b>Add Employee form</b></p>
+
+		<p>3. When done click <b>Add</b> button <img src="assets/FAQ images/addbtn.PNG" style="width: 50px;"> to save employee’s information or the <b>Clear</b> button <img src="assets/FAQ images/clearbtn.PNG" style="width: 50px;"> to reset parameters.</p>
+
+	  </div>
+	</div>
+  </div>
+
+<!--12-->
+<div class="accordion-item">
+	<h2 class="accordion-header" id="flush-headingTwelve">
+	  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwelve" aria-expanded="false" aria-controls="flush-collapseETwelve">
+		How can I Browse Employee Record?
+	  </button>
+	</h2>
+	<div id="flush-collapseTwelve" class="accordion-collapse collapse" aria-labelledby="flush-headingTwelve" data-bs-parent="#accordionFlushExample">
+	  <div class="accordion-body">
+		<p>There are two ways to browse employee records. First using the filter records and second using the search engine.</p> 
+		<p>1. To select all employees using the filter records, select from the dropdown list of the maximum number of employees.</p>
+
+		 <!--img201-->
+		 <div class="w3-container city w3-animate-right">
+			<div class="img-content">
+				<img src="assets/FAQ images/201page.png" alt="" class="center">
+			</div>
+		</div>
+		<p style="font-size: 12px; text-align: center;"><b>201 File page</b></p>
+
+		<p>2. To select a specific employee using the search engine, type in the employee’s number or name in the Search textbox found in the right side of the screen.</p>
+	  </div>
+	</div>
+  </div>
+
+<!--13-->
+<div class="accordion-item">
+	<h2 class="accordion-header" id="flush-headingThirtheen">
+	  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThirtheen" aria-expanded="false" aria-controls="flush-collapseEThirtheen">
+		How do I synchronize attendance records?
+	  </button>
+	</h2>
+	<div id="flush-collapseThirtheen" class="accordion-collapse collapse" aria-labelledby="flush-headingThirtheen" data-bs-parent="#accordionFlushExample">
+	  <div class="accordion-body">
+		  -----------
+	  </div>
+	</div>
+  </div>
+
+<!--14--> 
+<div class="accordion-item">
+	<h2 class="accordion-header" id="flush-headingFourtheen">
+	  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFourtheen" aria-expanded="false" aria-controls="flush-collapseEFourtheen">
+	    How do I update Leave Balance?
+	  </button>
+	</h2>
+	<div id="flush-collapseFourtheen" class="accordion-collapse collapse" aria-labelledby="flush-headingFourtheen" data-bs-parent="#accordionFlushExample">
+	  <div class="accordion-body">
+		  -----------
+	  </div>
+	</div>
+  </div>
+
+  <!--15-->
+  <div class="accordion-item">
+	<h2 class="accordion-header" id="flush-headingFiftheen">
+	  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFiftheen" aria-expanded="false" aria-controls="flush-collapseEFiftheen">
+		How do I add Broken Schedule?
+	  </button>
+	</h2>
+	<div id="flush-collapseFiftheen" class="accordion-collapse collapse" aria-labelledby="flush-headingFiftheen" data-bs-parent="#accordionFlushExample">
+	  <div class="accordion-body">
+		  -----------
+	  </div>
+	</div>
+  </div>
+
+  <!--16-->
+  <div class="accordion-item">
+	<h2 class="accordion-header" id="flush-headingSixtheen">
+	  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSixtheen" aria-expanded="false" aria-controls="flush-collapseSixtheen">
+		How to I add Local Holiday?
+	  </button>
+	</h2>
+	<div id="flush-collapseSixtheen" class="accordion-collapse collapse" aria-labelledby="flush-headingSixtheen" data-bs-parent="#accordionFlushExample">
+	  <div class="accordion-body">
+		<p>1. To add new Local Holiday, specify the Holiday Name from the drop-down list in Libraries.</p>
+
+		<!--imgHolidayPage-->
+		<div class="w3-container city w3-animate-opacity">
+		<div class="img-content">
+			<img src="assets/FAQ images/HolidayPage.png" alt="" class="center">
+			<p style="font-size: 12px;"><b>Local Holiday Page</b></p>
+		</div>
+	</div>
+
+		<p>2. When done, click <b>Add</b> button <img src="assets/FAQ images/addbtn.PNG" style="width: 50px;"> to add the Local Holiday into the employee DTR.</p>  
+		<p>3. To view the list of Local Holiday, click <b>Dropdown List of Holiday Records</b> and set it to the max limit. <img src="assets/FAQ images/DropdownListRecords.PNG" style="width: 70px;"></p>
+
+
+	  </div>
+	</div>
+  </div>
+
+<!--17-->
+<div class="accordion-item">
+	<h2 class="accordion-header" id="flush-headingSeventheen">
+	  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSeventheen" aria-expanded="false" aria-controls="flush-collapseSeventheen">
+		How do I update Leave Balance?
+	  </button>
+	</h2>
+	<div id="flush-collapseSeventheen" class="accordion-collapse collapse" aria-labelledby="flush-headingSeventheen" data-bs-parent="#accordionFlushExample">
+	  <div class="accordion-body">
+		  ------------
+	  </div>
+	</div>
+  </div>
+
+  <!--18-->
+  <div class="accordion-item">
+	<h2 class="accordion-header" id="flush-headingEightheen">
+	  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseEightheen" aria-expanded="false" aria-controls="flush-collapseEightheen">
+		How can I generate and print reports?
+	  </button>
+	</h2>
+	<div id="flush-collapseEightheen" class="accordion-collapse collapse" aria-labelledby="flush-headingEightheen" data-bs-parent="#accordionFlushExample">
+	  <div class="accordion-body">
+		<p>1. To generate a report, see Report tab of HRMIS User Manual or Online Help.</p>
+		<!--Alert-->
+		<div class="alert alert-warning alert-dismissible fade show" role="alert" style="font-size: 10px;">
+		 <strong>Note:</strong> Reports are generated in PDF format, so appropriate software to read this kind of file is required. We recommend Adobe Acrobat Reader version 9 or later.
+		 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+	   </div>
+	  </div>
+	</div>
+  </div>
+
+  <!--19-->
+  <div class="accordion-item">
+	<h2 class="accordion-header" id="flush-headingNihtheen">
+	  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseNintheen" aria-expanded="false" aria-controls="flush-collapseNintheen">
+		How can I exlude an employee from DTR?
+	  </button>
+	</h2>
+	<div id="flush-collapseNintheen" class="accordion-collapse collapse" aria-labelledby="flush-headingNintheen" data-bs-parent="#accordionFlushExample">
+	  <div class="accordion-body">
+		  ------------
+	  </div>
+	</div>
+  </div>
+
+  <!--20-->
+  <div class="accordion-item">
+	<h2 class="accordion-header" id="flush-headingTwenty">
+	  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwenty" aria-expanded="false" aria-controls="flush-collapseTwenty">
+		How can I override Official Business?
+	  </button>
+	</h2>
+	<div id="flush-collapseTwenty" class="accordion-collapse collapse" aria-labelledby="flush-headingTwenty" data-bs-parent="#accordionFlushExample">
+	  <div class="accordion-body">
+		----
+	  </div>
+	</div>
+  </div>
+
+  <!--21-->
+  <div class="accordion-item">
+	<h2 class="accordion-header" id="flush-headingTwentyOne">
+	  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwentyOne" aria-expanded="false" aria-controls="flush-collapseTwentyOne">
+		How can I add Attendance Scheme?
+	  </button>
+	</h2>
+	<div id="flush-collapseTwentyOne" class="accordion-collapse collapse" aria-labelledby="flush-headingTwentyOne" data-bs-parent="#accordionFlushExample">
+	  <div class="accordion-body">
+		  <p>1. To add new Attendance Scheme, fill-up the entry boxes that constitute the parameters for adding new Attendance Scheme in the Attendance Scheme page.
+		</p>
+	 
+		<div class="w3-container city w3-animate-opacity">
+			<div class="img-content">
+				<img src="assets/FAQ images/attendancescheme.PNG" alt="" class="center">
+				<p style="font-size: 12px;"><b>Add New Attendance Scheme form</b></p>
+			</div>
+		</div>
+
+		<p>2. Specify the <strong>Scheme  Type</strong> and <strong>Working Hours</strong> from the drop-down lists.</p>
+		<p>3. Type in the <strong>Scheme Code</strong> and <strong>Scheme Name</strong> on the entry boxes provided.</p>
+		<p>4. When done, click <Strong>Add</Strong> button <img src="assets/FAQ images/addbtn.PNG" style="width: 70px;"> to add new Attendance Scheme.</p>
+         
+	</div>
+	</div>
+  </div>
+
+  <!--22-->
+  <div class="accordion-item">
+	<h2 class="accordion-header" id="flush-headingTwentyTwo">
+	  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwentyTwo" aria-expanded="false" aria-controls="flush-collapseTwentyTwo">
+		How do I add user account?
+	  </button>
+	</h2>
+	<div id="flush-collapseTwentyTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwentyTwo" data-bs-parent="#accordionFlushExample">
+	  <div class="accordion-body">
+		<p>1. To add user account, click <Strong>User Account</Strong> on the dropdown list of Libraries tab.
+		</p>
+		<p>2. Specify the <strong>Access Level</strong> from the drop-down list.</p>
+		<p>3. For HR Module, fill-up the entry boxes that constitute the parameters for adding new User Account.</p>
+
+		<div class="w3-container city w3-animate-opacity">
+			<div class="img-content">
+				<img src="assets/FAQ images/HRuseraccount.PNG" alt="" class="center">
+				<p style="font-size: 12px;"><b>HR Module User Account form</b></p>
+			</div>
+		</div>
+
+		<p>4. Place a tick mark on the <strong>Assistant</strong> check box if the employee is assigned as HR Assistant then place a tick mark on the check box of the section(s) that the employee can access.</p>
+	   <p>5. Place a tick mark on the <Strong>HR Officer</Strong> check box if the employee is assigned as HR Officer then place a tick mark on the all section check box to access all sections.</p>
+	   <br>
+	   <p>6. For Finance/Payroll Module, fill-up the entry boxes that constitute the parameters for adding new User Account.</p>
+
+	   <div class="w3-container city w3-animate-opacity">
+		<div class="img-content">
+			<img src="assets/FAQ images/financeadduser.PNG" alt="" class="center">
+			<p style="font-size: 12px;"><b>Payroll Module User Account form</b></p>
+		</div>
+	</div>
+
+	<p>7. Place a tick mark on the <strong>Assistant</strong> check box if the employee is assigned as Cashier Assistant then place a tick mark on the check box of the section(s) that the employee can access.</p>
+	<p>8. Specify the <strong>Payroll Group</strong> assigned to the Cashier Assistant from the drop-down list.</p>
+	<p>9. Place a tick mark on the <Strong>Finance Officer</Strong> check box if the employee is assigned as Finance Officer then place a tick mark on the all section check box to access all sections.
+	</p>
+	<br>
+	<p>10. For Employee Module, Officer Module and Execom Module, fill-up the entry boxes that constitute the parameters for adding new User Account.</p>
+	<div class="w3-container city w3-animate-opacity">
+		<div class="img-content">
+			<img src="assets/FAQ images/addemployeemodule.PNG" alt="" class="center">
+			<p style="font-size: 12px;"><b>Employee Module User Account form</b></p>
+		</div>
+	</div>
+
+	<p>11. Specify the <strong>Employee Name</strong> from the drop-down list.</p>
+	<p>12. Type in the <strong>Username</strong> and <strong>Password</strong> on the entry boxes provided.</p>
+	<p>13. When done click <strong>Add</strong> button <img src="assets/FAQ images/addbtn.PNG" style="width: 70px;"> to add new User Account or the Clear button  to reset parameters.</p>
+</div>
+	</div>
+  </div>
+
+<!--ContentEndTag-->  
+</div>
+</div>
+</div>
+
+	<script src="app.js"></script>
+</body>
+</html>

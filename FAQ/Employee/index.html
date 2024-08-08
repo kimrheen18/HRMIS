@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link rel="icon" href="favicon.ico">
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="w3.css">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	
+	<!--Title-->	
+	<title>HRMIS | FAQs</title>
+</head>
+<body onload="typeWriter()">
+	
+<!--navbar-->
+  <nav class="navbar sticky-top " style="background: rgb(58, 134, 206);">
+	<div class="container-fluid">
+	  <a class="navbar-brand" href="#"><img src="logo.png" alt="logo" width="30" height="30"> 
+		</a>
+	</div>
+  </nav>
+  
+
+  <!--Content-->
+  <!--Header-->
+<div class="content">
+<div class="header-img">
+<div class="img-border">
+<img src="logo.png" alt="logo" style="width: 50px; height: 50px;">
+</div>
+</div>
+<div class="header-Text">
+<h2 style="color: rgb(58, 114, 179);">How can we help you?</h2>
+
+<!--ToastMessage-->
+<div class="position-fixed bottom-0 end-0 p-3" style="z-index: 5">
+<div role="alert" aria-live="assertive" aria-atomic="true" class="toast" data-bs-autohide="false">
+	<div class="toast-header">
+	  <img src="logo.png" class="rounded me-2" alt="..." style="width: 20px; height: 20px;">
+	  <strong class="me-auto">DOST</strong>
+	  <small>FAQs</small>
+	  <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+	</div>
+	<div class="toast-body" id="text-body">
+	</div>
+  </div>
+</div>
+
+<!--SearchBar-->
+<div class="form-floating mb-3" style="width: 50%; margin: auto;">
+	<input type="text" list="datalistOptions" class="form-control" id="floatingInput" placeholder="Search">
+	<label for="floatingInput"><i class="fa fa-search"></i> Search...</label>
+	<datalist id="datalistOptions">
+		<option value="Business Request">
+		<option value="Leave Request">
+		<option value="Travel Order Request">
+	  </datalist>
+</div>
+</div>
+
+
+<!--Content-->
+	<div class="accordion-content" style="margin: auto;">
+<div class="accordion accordion-flush" id="accordionFlushExample">
+	
+	<!--1-->
+	<div class="accordion-item">
+	  <h2 class="accordion-header" id="flush-headingOne">
+		<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+			How can I change my password?
+		</button>
+	  </h2>
+	  <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+		<div class="accordion-body">
+			<p>1. To change password, type in the new one on the entry box labeled change password in Personal Information page.
+			</p>
+			
+			<!--imgRequestPage-->
+			<div class="w3-container city w3-animate-opacity">
+			<div class="img-content">
+				<img src="assets/FAQ images/changePass.PNG" alt="" class="center">
+			</div>	
+			</div>
+			<p style="font-size: 12px; text-align: center;"><b>Change of Password Form</b></p>
+			
+		<p>2. When done, click <strong>Submit</strong> button <img src="assets/FAQ images/submitbtn.PNG" style="width: 50px;"> to change the previous password. A confirmation message will be displayed if the action is successful. </p>
+	<!--Alert-->
+	<div class="alert alert-warning alert-dismissible fade show" role="alert" style="font-size: 10px;">
+		<strong>Note:</strong> Password entered in change password should match with the password entered in confirm password to be able to change password.
+		<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+	  </div>	
+	</div>
+	  </div>
+	</div>
+	
+<!--2-->
+	<div class="accordion-item">
+	  <h2 class="accordion-header" id="flush-headingTwo">
+		<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+			How do I view my attendance records?
+		</button>
+	  </h2>
+	  <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+		<div class="accordion-body">
+			<p>1. To access attendance records for the current month, click the <strong>Attendance</strong> Tab.</p>
+
+			<!--imgLeavePage-->
+			<div class="w3-container city w3-animate-opacity">
+			<div class="img-content">
+				<img src="assets/FAQ images/attendancepage.PNG" alt="" class="center">
+			</div>
+		</div>
+		<p style="font-size: 12px; text-align: center;"><b>Attendance page</b></p>
+			
+			<p>2. To view attendance from previous month(s), specify <strong>Month</strong> and <strong>Year</strong> desired from the drop-down lists.</p>
+			
+		<p>3. When done, click <strong>Search</strong> button <img src="assets/FAQ images/searchbtn.PNG" style="width: 50px;">  to display the DTR that matched the parameters chosen. </p>
+
+		</div>
+	  </div>
+	</div>
+	
+<!--3-->
+	<div class="accordion-item">
+	  <h2 class="accordion-header" id="flush-headingThree">
+		<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+			I'm filing a request for the first time, how can I set my security question?
+		</button>
+	  </h2>
+	  <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+		<div class="accordion-body">
+		-------------------
+		</div>
+	  </div>
+	</div>
+	
+<!--4-->
+	<div class="accordion-item">
+		<h2 class="accordion-header" id="flush-headingFour">
+		  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+			How can I file Official Business request?
+		  </button>
+		</h2>
+		<div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
+		  <div class="accordion-body">
+			
+			<p>1. Click the <strong>Official Business</strong> tab from the dropdownlist of the Request tab to view the Official Business page.</p>
+		
+		
+			<div class="w3-container city w3-animate-opacity">
+			<div class="img-content">
+				<img src="assets/FAQ images/officialbusinesspage.PNG" alt="" class="center">
+			</div>
+		</div>
+		<p style="font-size: 12px; text-align: center;"><b>Official Business page</b></p>
+
+		
+			<p>2. Type in information needed such as <strong>Date</strong>, <strong>Time In</strong>, <strong>Time Out</strong>, <strong>Destination</strong> and <strong>Purpose</strong>.
+			</p>
+
+			  <p>3. When done, click Submit button <img src="assets/FAQ images/submitbtn.PNG" style="width: 50px;">  to proceed to User Identity Validation or the Cancel button <img src="assets/FAQ images/cancelbtn.PNG" style="width: 50px;"> to cancel opeartion.
+			  </p>
+			  <p>4. To print a copy of request, click <strong>Print/Preview</strong> button  <img src="assets/FAQ images/printbtn.PNG" style="width: 50px;">. The printable document will appear in a new window.
+			  </p>
+			  <div class="alert alert-warning alert-dismissible fade show" role="alert" style="font-size: 10px;">
+				<strong>Note:</strong> To view the list of approved OB, click the Offical Business tab.
+				<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+			  </div>	
+		  </div>
+		</div>
+	  </div>
+	 
+<!--5-->
+	  <div class="accordion-item">
+		<h2 class="accordion-header" id="flush-headingFive">
+		  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
+			How can I file Seminars/Trainings request?
+		  </button>
+		</h2>
+		<div id="flush-collapseFive" class="accordion-collapse collapse" aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
+		  <div class="accordion-body">
+			<p>1. Click the PDS Update on the dropdown list of the Request tab to view the Seminars/Trainings page.</p>
+			<p>2. Specify <strong>Type of Profile</strong> from the dropdown list.</p>
+		 
+			<div class="w3-container city w3-animate-opacity">
+				<div class="img-content">
+					<img src="assets/FAQ images/trainingSeminars.PNG" alt="" class="center">
+				</div>
+			</div>
+			<p style="font-size: 12px; text-align: center;"><b>Seminars/Trainings page</b></p>
+	
+	     <p>3. Type in information needed such as <strong>Training Title</strong>, <strong>Number of Hours</strong>, <strong>Venue</strong>, <strong>Organizer</strong>, <strong>Cost</strong>, <strong>Date</strong> and <strong>Purpose</strong>.</p>
+		 <p>4. When done, click Submit button <img src="assets/FAQ images/submitbtn.PNG" style="width: 50px;">  to proceed to User Identity Validation or the Cancel button <img src="assets/FAQ images/cancelbtn.PNG" style="width: 50px;"> to cancel opeartion.</p>
+		</div>
+		</div>
+	  </div>
+
+<!--6-->
+  <div class="accordion-item">
+	<h2 class="accordion-header" id="flush-headingSix">
+	  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSix" aria-expanded="false" aria-controls="flush-collapseSix">
+		How can I file Leave request?
+	  </button>
+	</h2>
+	<div id="flush-collapseSix" class="accordion-collapse collapse" aria-labelledby="flush-headingSix" data-bs-parent="#accordionFlushExample">
+	  <div class="accordion-body">
+		 <p>1. Click the <strong>Leave</strong> tab from the dropdown list of the Request tab to view the Leave page.</p>
+
+		 <div class="w3-container city w3-animate-opacity">
+			<div class="img-content">
+				<img src="assets/FAQ images/leavepage.PNG" alt="" class="center">
+			</div>
+		</div>
+		<p style="font-size: 12px; text-align: center;"><b>Leave page</b></p>
+
+		<p>2. Specify the <strong>Type of Leave</strong> from the drop-down list.</p>
+		<p>3. Type in the <strong>Date</strong>, <strong>Number of Days Applied</strong> and <strong>Reasons for Applying</strong>.</p>
+		<p>4. When done, click Submit button <img src="assets/FAQ images/submitbtn.PNG" style="width: 50px;">  to proceed to User Identity Validation or the Cancel button <img src="assets/FAQ images/cancelbtn.PNG" style="width: 50px;"> to cancel opeartion.</p>
+	  </div>
+	</div>
+  </div>
+	
+<!--7-->
+  <div class="accordion-item">
+	<h2 class="accordion-header" id="flush-headingSeven">
+	  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSeven" aria-expanded="false" aria-controls="flush-collapseSeven">
+		How can I file Travel Order request?
+	  </button>
+	</h2>
+	<div id="flush-collapseSeven" class="accordion-collapse collapse" aria-labelledby="flush-headingSeven" data-bs-parent="#accordionFlushExample">
+	  <div class="accordion-body">
+		<p>1. Click the <strong>Travel Order</strong> tab from the dropdown list of the Request tab to view the Travel Order page.
+		</p>
+
+	
+		<div class="w3-container city w3-animate-opacity">
+		<div class="img-content">
+			<img src="assets/FAQ images/travelorder.PNG" alt="" class="center">
+		</div>
+	</div>
+	<p style="font-size: 12px; text-align: center;"><b>Travel Order page</b></p>
+		
+	<p>2. Type in information needed such as Destination, Date and Purpose.
+		</p>
+	<p> 3. When done, click Submit button <img src="assets/FAQ images/submitbtn.PNG" style="width: 50px;">  to proceed to User Identity Validation or the Cancel button <img src="assets/FAQ images/cancelbtn.PNG" style="width: 50px;"> to cancel opeartion.</p>
+
+	  </div>
+	</div>
+  </div>
+
+  <!--8-->
+<div class="accordion-item">
+	<h2 class="accordion-header" id="flush-headingEight">
+	  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseEight" aria-expanded="false" aria-controls="flush-collapseEight">
+		How can I file PDS Update request?
+	  </button>
+	</h2>
+	<div id="flush-collapseEight" class="accordion-collapse collapse" aria-labelledby="flush-headingEight" data-bs-parent="#accordionFlushExample">
+	  <div class="accordion-body">
+		<p>1. Click the <strong>PDS Update</strong> tab from the dropdown list of the Request tab to view the PDS Update page.</p>
+
+		<div class="w3-container city w3-animate-opacity">
+			<div class="img-content">
+				<img src="assets/FAQ images/pdsupate.PNG" alt="" class="center">
+			</div>
+		</div>
+		<p style="font-size: 12px; text-align: center;"><b>PDS Update page</b></p>
+
+		<p>2. To update PDS, specify the <strong>Type of Profile</strong> from the drop-down list.</p>
+
+		<div class="w3-container city w3-animate-right">
+			<div class="img-content">
+				<img src="assets/FAQ images/editpdsupdate.PNG" alt="" class="center" style="width: 50%; height: 30%;">
+			</div>
+		</div>
+		<p style="font-size: 12px; text-align: center;"><b>Edit Information Form</b></p>
+        <p>3. To update previous information, click the <strong>Edit</strong> button opposite the information to edit.</p>
+		<p>4. To add new information, fill-up the entry box that constitutes the parameters for adding new information.</p>
+        <p>5. When done, click Submit button <img src="assets/FAQ images/submitbtn.PNG" style="width: 50px;">  to proceed to User Identity Validation or the Cancel button <img src="assets/FAQ images/cancelbtn.PNG" style="width: 50px;"> to cancel opeartion.</p>
+	  </div>
+	</div>
+  </div>
+
+  <!--9-->
+  <div class="accordion-item">
+	<h2 class="accordion-header" id="flush-headingNine">
+	  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseNine" aria-expanded="false" aria-controls="flush-collapseNine">
+		How can I file Reports request?
+	  </button>
+	</h2>
+	<div id="flush-collapseNine" class="accordion-collapse collapse" aria-labelledby="flush-headingNine" data-bs-parent="#accordionFlushExample">
+	  <div class="accordion-body">
+		  ------------
+	  </div>
+	</div>
+  </div>
+
+<!--10-->
+<div class="accordion-item">
+	<h2 class="accordion-header" id="flush-headingTen">
+	  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTen" aria-expanded="false" aria-controls="flush-collapseTen">
+		How can I file Leave Monetization request?
+	  </button>
+	</h2>
+	<div id="flush-collapseTen" class="accordion-collapse collapse" aria-labelledby="flush-headingTen" data-bs-parent="#accordionFlushExample">
+	  <div class="accordion-body">
+		  <p>1. Click the <strong>Leave Monetization</strong> tab from the dropdown list of the Request tab to view the Leave Monetization page.</p>
+
+		  <!--Alert-->
+			<div class="alert alert-warning alert-dismissible fade show" role="alert" style="font-size: 10px;">
+				<strong>Note:</strong> Only regular employees can file for Leave Monetization
+				<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+			  </div>
+			  
+		 <div class="w3-container city w3-animate-opacity">
+		<div class="img-content">
+			<img src="assets/FAQ images/leavemonetizationpage.PNG" alt="" class="center">
+			<p style="font-size: 12px;"><b>Leave Monetization page</b></p>
+		</div>
+		</div>
+
+	  </div>
+	</div>
+  </div>
+
+  <!--11-->
+  <div class="accordion-item">
+	<h2 class="accordion-header" id="flush-headingEleven">
+	  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseEleven" aria-expanded="false" aria-controls="flush-collapseEleven">
+		How can I view status of my request/s?
+	  </button>
+	</h2>
+	<div id="flush-collapseEleven" class="accordion-collapse collapse" aria-labelledby="flush-headingEleven" data-bs-parent="#accordionFlushExample">
+	  <div class="accordion-body">
+		  <p>1. To view the status and history of requests, click Notification Bell button  on the Navigation section.
+			   A new window will open showing the history of requests.</p>
+
+		 
+		  <div class="w3-container city w3-animate-opacity">
+		<div class="img-content">
+			<img src="assets/FAQ images/notificationpage.PNG" alt="" class="center">
+		</div>
+		</div>
+		<p style="font-size: 12px; text-align: center;"><b>Notification History page</b></p>
+
+	  </div>
+	</div>
+  </div>
+
+<!--12-->
+<div class="accordion-item">
+	<h2 class="accordion-header" id="flush-headingTwelve">
+	  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwelve" aria-expanded="false" aria-controls="flush-collapseETwelve">
+		How can I cancel filed request/s?
+	  </button>
+	</h2>
+	<div id="flush-collapseTwelve" class="accordion-collapse collapse" aria-labelledby="flush-headingTwelve" data-bs-parent="#accordionFlushExample">
+	  <div class="accordion-body">
+	<p>1. To cancel a request, click the Cancel button opposite the corresponding request to cancel.
+	</p>
+
+	<div class="w3-container city w3-animate-opacity">
+		<div class="img-content">
+			<img src="assets/FAQ images/cancelrequest.PNG" alt="" class="center">
+		</div>
+		</div>
+		<p style="font-size: 12px; text-align: center;"><b>Cancel request</b></p>
+
+		<p>2. After cancellation of request, the filed request’s status will now be request cancelled.</p>
+	  </div>
+	</div>
+  </div>
+
+
+<!--ContentEndTag-->  
+</div>
+</div>
+</div>
+
+	<script src="app.js"></script>
+</body>
+</html>

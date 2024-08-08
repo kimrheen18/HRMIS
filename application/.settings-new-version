@@ -1,0 +1,3 @@
+1. Add AUTO_INCREMENT code for tblEmpDeductLoanConAdjust
+	# ALTER TABLE  `tblEmpDeductLoanConAdjust` CHANGE  `code`  `code` INT( 100 ) NOT NULL AUTO_INCREMENT ;
+

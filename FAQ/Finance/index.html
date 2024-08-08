@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link rel="shortcut icon" type="image/png" href="assets/favicon.ico">
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="w3.css">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	
+	<!--Title-->	
+	<title>HRMIS | FAQs</title>
+</head>
+<body onload="typeWriter()">
+	
+<!--navbar-->
+  <nav class="navbar sticky-top " style="background: rgb(58, 134, 206);">
+	<div class="container-fluid">
+	  <a class="navbar-brand" href="#"><img src="assets/logo.png" alt="logo" width="30" height="30"> 
+		</a>
+	</div>
+  </nav>
+  
+
+  <!--Content-->
+  <!--Header-->
+<div class="content">
+<div class="header-img">
+<div class="img-border">
+<img src="assets/logo.png" alt="logo" style="width: 50px; height: 50px;">
+</div>
+</div>
+<div class="header-Text">
+<h2 style="color: rgb(58, 114, 179);">How can we help you?</h2>
+
+<!--ToastMessage-->
+<div class="position-fixed bottom-0 end-0 p-3" style="z-index: 5">
+<div role="alert" aria-live="assertive" aria-atomic="true" class="toast" data-bs-autohide="false">
+	<div class="toast-header">
+	  <img src="assets/logo.png" class="rounded me-2" alt="..." style="width: 20px; height: 20px;">
+	  <strong class="me-auto">DOST</strong>
+	  <small>FAQs</small>
+	  <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+	</div>
+	<div class="toast-body" id="text-body">
+	</div>
+  </div>
+</div>
+
+<!--SearchBar-->
+<div class="form-floating mb-3" style="width: 50%; margin: auto;">
+	<input type="text" list="datalistOptions" class="form-control" id="floatingInput" placeholder="Search">
+	<label for="floatingInput"><i class="fa fa-search"></i> Search...</label>
+	<datalist id="datalistOptions">
+		<option value="Business Request">
+		<option value="Leave Request">
+		<option value="Travel Order Request">
+	  </datalist>
+</div>
+</div>
+
+
+<!--Content-->
+	<div class="accordion-content" style="margin: auto;">
+<div class="accordion accordion-flush" id="accordionFlushExample">
+	
+	<!--1-->
+	<div class="accordion-item">
+	  <h2 class="accordion-header" id="flush-headingOne">
+		<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+			How do I view and edit income?
+		</button>
+	  </h2>
+	  <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+		<div class="accordion-body">
+			<p>1. Click the <b>View</b> from the Compensation left side of the <b>LIST OF EMPLOYEES</b> and click the <b>Income</b> to view the Increase in Income page.</p>
+			
+		<div class="alert alert-warning alert-dismissible fade show" role="alert" style="font-size: 10px;">
+			<strong>Note:</strong> The list of income displayed is from the Income Libraries.
+			<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+		  </div>
+
+			<!--imgRequestPage-->
+			<div class="w3-container city w3-animate-opacity">
+			<div class="img-content">
+				<img src="assets/FAQ images/update.png" alt="" class="center">
+				<img src="assets/FAQ images/view income.png" alt="" class="center">
+			</div>	
+			</div>
+			<p style="font-size: 12px; text-align: center;"><b>Income Page</b></p>
+
+			<p>2. To update income details, click the <b>Edit</b> button to update <b> Income</b> on the screen.</p>
+			
+			<!--Print Preview-->
+			<div class="w3-container city w3-animate-right">
+			<div class="img-content">
+				
+				<img src="assets/FAQ images/updatee.png" alt="" class="center" style="width: 80%;">
+			
+            </div>
+		</div>
+		<p style="font-size: 12px; text-align: center;"><b>Income Page</b></p>
+			<p>3. For Benefit Income types, information that can be updated includes the income <b>Amount</b>, <b>Period 1</b> income amount, <b>Period 2</b> income amount and income <b>Status</b>. </p>
+			<div class="w3-container city w3-animate-right">
+				<div class="img-content">
+					<img src="assets/FAQ images/edit.png" alt="" class="center" style="width: 80%;">
+				
+				</div>
+			</div>
+			<p style="font-size: 12px; text-align: center;"><b>Benefit Income Update window</b></p>	
+			<p>4. For Bonus Income type, information that can be updated includes the income <b>Amount</b>, <b>Tax</b>, <b>Period 1</b> income amount, <b>Period 2</b> income amount and income <b>Status</b>.</p>
+			<div class="w3-container city w3-animate-right">
+				<div class="img-content">
+					<img src="assets/FAQ images/editt.png" alt="" class="center" style="width: 80%;">
+				
+				</div>	
+				</div>
+			<p style="font-size: 12px; text-align: center;"><b>Bonus Income Update window</b></p>
+		<p>5. For Additional Income types, information that can be updated includes the income <b>Amount</b>, <b>Period 1</b> income amount, <b>Period 2</b> income amount and income <b>Status</b>.</p>
+		<div class="w3-container city w3-animate-right">
+			<div class="img-content">
+			<img src="assets/FAQ images/edittt.png" alt="" class="center" style="width: 80%;">
+			
+			</div>
+		</div>
+		<p style="font-size: 12px; text-align: center;"><b>Additional Income Update window</b></p>	
+		<p>6. When done, click <b>Save</b> button to save entry. To update income details for all employees, click <b>Update all employee</b> button  . Click <b>Cancel</b> button  to cancel the operation.</p>	
+	
+	</div>
+	  </div>
+	</div>
+	
+<!--2-->
+	<div class="accordion-item">
+	  <h2 class="accordion-header" id="flush-headingTwo">
+		<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+			How do I view and edit premiums/loans?
+		</button>
+	  </h2>
+	  <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+		<div class="accordion-body">
+			<p>1. Click the <b>View</b> from the Compensation left side of the <b>LIST OF EMPLOYEES</b> and click the <b>Premiums/Loans</b> to view the Premiums/Loans.</p>
+
+			<!--imgLeavePage-->
+			<div class="w3-container city w3-animate-opacity">
+			<div class="img-content">
+				<img src="assets/FAQ images/incomee.png" alt="" class="center">
+				<img src="assets/FAQ images/loan.png" alt="" class="center">
+			</div>
+		</div>
+		<p style="font-size: 12px; text-align: center;"><b>Premiums/Loans page</b></p>
+			
+			<p>2. To update premiums/loans details, click the <b>Edit</b> button to update <b> premiums/loans</b> on the screen.</p>
+			<!--imgLeaveDetails-->
+			<div class="w3-container city w3-animate-right">
+			<div class="img-content">
+				<img src="assets/FAQ images/loan1.png" alt="" class="center" style="width: 80%;">
+			</div>
+		</div>
+		<p style="font-size: 12px; text-align: center;"><b>Premiums/loans Page</b></p>
+			
+		<p>3. For Regular Deduction Type, information that can be updated includes the <b>Monthly</b> deduction amount, <b>Period 1</b> deduction amount, <b>Period 2</b> deduction amount and deduction <b>Status</b>.</p>
+		<div class="w3-container city w3-animate-right">
+			<div class="img-content">
+				<img src="assets/FAQ images/updateloan1.png" alt="" class="center" style="width: 80%;">	
+			</div>
+		</div>
+		<p style="font-size: 12px; text-align: center;"><b>Regular deduction list Update window</b></p>
+		
+		<p>4. For Loan Deduction Type, information that can be updated includes the Loan details such as <b>Monthly</b> deduction amount, <b>Period 1</b> deduction amount, <b>Period 2</b> deduction amount and <b>Start Year</b>, <b>Start Month</b>, <b>End Year</b>, <b>End Month</b>, and deduction <b>Status</b>.</p>
+		<div class="w3-container city w3-animate-right">
+			<div class="img-content">
+				<img src="assets/FAQ images/updateloan3.png" alt="" class="center" style="width: 80%;">	
+			</div>
+		</div>
+		<p style="font-size: 12px; text-align: center;"><b>Loan list Update window</b></p>
+		<p>5. For Contribution and Others Deduction Type, information that can be updated includes the <b>Monthly</b> deduction amount, <b>Period 1</b> deduction amount, <b>Period 2</b> deduction amount and deduction <b>Status</b>.</p>
+		<div class="w3-container city w3-animate-right">
+			<div class="img-content">
+				<img src="assets/FAQ images/updateloan2.png" alt="" class="center" style="width: 80%;">	
+			</div>
+		</div>
+		<p style="font-size: 12px; text-align: center;"><b>Contribution and Others Deductions Update window</b></p>
+		<p>6. When done, click <b>Save</b> button to save entry. To update income details for all employees, click <b>Update all employee</b> button  . Click <b>Cancel</b> button  to cancel the operation.</p>
+		
+	</div>
+	  </div>
+	</div>
+	
+<!--3-->
+	<div class="accordion-item">
+	  <h2 class="accordion-header" id="flush-headingThree">
+		<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+			How to process payroll of permanent employees?
+		</button>
+	  </h2>
+	  <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+		<div class="accordion-body">
+			<p>1. Click the <b>Update</b> from the left navigation bar next the <b>Process Payroll</b> to show the Process Payroll window screen.</p>
+			<p>2. To procced 4 Step of Payroll Process specify what <b>Employee</b>, <b>Process</b>, <b>Month</b>, <b>Year</b>, and <b>Period</b> from the drop-down lists and click the <b>Save and continue</b>.</p>
+		
+			<!--imgTravelPage-->
+			<div class="w3-container city w3-animate-opacity">
+			<div class="img-content">
+				<img src="assets/FAQ images/payroll.png" alt="" class="center">
+			</div>
+		</div>
+			<!--imgTravelDetails-->
+		<p style="font-size: 12px; text-align: center;"><b>Process Payroll Page</b></p>
+	<p>3. For the step 2 Click Compute button to compute the benefits/salary of permanent employees.</p>
+		<!--imgTravelDetails-->
+		<div class="w3-container city w3-animate-right">
+			<div class="img-content">
+				<img src="assets/FAQ images/paroll2.png" alt="" class="center">
+				<img src="assets/FAQ images/payroll3.png" alt="" class="center">
+				<img src="assets/FAQ images/payroll4.png" alt="" class="center">
+			</div>
+		</div>
+		 
+		<p style="font-size: 12px; text-align: center;"><b>Process Payroll Page</b></p>
+
+		<div class="alert alert-warning alert-dismissible fade show" role="alert" style="font-size: 10px;">
+			<strong>Note:</strong> A permanent employee is qualified to a Hazard Pay (which is computed as Salary times the Hazard Pay Factor of employee) provided that he/she has been present for at least 1 day, a Laundry Pay of 500.00 provided that he/she has been present for at least 10 days and a Subsistence Allowance of 150.00 for every day present.
+			<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+		  </div>
+	
+		<div class="alert alert-warning alert-dismissible fade show" role="alert" style="font-size: 10px;">
+			<strong>Note:</strong> After manual editing, Hazard Pay, Laundry Pay, Subsistence Allowance and Salary of permanent employees is computed.
+			<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+		  </div>
+
+		<p>4. Click the <b>Back</b> icon to back to Process Payroll.</p>
+
+		<p>5. To process payroll, place a tick mark on the corresponding checkboxes that will be included in the processing of payroll.</p>
+		
+		<p>6. When done, click the <b>Compute</b> button  to start processing of payroll. A confirmation message will be displayed if the action was successful.</p>
+		
+		<p>7. Click the <b>Process History</b> from the left navigation bar to view the Process History window.</p>
+		<div class="w3-container city w3-animate-right">
+			<div class="img-content">
+				<img src="assets/FAQ images/process history.png" alt="" class="center">
+				<p style="font-size: 12px; text-align: center;"><b>Process Payroll Page</b></p>
+
+		<div class="alert alert-warning alert-dismissible fade show" role="alert" style="font-size: 10px;">
+			<strong>Note:</strong> The Cashier Assistant can only view the Process History of records he/she processed. A Cashier Assistant is assigned through the HR Module.
+			<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+		  </div>	
+			
+			</div>
+		</div>
+
+		<p>8. Specify the <b>Month</b> and <b>Year</b> from the drop-down lists.</p>
+		<p>9. When done, click <b>Search</b> button  to view processing history records that matched the parameters chosen.</p>
+
+
+
+
+		</div>
+	  </div>
+	</div>
+	
+<!--4-->
+	<div class="accordion-item">
+		<h2 class="accordion-header" id="flush-headingFour">
+		  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+			How to process payroll of contractual employees?
+		  </button>
+		</h2>
+		<div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
+		  <div class="accordion-body">
+			
+			<p>1. Click the <b>Update</b> from the left navigation bar next the <b>Process Payroll</b> to show the Process Payroll window screen.</p>
+			<p>2. To procced 4 Step of Payroll Process specify what <b>Employee</b>, <b>Process</b>, <b>Month</b>, <b>Year</b>, and <b>Period</b> from the drop-down lists and click the <b>Save and continue</b>.</p>
+		
+			<!--imgTravelPage-->
+			<div class="w3-container city w3-animate-opacity">
+			<div class="img-content">
+				<img src="assets/FAQ images/payroll.png" alt="" class="center">
+			</div>
+		</div>
+		
+		<p style="font-size: 12px; text-align: center;"><b>Process Payroll Page</b></p>
+
+
+	<p>3. For the step 2 Click Compute button to compute the payroll of contractual employees.</p>
+		<!--imgTravelDetails-->
+		<div class="w3-container city w3-animate-right">
+			<div class="img-content">
+				<img src="assets/FAQ images/paroll2.png" alt="" class="center">
+				<img src="assets/FAQ images/payroll3.png" alt="" class="center">
+				<img src="assets/FAQ images/payroll4.png" alt="" class="center">
+			</div>
+		</div>
+		 
+		<p style="font-size: 12px; text-align: center;"><b>Process Payroll Page</b></p>
+	
+		<div class="alert alert-warning alert-dismissible fade show" role="alert" style="font-size: 10px;">
+			<strong>Note:</strong>  After manual editing, days present and period salary of contractual employees is computed.
+			<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+		  </div>
+
+		<p>4. Click the <b>Back</b> icon to back to Process Payroll.</p>
+
+		<p>5. To process payroll, place a tick mark on the corresponding checkboxes that will be included in the processing of payroll.</p>
+		
+		<p>6. When done, click the <b>Compute</b> button  to start processing of payroll. A confirmation message will be displayed if the action was successful.</p>
+		
+		<p>7. Click the <b>Process History</b> from the left navigation bar to view the Process History window.</p>
+		
+		<div class="w3-container city w3-animate-right">
+			<div class="img-content">
+				<img src="assets/FAQ images/process history.png" alt="" class="center">
+
+				<p style="font-size: 12px; text-align: center;"><b>Process Payroll Page</b></p>
+
+				<div class="alert alert-warning alert-dismissible fade show" role="alert" style="font-size: 10px;">
+			<strong>Note:</strong> The Cashier Assistant can only view the Process History of records he/she processed. A Cashier Assistant is assigned through the HR Module.
+			<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+		  </div>	
+			
+			</div>
+		</div>
+
+		<p>8. Specify the <b>Month</b> and <b>Year</b> from the drop-down lists.</p>
+		<p>9. When done, click <b>Search</b> button  to view processing history records that matched the parameters chosen.</p>
+
+
+
+		  </div>
+		</div>
+	  </div>
+	 
+<!--5-->
+	  <div class="accordion-item">
+		<h2 class="accordion-header" id="flush-headingFive">
+		  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
+			How to process payroll of job order employees?
+		  </button>
+		</h2>
+		<div id="flush-collapseFive" class="accordion-collapse collapse" aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
+		  <div class="accordion-body">
+			<p>1. Click the <b>Update</b> from the left navigation bar next the <b>Process Payroll</b> to show the Process Payroll window screen.</p>
+				<p>2. To procced 4 Step of Payroll Process specify what <b>Employee</b>, <b>Process</b>, <b>Month</b>, <b>Year</b>, and <b>Period</b> from the drop-down lists and click the <b>Save and continue</b>.</p>
+	
+			<!--imgTravelPage-->
+			<div class="w3-container city w3-animate-opacity">
+			<div class="img-content">
+				<img src="assets/FAQ images/payroll.png" alt="" class="center">
+			</div>
+		</div>
+		
+		<p style="font-size: 12px; text-align: center;"><b>Process Payroll Page</b></p>
+
+
+	<p>3. For the step 2 Click Compute button to compute the payroll of job order employees.</p>
+		<!--imgTravelDetails-->
+		<div class="w3-container city w3-animate-right">
+			<div class="img-content">
+				<img src="assets/FAQ images/paroll2.png" alt="" class="center">
+				<img src="assets/FAQ images/payroll3.png" alt="" class="center">
+				<img src="assets/FAQ images/payroll4.png" alt="" class="center">
+			</div>
+		</div>
+		 
+		<p style="font-size: 12px; text-align: center;"><b>Process Payroll Page</b></p>
+	
+		<div class="alert alert-warning alert-dismissible fade show" role="alert" style="font-size: 10px;">
+			<strong>Note:</strong> After manual editing, period salary and tax of job order employees is computed.
+			<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+		  </div>
+
+		<p>4. Click the <b>Back</b> icon to back to Process Payroll.</p>
+
+		<p>5. To process payroll, place a tick mark on the corresponding checkboxes that will be included in the processing of payroll.</p>
+		
+		<p>6. When done, click the <b>Compute</b> button  to start processing of payroll. A confirmation message will be displayed if the action was successful.</p>
+		
+		<p>7. Click the <b>Process History</b> from the left navigation bar to view the Process History window.</p>
+		
+		<div class="w3-container city w3-animate-right">
+			<div class="img-content">
+				<img src="assets/FAQ images/process history.png" alt="" class="center">
+
+				<p style="font-size: 12px; text-align: center;"><b>Process Payroll Page</b></p>
+
+				<div class="alert alert-warning alert-dismissible fade show" role="alert" style="font-size: 10px;">
+			<strong>Note:</strong> The Cashier Assistant can only view the Process History of records he/she processed. A Cashier Assistant is assigned through the HR Module.
+			<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+		  </div>	
+			
+			</div>
+		</div>
+
+		<p>8. Specify the <b>Month</b> and <b>Year</b> from the drop-down lists.</p>
+		<p>9. When done, click <b>Search</b> button  to view processing history records that matched the parameters chosen.</p>
+
+
+			  
+
+
+
+		</div>
+		</div>
+	  </div>
+
+	
+<!--6-->
+  <div class="accordion-item">
+	<h2 class="accordion-header" id="flush-headingSeven">
+	  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSeven" aria-expanded="false" aria-controls="flush-collapseSeven">
+		How can I switch to Employee Module from Payroll Module?
+	  </button>
+	</h2>
+	<div id="flush-collapseSeven" class="accordion-collapse collapse" aria-labelledby="flush-headingSeven" data-bs-parent="#accordionFlushExample">
+	  <div class="accordion-body">
+		<p>1.To switch from Payroll Module to Employee Module, click on the Down button  beside the name of the user.</p>
+		<p>2. Click the <b>Employee Module</b> link, the user will be directed to the default screen of the Employee Module.</p>
+
+ 
+
+<!--ContentEndTag-->  
+</div>
+</div>
+</div>
+
+	<script src="app.js"></script>
+</body>
+</html>

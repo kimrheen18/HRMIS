@@ -1,0 +1,1507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link rel="shortcut icon" type="image/png" href="assets/favicon.ico">
+	<link rel="stylesheet" href="style.css">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="w3.css">
+	
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	
+	<!--Title-->	
+	<title>HRMIS | Online Help</title>
+</head>
+<body onload="typeWriter()">
+
+
+ 
+
+	<!--Sidebar -->
+<div class=" w3-sidebar w3-bar-block w3-black w3-collapse w3-card w3-animate-left" style="width:230px; z-index: 5;" id="mySidebar">
+
+	
+	<button class="w3-bar-item w3-button w3-medium w3-hide-large w3-hover-red" onclick="sidebar_close()">Close &times;</button>
+
+	<div class="w3-bar-item " style="margin-top: 10px;">
+		<img src="assets/logo.png" alt="logo" width="20px" height="20px"> Online Help</div>
+
+	<input class="w3-input w3-border w3-padding sticky-sm-top sticky-top" type="text" placeholder="Search..." id="myInput" onkeyup="myFunction()" style="margin-top: 5px; margin-bottom: 10px;">
+
+	<!--Loginbtn-->
+	<div class="w3-dropdown-click">
+	<button class="w3-bar-item w3-button tablink w3-cyan" onclick="openLink(event, 'login')">Login<i class="btn w3-right w3-tiny" onclick=" myDropFunc()"></i></button>	
+	<div id="Drop" class="w3-bar-block w3-hide  w3-card w3-hover-white ">
+		<button  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'Howtologin')">How to Login</button>
+   </div>
+   </div>
+	
+	<button class="w3-bar-item w3-button tablink" onclick="openLink(event, 'DefaultScreen')">Default Screen</button>
+	<button class="w3-bar-item w3-button tablink" onclick="openLink(event, 'ExeCommodule')">Employee Module</button>
+
+	<div class="w3-dropdown-click">
+	<button class="w3-bar-item w3-button tablink" onclick="openLink(event, '201File')">201 File<i class="btn w3-right w3-tiny" onclick="myDropFunc201()"></i></button>
+	<div id="201Drop" class="w3-bar-block w3-hide  w3-card w3-hover-white">
+		<div class="w3-dropdown-click">
+	<a  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'Personalinfo')" >Personal Information<i class="btn w3-right w3-tiny" onclick="myDropFuncInfo()"></i></a>
+	<div id="InfoDrop" class="w3-bar-block w3-hide  w3-card w3-hover-white">
+		<a class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'Printdata')">How to Print Personal Data Sheet</a>
+		<a class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'Changepass')">How to Change Account Password</a>
+		</div>
+	</div>
+	<a  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'FamBg')" >Family Background </a>
+	<a  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'educ')" >Education </a>
+	<a  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'exam')" >Eligibility </a>
+	<a  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'work')" >Work Experience </a>
+	<a  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'voluntary')" >Voluntary Work </a>
+	<a  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'training')" >Trainings</a>
+	<a  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'otherInfo')" >Other Information</a>
+	<a  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'posDetails')" >Position Details</a>
+	<a  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'DAR')" >Duties and Responsibilities</a>
+	<a  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'appointment')" >Appointment Issued</a>
+
+   </div>
+   </div>
+	
+	<div class="w3-dropdown-click">
+	<button class="w3-bar-item w3-button tablink" onclick="openLink(event, 'Attendance')">Attendance <i class="btn w3-right w3-tiny" onclick="myDropFuncAtt()"></i></button>
+	<div id="AttDrop" class="w3-bar-block w3-hide  w3-card w3-hover-white">
+		<a  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'printrecord')" >How to Print Daily Time Record</a>
+		<a  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'leave')" >Leave Balance</a>
+	</div>
+     </div>
+
+
+		 
+		 <div class="w3-dropdown-click">
+		 <button class="w3-bar-item w3-button tablink" onclick="openLink(event, 'tasks')">Request Tab<i class="btn w3-right w3-tiny" onclick=" myDropFuncTaskP()"></i></button>
+		 <div id="Droptask" class="w3-bar-block w3-hide  w3-card w3-hover-white ">
+			<button  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'reqst')">How to file request</button>
+			<button  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'obreqst')">Official Business</button>
+			<button  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'leavereqst')">Leave</button>
+			<button  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'travelreqst')">Travel Order</button>
+			<button  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'Pdsreqst')">PDS Update</button>
+			<button  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'leavemonetreqst')">Leave Monetization</button>
+			<button  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'dtrreqst')">DTR Update</button>
+			<button  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'comptimereqst')">Compensatory Time off</button>
+	   </div>
+	   </div>
+
+	   <div class="w3-dropdown-click">
+		<button class="w3-bar-item w3-button tablink" onclick="openLink(event, 'notification')">Notification</button>
+		 </div>
+
+<div class="w3-dropdown-click">
+	<button class="w3-bar-item w3-button tablink" onclick="openLink(event, 'compensation')">Compensation<i class="btn w3-right w3-tiny" onclick="myDropFuncCompensation()"></i></button>
+	<div id="DropCompensation" class="w3-bar-block w3-hide  w3-card w3-hover-white">
+		<a  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'Personnelprofile')" >Personnel Profile </a>
+		<a  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'income')" >Income </a>
+		<a  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'summarydeduc')" >Deduction Summary </a>
+		<a  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'premloans')" >Premiums and Loans </a>
+		<a  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'remittance')" >Remittances </a>
+	</div>
+	 </div>
+
+
+	 
+	  <button class="w3-bar-item w3-button tablink" onclick="openLink(event, 'report')">Reports</button>
+
+		<button class="w3-bar-item w3-button tablink" onclick="openLink(event, 'user')">User</button>
+	
+	
+
+		 <div class="w3-dropdown-click">
+			<button class="w3-bar-item w3-button tablink" onclick="openLink(event, 'appendix')">Appendix A. HRMIS Reports<i class="btn w3-right w3-tiny" onclick="myDropFuncAppendix()"></i></button>
+			<div id="DropAppendix" class="w3-bar-block w3-hide  w3-card w3-hover-white">
+				<a  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'appendix1')" >Appendix A.1 Personal Data Sheet</a>
+				<a  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'appendix2')" >Appendix A.2 Service Record</a>
+				<a  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'appendix3')" >Appendix A.3 Daily Time Record</a>
+				<a  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'appendix4')" >Appendix A.4 Official Business Slip</a>
+				<a  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'appendix5')" >Appendix A.5 Application for Leave</a>
+				<a  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'appendix6')" >Appendix A.6 Travel Order</a>
+				<a  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'appendix7')" >Appendix A.7 Employee Payslip</a>
+				<a  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'appendix8')" >Appendix A.8 Remittances</a>
+				<a  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'appendix9')" >Appendix A.9 Acceptance of Resignation</a>
+				<a  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'appendix10')">Appendix A.10 Accumulated Leave Credits</a>
+				<a  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'appendix11')">Appendix A.11 Accumulated Report by Office</a>
+				<a  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'appendix12')">Appendix A.12 Assumption of Duties and Responsibilities</a>
+				<a  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'appendix13')">Appendix A.13 Certificate of Duties and Responsibilities</a>
+				<a  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'appendix14')">Appendix A.14 Certificate of Employees Compensation)</a>
+				<a  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'appendix15')">Appendix A.15 Certificate of No Administrative Charge</a>
+				<a  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'appendix16')">Appendix A.16 Certificate of No Administrative Charge (for Legal Purposes)</a>
+				<a  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'appendix17')">Appendix A.17 Certificate of Service Loyalty Award</a>
+				<a  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'appendix18')">Appendix A.18 Comparative Analysis of Candidates' Qualification</a>
+				<a  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'appendix19')">Appendix A.19 Employees First Day of Service</a>
+				<a  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'appendix20')">Appendix A.20 Employee Profile</a>
+				<a  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'appendix21')">Appendix A.21 List of Educational Attainment</a>
+				<a  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'appendix22')">Appendix A.22 List of Employees by Age</a>
+				<a  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'appendix23')">Appendix A.23 List of Employees by Date Hired</a>
+				<a  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'appendix24')">Appendix A.24 List of Employees by Date of Birth</a>
+				<a  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'appendix25')">Appendix A.25 List of Employees by Educational Attainmente</a>
+				<a  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'appendix26')">Appendix A.26 List of Employees by Gender</a>
+				<a  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'appendix27')">Appendix A.27 List of Employees by Length of Service</a>
+				<a  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'appendix28')">Appendix A.28 List of Employees by Salary Grade</a>
+				<a  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'appendix29')">Appendix A.29 List of Employees by Salary Grade (Alphabetical)</a>
+				<a  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'appendix30')">Appendix A.30 List of Employees' Date of Birth (Alphabetical)</a>
+				<a  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'appendix31')">Appendix A.31 List of Employees' Training</a>
+				<a  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'appendix32')">Appendix A.32 List of Retirees</a>
+				<a  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'appendix33')">Appendix A.33 List of Training Programs</a>
+				<a  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'appendix34')">Appendix A.34 List of Vacant Position(s)</a>
+				<a  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'appendix35')">Appendix A.35 Loyalty Report</a>
+				<a  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'appendix36')">Appendix A.36 Panunumpa sa Katungkulan</a>
+				<a  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'appendix37')">Appendix A.37 Plantilla of Personnel</a>
+				<a  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'appendix38')">Appendix A.38 Report on Tardiness</a>
+				<a  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'appendix39')">Appendix A.39 Report on Tardiness, Undertime and Absences</a>
+				<a  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'appendix40')">Appendix A.40 Trainings of Staff</a>>
+			</div>
+			 </div>
+	
+
+
+<!--sidebarEndtag-->
+</div>
+
+<!--Header-->
+<div id="main">
+<!--overlayEffect-->	
+<div class="w3-overlay" onclick="sidebar_close()" style="cursor:pointer" id="myOverlay"></div>
+
+<!--navbar-->
+  <nav class="navbar sticky-top w3-main" style="background: rgb(58, 134, 206); margin-left: 230px;">
+	<div class="container-fluid">
+		<a class="navbar-brand" href="#"><button id="openNav" class="w3-button w3-hover-blue-gray w3-xlarge w3-hide-large" onclick="sidebar_open()" id="openNav">&#9776;</button> <img src="assets/logo.png" alt="logo" width="30px" height="30px"> 
+		</a>		
+	</div>
+  </nav>
+
+
+
+	<!--displayContent-->
+<div class="w3-main " style="margin-left:250px">
+	
+	
+	<!--loginPage-->
+	<div class="loginPage">
+	<div id="login" class="w3-container page w3-animate-left">
+	  <h2>Login</h2>
+	  <p>To login to the system, the user is required to enter a valid username and password on 
+		  the Login Form at the center of the Main Page (See Figure 1-1).</p>
+
+		  <div class="img-content">
+			<img src="assets/images/LoginPage.PNG" alt="" class="center">
+		</div>	
+		<p style="font-size: 12px; text-align: center;"><b>Figure 1-1 DOST-CO HRMIS Main Page</b></p>		
+	</div>
+</div>
+
+<!--HowtoLogin-->
+	<div id="Howtologin" class="w3-container page w3-animate-left" style="display:none">
+		<h2>How to Login</h2>
+		<p>1. Enter Username and Password on the entry boxes labeled respectively. 
+			Then click Login button  (See Figure 1-2).
+		</p>
+
+		<div class="img-content">
+			<img src="assets/images/loginForm.PNG" alt="" class="center" style="width: 30%;">
+		</div>	
+		<p style="font-size: 12px; text-align: center;"><b>Figure 1-2 Login Form</b></p>
+		<p>2. If login is successful, you will be directed to the Default Screen</a>.</p>
+	  
+	</div>
+
+
+<!--DefaultScreen-->
+	<div id="DefaultScreen" class="w3-container page w3-animate-left" style="display:none">
+		
+		<div class="defaultScreen">
+	  <h2>Default Screen</h2>
+	  <p>Once logged in to the system you will be automatically directed to the Notification Section (See Figure 2).</p>
+	  
+	  <div class="img-content">
+		<img src="assets/images/defaultScreen.PNG" alt="" class="center">
+	</div>	
+	<p style="font-size: 12px; text-align: center;"><b>Figure 2 Default Page</b></p>
+	
+	
+	</div>
+
+
+<!--DefaultScreenComponents-->
+<p>These are the components of the Default Screen and a brief description of what they are:</p>
+<div class="accordion" id="accordionExample" >
+	<div class="accordion-item ">
+	  <h2 class="accordion-header" id="headingOne">
+		<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+			<strong>User</strong>
+		</button>
+	  </h2>
+	  <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+		<div class="accordion-body">
+			displays the username of the logged-in user, 
+			provides links to Switch to ERMS, Switch to PMS and Logout sub-section
+		</div>
+	  </div>
+	</div>
+	<div class="accordion-item">
+	  <h2 class="accordion-header" id="headingTwo">
+		<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+			<strong>201 Section</strong>
+		</button>
+	  </h2>
+	  <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+		<div class="accordion-body">
+			Provides links to Personal Information, Family Background, Education, Examination, Work Experience, Voluntary Works, Trainings, Other Information, Position Details, Duties and Responsibilities, Documents and ARE sub-sections
+		</div>
+	  </div>
+	</div>
+	<div class="accordion-item">
+	  <h2 class="accordion-header" id="headingThree">
+		<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+			<strong>Attendance Section</strong>
+		</button>
+	  </h2>
+	  <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+		<div class="accordion-body">
+			Provides link to Daily Time Record,
+			 Employees Present, Employees Absent, Employees on Leave and Employees on OB/TO/TT Sub-sections
+		</div>
+	  </div>
+	</div>
+	
+	<div class="accordion-item">
+		<h2 class="accordion-header" id="headingFour">
+		  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+			  <strong>Request Section </strong>
+		  </button>
+		</h2>
+		<div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+		  <div class="accordion-body">
+			Provides links to Official Business, Seminars/Trainings, Leave, Travel Order, PDS Update, Reports and Leave Monetization sub-sections
+		  </div>
+		</div>
+	  </div>
+
+	  <div class="accordion-item">
+		<h2 class="accordion-header" id="headingFive">
+		  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+			  <strong>Notification Section</strong>
+		  </button>
+		</h2>
+		<div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
+		  <div class="accordion-body">
+			Provides link to Request Status sub-section
+		  </div>
+		</div>
+	  </div>
+
+	  <div class="accordion-item">
+		<h2 class="accordion-header" id="headingSix">
+		  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+			  <strong>Compensation Section</strong>
+		  </button>
+		</h2>
+		<div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#accordionExample">
+		  <div class="accordion-body">
+			Provides links to Personnel Profile, Income, Deduction
+		  </div>
+		</div>
+	  </div>
+
+	  <div class="accordion-item">
+		<h2 class="accordion-header" id="headingSeven">
+		  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+			  <strong>Reports Section</strong>
+		  </button>
+		</h2>
+		<div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven" data-bs-parent="#accordionExample">
+		  <div class="accordion-body">
+			Provides link to Report sub-section
+		  </div>
+		</div>
+	  </div>
+<!--endTag-->	
+	</div>
+</div>
+<!--ComponentsEndtag-->
+
+	<div id="ExeCommodule" class="w3-container page w3-animate-left" style="display:none">
+	  <h2>Execom Module</h2>
+	  <p>The Execom Module is one component of DOST-CO HRMIS that presents the overall information regarding the head of 
+		  the agency which includes the Department Secretary, Under Secretaries and Assistant Secretaries. 
+		  This module provides access for users to view his/her personal data, attendance records, compensation details,
+		   file requests to HR personnel and requests of subordinates.</p>
+        <br>
+		  <p>The Execom Module allows employees to:</p>
+		 
+			<div class="accordion" id="accordionExample">
+			<div class="accordion-item">
+			  
+				<h2 class="accordion-header" id="headingEight">
+				<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEight" aria-expanded="true" aria-controls="collapseEight">
+					<strong>201 File Section</strong> 
+				</button>
+			  </h2>
+			  <div id="collapseEight" class="accordion-collapse collapse" aria-labelledby="headingEight" data-bs-parent="#accordionExample">
+				<div class="accordion-body">	
+					  <ul class="list-group w3-animate-right">
+						<li class="list-group-item">View Personal Information</li>
+						<li class="list-group-item">View Family Background</li>
+						<li class="list-group-item">View Education</li>
+						<li class="list-group-item">View Examination</li>
+						<li class="list-group-item">View Work Experience</li>
+						<li class="list-group-item">View Voluntary Works</li>
+						<li class="list-group-item">View Trainings</li>
+						<li class="list-group-item">View Other Information</li>
+						<li class="list-group-item">View Position Details</li>
+						<li class="list-group-item">View Duties and Responsibilities</li>
+						<li class="list-group-item">View Documents</li>
+						<li class="list-group-item">View ARE</li>
+						<li class="list-group-item">Change User Password</li>
+						<li class="list-group-item">View and Print Personal Data Sheet</li>
+					  </ul>
+				</div>
+			  </div>
+			</div>
+
+		<div class="accordion-item">
+			  <h2 class="accordion-header" id="headingNine">
+				<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
+					<strong>Attendance Section</strong>
+				</button>
+			  </h2>
+			  <div id="collapseNine" class="accordion-collapse collapse" aria-labelledby="headingNine" data-bs-parent="#accordionExample">
+				<div class="accordion-body">
+					  <ul class="list-group w3-animate-right">
+						<li class="list-group-item">View Daily Time Record</li>
+						<li class="list-group-item">View Daily Time Record of Employees within the Agency</li>
+						<li class="list-group-item">View Employees Present</li>
+						<li class="list-group-item">View Employees Absent</li>
+						<li class="list-group-item">View Employees on Leave</li>
+						<li class="list-group-item">View Employees on OB/TO/TT</li>
+					  </ul>
+				</div>
+			  </div>
+			</div>
+
+
+			<div class="accordion-item">
+			  
+				<h2 class="accordion-header" id="headingTen">
+				<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTen" aria-expanded="false" aria-controls="collapseTen">
+					<strong>Request Section</strong> 
+				</button>
+			  </h2>
+			  <div id="collapseTen" class="accordion-collapse collapse" aria-labelledby="headingTen" data-bs-parent="#accordionExample">
+				<div class="accordion-body">	
+					  <ul class="list-group w3-animate-right">
+						<li class="list-group-item">File Requests On-line</li>
+						<li class="list-group-item">Approve Requests</li>
+						<li class="list-group-item">Disapprove Requests</li>
+						<li class="list-group-item">View and Print Requests</li>
+					  </ul>
+				</div>
+			  </div>
+			</div>
+
+			<div class="accordion-item">
+			  
+				<h2 class="accordion-header" id="headingEleven">
+				<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEleven" aria-expanded="false" aria-controls="collapseEleven">
+					<strong>Notification Section</strong> 
+				</button>
+			  </h2>
+			  <div id="collapseEleven" class="accordion-collapse collapse" aria-labelledby="headingEleven" data-bs-parent="#accordionExample">
+				<div class="accordion-body">	
+					  <ul class="list-group w3-animate-right">
+						<li class="list-group-item">View Notifications on Employee Requests</li>
+						<li class="list-group-item">Cancel Requests</li>
+					  </ul>
+				</div>
+			  </div>
+			</div>
+
+			<div class="accordion-item">
+			  
+				<h2 class="accordion-header" id="headingTwelve">
+				<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwelve" aria-expanded="false" aria-controls="collapseTwelve">
+					<strong>Compensation Section</strong> 
+				</button>
+			  </h2>
+			  <div id="collapseTwelve" class="accordion-collapse collapse" aria-labelledby="headingEleven" data-bs-parent="#accordionExample">
+				<div class="accordion-body">	
+					  <ul class="list-group w3-animate-right">
+						<li class="list-group-item">View Personnel Profile</li>
+						<li class="list-group-item">View Income</li>
+						<li class="list-group-item">View Deduction Summary</li>
+						<li class="list-group-item">View Premiums and Loans</li>
+						<li class="list-group-item">View Remittances</li>
+						<li class="list-group-item">View and Print Reports</li>
+					  </ul>
+				</div>
+			  </div>
+			</div>
+
+
+			<div class="accordion-item">
+			  
+				<h2 class="accordion-header" id="headingThirtheen">
+				<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThirtheen" aria-expanded="false" aria-controls="collapseThirtheen">
+					<strong>User Section</strong> 
+				</button>
+			  </h2>
+			  <div id="collapseThirtheen" class="accordion-collapse collapse" aria-labelledby="headingEleven" data-bs-parent="#accordionExample">
+				<div class="accordion-body">	
+					  <ul class="list-group w3-animate-right">
+						<li class="list-group-item">Logout from the system</li>
+					  </ul>
+				</div>
+			  </div>
+			</div>
+		
+		</div>	
+		  </div>
+		<!--ExeComEndTag-->  
+
+	<div id="201File" class="w3-container page w3-animate-left" style="display:none">
+		<h2>201 File</h2>
+		<p>This part of the section contains personal information as required in CSC Form 212 (Revised 2005). It also contains personal documents
+			 such as Special Order or Administrative Order Memorandum and others from the 
+			 DOST-CO ERMS and personal records such as ARE from DOST-CO PMS.</p> 
+  
+			 <p>1. To access the PDS page, click the <strong>PDS</strong> tab (See Figure 3-1).</p>
+  
+
+  
+			 <div class="img-content">
+			  <img src="assets/images/defaultscreen.PNG" alt="" class="center">
+		  </div>	
+		  <p style="font-size: 12px; text-align: center;"><b>Figure 3-1 201 File page</b></p>
+	  </div>
+  
+	  <div id="Personalinfo" class="w3-container page w3-animate-left" style="display:none">
+		<h2>Personal Information</h2>
+  
+			 <p>1. Click the <Strong>Personal Info</Strong> tab to view the Personal Information page (See Figure 3-2).
+			</p>
+  
+			 <div class="img-content">
+			  <img src="assets/images/defaultscreen.PNG" alt="" class="center">
+		  </div>	
+		  <p style="font-size: 12px; text-align: center;"><b>Figure 3-2 Personal Information page</b></p>
+	  </div>
+
+	  <div id="Printdata" class="w3-container page w3-animate-left" style="display:none">
+		<h2>How to Print Personal Data Sheet</h2>
+  
+			 <p>1. To print a copy of PDS, click <strong>Print Personal Data Sheet</strong> button <img src="assets/images/printdatasheet.PNG" style="width: 100px;">.
+			</p>
+  
+			 <div class="img-content">
+			  <img src="assets/images/defaultscreen.PNG" alt="" class="center">
+		  </div>	
+		  <p style="font-size: 12px; text-align: center;"><b>Figure 3-2 Personal Information page</b></p>
+	  </div>
+
+	  <div id="Changepass" class="w3-container page w3-animate-left" style="display:none">
+		<h2>How to Change Account Password</h2>
+  
+			 <p>1. To change password, type in the new one on the entry box labeled <strong>change password</strong> (See Figure 3-3).
+			</p>
+  
+			 <div class="img-content">
+			  <img src="assets/images/changepass.PNG" alt="" class="center">
+		  </div>	
+		  <p style="font-size: 12px; text-align: center;"><b>Figure 3-3 Change of Password Form</b></p>
+
+		  	<!--Alert-->
+	<div class="alert alert-warning alert-dismissible fade show" role="alert" style="font-size: 10px;">
+		<strong>Note:</strong> Password entered in change password should match with the password entered in confirm password to be able to change password.
+		<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+	  </div>	
+
+	  <p>2. When done, click <strong>Submit</strong> button to change the previous password. A confirmation message will be displayed if the action is successful.</p>
+	  </div>
+  
+  
+	  <div id="FamBg" class="w3-container page w3-animate-left" style="display:none">
+		<h2>Family Background</h2>
+  
+			 <p>1. Click the <strong>Family Background</strong> tab to view the Family Background page (See Figure 3-4).
+			</p>
+  
+			 <div class="img-content">
+			  <img src="assets/images/familybackground.PNG" alt="" class="center">
+		  </div>	
+		  <p style="font-size: 12px; text-align: center;"><b>Figure 3-4 Family Background page</b></p>
+
+	  </div>
+
+	  <div id="educ" class="w3-container page w3-animate-left" style="display:none">
+		<h2>Education</h2>
+  
+			 <p>1. Click the <strong>Education</strong> tab to view the Education page (See Figure 3-5).
+			</p>
+  
+			 <div class="img-content">
+			  <img src="assets/images/Educationtab.PNG" alt="" class="center">
+		  </div>	
+		  <p style="font-size: 12px; text-align: center;"><b>Figure 3-5 Education page</b></p>
+
+	  </div>
+	
+	  <div id="exam" class="w3-container page w3-animate-left" style="display:none">
+		<h2>Eligibility</h2>
+  
+			 <p>1. Click the <strong>Eligibility</strong> tab to view the Eligibility page (See Figure 3-6).
+			</p>
+  
+			 <div class="img-content">
+			  <img src="assets/images/exam.PNG" alt="" class="center">
+		  </div>	
+		  <p style="font-size: 12px; text-align: center;"><b>Figure 3-6 Eligibility page</b></p>
+
+	  </div>
+  
+	  <div id="work" class="w3-container page w3-animate-left" style="display:none">
+		<h2>Work Experience</h2>
+  
+			 <p>1. Click the <strong>Work Experience</strong> tab to view the Work Experience page (See Figure 3-7).
+			</p>
+  
+			 <div class="img-content">
+			  <img src="assets/images/workExp.PNG" alt="" class="center">
+		  </div>	
+		  <p style="font-size: 12px; text-align: center;"><b>Figure 3-7 Work Experience page</b></p>
+
+	  </div>
+
+	  <div id="voluntary" class="w3-container page w3-animate-left" style="display:none">
+		<h2>Voluntary Work</h2>
+  
+			 <p>1. Click the <strong>Voluntary Work</strong> tab to view the Voluntary Work page (See Figure 3-8).
+
+			</p>
+  
+			 <div class="img-content">
+			  <img src="assets/images/voluntarywork.PNG" alt="" class="center">
+		  </div>	
+		  <p style="font-size: 12px; text-align: center;"><b>Figure 3-8 Voluntary Work page</b></p>
+
+	  </div>
+	
+	  <div id="training" class="w3-container page w3-animate-left" style="display:none">
+		<h2>Trainings</h2>
+  
+			 <p>1.Click the <strong>Trainings</strong> tab to view the Trainings page (See Figure 3-9).
+
+			</p>
+  
+			 <div class="img-content">
+			  <img src="assets/images/trainings.PNG" alt="" class="center">
+		  </div>	
+		  <p style="font-size: 12px; text-align: center;"><b>Figure 3-9 Trainings page</b></p>
+
+	  </div>
+
+	  <div id="otherInfo" class="w3-container page w3-animate-left" style="display:none">
+		<h2>Other Information</h2>
+  
+			 <p>1. Click the <strong>Other Information</strong> tab to view the Other Information page (See Figure 3-10).
+
+			</p>
+  
+			 <div class="img-content">
+			  <img src="assets/images/ohterInfo.PNG" alt="" class="center">
+		  </div>	
+		  <p style="font-size: 12px; text-align: center;"><b>Figure 3-10 Other Information page</b></p>
+
+	  </div>
+	
+	  <div id="posDetails" class="w3-container page w3-animate-left" style="display:none">
+		<h2>Position Details</h2>
+  
+			 <p>1. Click the <strong>Position Details</strong> tab to view the Position Details page (See Figure 3-11).
+
+			</p>
+  
+			 <div class="img-content">
+			  <img src="assets/images/positionDetails.PNG" alt="" class="center">
+		  </div>	
+		  <p style="font-size: 12px; text-align: center;"><b>Figure 3-11 Position Details page</b></p>
+
+	  </div>
+	
+
+	  <div id="DAR" class="w3-container page w3-animate-left" style="display:none">
+		<h2>Duties and Responsibilities</h2>
+  
+			 <p>1. Click the <strong>Duties and Responsibilities</strong> tab to view the Duties and Responsibilities page (See Figure 3-12).
+
+
+			</p>
+  
+			 <div class="img-content">
+			  <img src="assets/images/dAR.PNG" alt="" class="center">
+		  </div>	
+		  <p style="font-size: 12px; text-align: center;"><b>Figure 3-12 Duties and Responsibilities page</b></p>
+
+	  </div>
+
+	  <div id="appointment" class="w3-container page w3-animate-left" style="display:none">
+		<h2>Appointment Issued</h2>
+  
+			 <p>1. Click the <strong>Appointment Issued</strong> tab to view the Appointment Issued page (See Figure 3-13).
+			</p>
+  
+			 <div class="img-content">
+			  <img src="assets/images/appointmentIssue.PNG" alt="" class="center">
+		  </div>	
+		  <p style="font-size: 12px; text-align: center;"><b>Figure 3-13 Appointment Issued page</b></p>
+
+	  </div>
+
+	  <div id="Attendance" class="w3-container page w3-animate-left" style="display:none">
+		<h2>Attendance</h2>
+		<p>This part of the section contains information about officer’s attendance details of as well as that of employee’s 
+			under the same office. Information such as the employee’s time in and time out, the total number of working days, 
+			the number of days the employee reported to office and the number of days the employee was absent or was on leave. 
+			This section also contains the list of employees present, list of employees absent, list of employees on leave and list of employees on OB/TO/TT.</p>
+  
+			 <p>1. To access the Daily Time Record, click the <strong>Attendance</strong> Tab (See Figure 3-14).
+			</p>
+  
+			 <div class="img-content">
+			  <img src="assets/images/dailyTimeRecord.PNG" alt="" class="center">
+		  </div>	
+		  <p style="font-size: 12px; text-align: center;"><b>Figure 3-14 Attendance page</b></p>
+
+		  
+		  	<!--Alert-->
+	<div class="alert alert-warning alert-dismissible fade show" role="alert" style="font-size: 10px;">
+		<strong>Note:</strong> Default DTR shown is of the current month.
+		<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+	  </div>	
+
+	  <p>2. To view attendance from previous month(s), specify <strong>Month</strong> and <strong>Year</strong> desired from the drop-down lists.</p>
+	  <p>3. When done, click <strong>Search button</strong> to display the DTR that matched the parameters chosen.</p>
+
+
+
+	  </div>
+	
+
+	  <div id="printrecord" class="w3-container page w3-animate-left" style="display:none">
+		<h2>How to Print Daily Time Record</h2>
+  
+		<p>1. To print a copy of DTR, click Print/Preview button <img src="assets/images/previewprintbtn.PNG" style="width: 70px;">. The printable document will appear in a new window.</p>
+  
+			 <div class="img-content">
+			  <img src="assets/images/dailyTimeRecord.PNG" alt="" class="center">
+		  </div>	
+		  <p style="font-size: 12px; text-align: center;"><b>Figure 3-14 Attendance page</b></p>
+
+	  </div>
+
+	  <div id="leave" class="w3-container page w3-animate-left" style="display:none">
+		<h2>Leave Balance</h2>
+  
+		<p>1. To access Leave Balance, Click the <strong>Leave Balance</strong> tab (See Figure 3-15).</p>
+  
+			 <div class="img-content">
+			  <img src="assets/images/leavepage.PNG" alt="" class="center">
+		  </div>	
+		  <p style="font-size: 12px; text-align: center;"><b>Figure 3-15 Leave Balance page</b></p>
+
+	  </div>
+
+
+	  <div id="tasks" class="w3-container page w3-animate-left" style="display:none">
+		<h2>Request</h2>
+		<p>This part of the section allows the employees to send request files on-line. 
+			This is where the employee can file for Official Business Request, file for Seminars/Trainings attendance, 
+			file for Leave application, file for Travel Order authority, 
+			update employee’s Personal Data Sheet, request for reports generation and monetization of leave benefits.</p>
+  
+			 <p>1. To access the <strong>Request</strong> page, click the Request tab (See Figure 3-16).
+			</p>
+  
+			 <div class="img-content">
+			  <img src="assets/images/requestpage.PNG" alt="" class="center">
+		  </div>	
+		  <p style="font-size: 12px; text-align: center;"><b>Figure 3-16 Request page</b></p>
+
+	  </div>
+
+	  <div id="reqst" class="w3-container page w3-animate-left" style="display:none">
+		<h2>Official Business</h2>
+		<p>1. Click the <strong>Official Business</strong> tab from the dropdown list of Request tab to view the Official Business page (See Figure 3-17).</p>
+  
+
+  
+			 <div class="img-content">
+			  <img src="assets/images/OfficialBusiness.PNG" alt="" class="center">
+		  </div>	
+		  <p style="font-size: 12px; text-align: center;"><b>Figure 3-17 Official Businiess page</b></p>
+
+		  <p>2. Type in the <strong>Date</strong>, <strong>Time In</strong>, <strong>Time Out</strong>, <strong>Destination</strong> and <strong>Purpose</strong>.</p>
+          <p>3. When done, click <strong>Submit</strong> button to proceed to User Identity Validation or the <strong>Cancel</strong> button to cancel operation.</p>
+	  </div>
+
+	  <div id="obreqst" class="w3-container page w3-animate-left" style="display:none">
+		<h2>Official Business</h2>
+		<p>1. Click the <strong>Official Business</strong> tab from the dropdown list of Request tab to view the Official Business page (See Figure 3-17).</p>
+  
+
+  
+			 <div class="img-content">
+			  <img src="assets/images/OfficialBusiness.PNG" alt="" class="center">
+		  </div>	
+		  <p style="font-size: 12px; text-align: center;"><b>Figure 3-17 Official Businiess page</b></p>
+
+		  <p>2. Type in the <strong>Date</strong>, <strong>Time In</strong>, <strong>Time Out</strong>, <strong>Destination</strong> and <strong>Purpose</strong>.</p>
+          <p>3. When done, click <strong>Submit</strong> button to proceed to User Identity Validation or the <strong>Cancel</strong> button to cancel operation.</p>
+	  </div>
+
+	  <div id="leavereqst" class="w3-container page w3-animate-left" style="display:none">
+		<h2>Leave</h2>
+		<p>1. Click the <strong>Leave</strong> tab from the dropdown list of Request tab to view the Leave page (See Figure 3-18).</p>
+  
+
+  
+			 <div class="img-content">
+			  <img src="assets/images/leavereqpage.PNG" alt="" class="center">
+		  </div>	
+		  <p style="font-size: 12px; text-align: center;"><b>Figure 3-18 Leave page</b></p>
+
+		  <p>2. Specify the <strong>Type of Leave</strong> from the drop-down list.</p>
+		  <p>3. Type in the <strong>Date</strong>, <strong>Number of Days Applied</strong> and <strong>Reasons for Applying</strong>.</p>
+          <p>4. When done, click <strong>Submit</strong> button to proceed to User Identity Validation or the <strong>Cancel</strong> button to cancel operation.</p>
+	  </div>
+
+
+	  <div id="travelreqst" class="w3-container page w3-animate-left" style="display:none">
+		<h2>Travel Order</h2>
+		<p>1. Click the <strong>Travel Order</strong> tab from the dropdown list of Request tab to view the Travel Order page (See Figure 3-19).</p>
+  
+
+  
+			 <div class="img-content">
+			  <img src="assets/images/travelOrder.PNG" alt="" class="center">
+		  </div>	
+		  <p style="font-size: 12px; text-align: center;"><b>Figure 3-19 Travel Order page</b></p>
+
+		  <p>2. Type in the <strong>Destination</strong>, <strong>Date</strong> and <strong>Purpose</strong>.</p>
+          <p>3. When done, click <strong>Submit</strong> button to proceed to User Identity Validation or the <strong>Cancel</strong> button to cancel operation.</p>
+	  </div>
+
+	  <div id="Pdsreqst" class="w3-container page w3-animate-left" style="display:none">
+		<h2>PDS Update</h2>
+		<p>1. Click the <strong>PDS Update</strong> tab from the dropdown list of Request tab to view the PDS Update page (See Figure 3-20).</p>
+  
+
+  
+			 <div class="img-content">
+			  <img src="assets/images/pdsRequest.PNG" alt="" class="center">
+		  </div>	
+		  <p style="font-size: 12px; text-align: center;"><b>Figure 3-20 PDS Update page</b></p>
+
+		  <p>2. To update PDS, specify the <strong>Type of Profile</strong> from the drop-down list.</p>
+		  <p>3. To update previous information, click the <strong>Edit</strong> button opposite the information to edit.</p>
+		  <p>4. To add new information, fill-up the entry box that constitutes the parameters for adding new information.</p>
+          <p>5. When done, click <strong>Submit</strong> button to proceed to User Identity Validation or the <strong>Cancel</strong> button to cancel operation.</p>
+	  </div>
+	 
+	  <div id="leavemonetreqst" class="w3-container page w3-animate-left" style="display:none">
+		<h2>Leave Monetization</h2>
+		<p>1. Click the <strong>Leave Monetization</strong> tab from the dropdown list of Request tab to view the Leave Monetization page (See Figure 3-21).</p>
+  
+
+  
+			 <div class="img-content">
+			  <img src="assets/images/leaveMonetization.PNG" alt="" class="center">
+		  </div>	
+		  <p style="font-size: 12px; text-align: center;"><b>Figure 3-21 Leave Monetization page</b></p>
+
+		  <p>2. Place a tick mark on the <strong>Commutation</strong> checkbox to request for Leave Commutation.</p>
+		  <p>3. When done, click  <strong>Submit</strong>button to file request for Leave Monetization.</p>
+
+		  	<!--Alert-->
+	<div class="alert alert-warning alert-dismissible fade show" role="alert" style="font-size: 10px;">
+		<strong>Note:</strong> Only regular employees can file for Leave Monetization.
+		<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+	  </div>	
+	  	<!--Alert-->
+	<div class="alert alert-warning alert-dismissible fade show" role="alert" style="font-size: 10px;">
+		<strong>Note:</strong> Check leave credits and review the guidelines before submitting request to avoid errors and conflict.
+		<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+	  </div>	
+		 
+	  </div>
+
+
+	  <div id="dtrreqst" class="w3-container page w3-animate-left" style="display:none">
+		<h2>DTR Update</h2>
+		<p>1. Click the <strong>DTR Update</strong> tab from the dropdown list of Request tab to view the DTR Update page (See Figure 3-22).</p>
+  
+
+  
+			 <div class="img-content">
+			  <img src="assets/images/dtrUpdate.PNG" alt="" class="center">
+		  </div>	
+		  <p style="font-size: 12px; text-align: center;"><b>Figure 3-22 DTR Update page</b></p>
+
+		  <p>2. To add new information, fill-up the entry box that constitutes the parameters for adding new information including <strong>Date</strong>, <strong>Time</strong>, <strong>Reason</strong> and <strong>Supporting Evidence</strong>.</p>
+		  <p>3. Specify <strong>Authorized Official (Signatory)</strong> from the dropdown list. </p>
+          <p>5. When done, click <strong>Submit</strong> button to proceed to User Identity Validation or the <strong>Cancel</strong> button to cancel operation.</p>
+	  </div>
+
+	  <div id="comptimereqst" class="w3-container page w3-animate-left" style="display:none">
+		<h2>Compesary Time Off</h2>
+		<p>1. Click the <strong>Compesary Time Off</strong> tab from the dropdown list of Request tab to view the Compesary Time Off page (See Figure 3-23).</p>
+  
+
+  
+			 <div class="img-content">
+			  <img src="assets/images/compesatoryTime.PNG" alt="" class="center">
+		  </div>	
+		  <p style="font-size: 12px; text-align: center;"><b>Figure 3-23 Compesary Time Off page</b></p>
+
+		  <p>2. To add new information, fill-up the entry box that constitutes the parameters for adding new information including <strong>Date</strong>, <strong>Time</strong> and <strong>Purpose</strong>.</p>
+		  <p>3. Specify <strong>Recommending Approval</strong> and <strong>Approval / Disapproval</strong> from the dropdown list. </p>
+          <p>5. When done, click <strong>Submit</strong> button to proceed to User Identity Validation or the <strong>Cancel</strong> button to cancel operation.</p>
+	  </div>
+
+
+	  <div id="notification" class="w3-container page w3-animate-left" style="display:none">
+		<h2>Notification</h2>
+		<p>This part of the section allows the employee to view the status of requests filed, as well as the history of employee’s requests.</p>
+		<p>1. To access the Notification page, click the <strong>Notification bell</strong> on navigation bar (See Figure 3-24).</p>
+  
+
+  
+			 <div class="img-content">
+			  <img src="assets/images/notification page.PNG" alt="" class="center">
+		  </div>	
+		  <p style="font-size: 12px; text-align: center;"><b>Figure 3-24 Notification page</b></p>
+
+		  <p>2. To view the status and history of requests, click <Strong>View</Strong> button. A new window will open showing the history of requests.</p>
+          <p>3. To cancel a request, click the <strong>Cancel</strong> button opposite the corresponding request to cancel.</p>
+	  </div>
+
+
+	  <div id="compensation" class="w3-container page w3-animate-left" style="display:none">
+		<h2>Compensation</h2>
+		<p>This part of the section contains information regarding the employee’s compensation details. In this section information such as the employee’s Personal Profile,
+			 the employee’s Income, the employee’s Deduction Summary, the employee’s Premiums/Loans, the employee’s Remittances and Compensation Reports are displayed.</p>
+		<p>1. To access the Compensation page, click the <Strong>Compensation</Strong> tab (See Figure 3-25).</p>
+  
+
+  
+			 <div class="img-content">
+			  <img src="assets/images/compensationPage.PNG" alt="" class="center">
+		  </div>	
+		  <p style="font-size: 12px; text-align: center;"><b>Figure 3-25 Compensation page</b></p>
+
+	  </div>
+
+	  <div id="Personnelprofile" class="w3-container page w3-animate-left" style="display:none">
+		<h2>Personnel Profile</h2>
+		<p>1. Click the Personnel Profile tab to view the Personnel Profile page (See Figure 3-26).</p>
+  
+
+  
+			 <div class="img-content">
+			  <img src="assets/images/compensationPage.PNG" alt="" class="center">
+		  </div>	
+		  <p style="font-size: 12px; text-align: center;"><b>Figure 3-26 Personnel Profile page</b></p>
+
+	  </div>
+
+	  <div id="income" class="w3-container page w3-animate-left" style="display:none">
+		<h2>Income</h2>
+		<p>1. Click the Income tab to view the Income page (See Figure 3-27).</p>
+  
+
+  
+			 <div class="img-content">
+			  <img src="assets/images/incomepage.PNG" alt="" class="center">
+		  </div>	
+		  <p style="font-size: 12px; text-align: center;"><b>Figure 3-27 Income page</b></p>
+
+	  </div>
+
+	  <div id="summarydeduc" class="w3-container page w3-animate-left" style="display:none">
+		<h2>Deduction Summary</h2>
+		<p>1. Click the Deduction Summary tab to view the Deduction Summary page (See Figure 3-28).</p>
+  
+
+  
+			 <div class="img-content">
+			  <img src="assets/images/deductionSummary.PNG" alt="" class="center">
+		  </div>	
+		  <p style="font-size: 12px; text-align: center;"><b>Figure 3-28 Income page</b></p>
+
+	  </div>
+
+	  <div id="premloans" class="w3-container page w3-animate-left" style="display:none">
+		<h2>Premiums/Loans</h2>
+		<p>1. Click the Premiums/Loans tab to view the Premiums/Loans page (See Figure 3-29).</p>
+  
+
+  
+			 <div class="img-content">
+			  <img src="assets/images/premloans.PNG" alt="" class="center">
+		  </div>	
+		  <p style="font-size: 12px; text-align: center;"><b>Figure 3-29 Premiums/Loans page</b></p>
+
+	  </div>
+
+	  <div id="remittance" class="w3-container page w3-animate-left" style="display:none">
+		<h2>Remittances</h2>
+		<p>1. Click the Remittances tab to view the Remittances page (See Figure 3-30).</p>
+  
+
+  
+			 <div class="img-content">
+			  <img src="assets/images/remittances.PNG" alt="" class="center">
+		  </div>	
+		  <p style="font-size: 12px; text-align: center;"><b>Figure 3-30 Remittances</b></p>
+
+		  <p>2. To view Remittances, specify the <strong>Remittance Type</strong> from the drop-down list.</p>
+		  <p>3. Select the <strong>Start Year</strong> and <strong>End Year</strong> from the drop-down lists.</p>
+		  <p>4. When done, click <strong>Search</strong> button to display remittances that matched parameters chosen.
+		</p>
+	  </div>
+
+	  <div id="report" class="w3-container page w3-animate-left" style="display:none">
+		<h2>Reports</h2>
+		<p>This section allows user to generate and print various reports.</p>
+  
+		<p>1. To access the Reports page, click <Strong>Reports</Strong> tab (See Figure 3-31).</p>
+		<p>2. Specify <Strong>Type of Reports</Strong> from the dropdown list. </p>
+			
+		<div class="img-content">
+			  <img src="assets/images/reportpage.PNG" alt="" class="center">
+		  </div>	
+		  <p style="font-size: 12px; text-align: center;"><b>Figure 3-31 Reports page</b></p>
+	  </div>
+	  
+	 
+	  <div id="user" class="w3-container page w3-animate-left" style="display:none">
+		<h2>User</h2>
+		<p>This part of the section contains details regarding the user who is logged-in.
+			 This includes information such as the name of the user currently logged-in, other user type(s) he/she can access, 
+			other system connected with HRMIS and the logout option. The User is located at the upper-right side of the screen (See Figure 3-32).</p>
+  
+
+  
+			 <div class="img-content">
+			  <img src="assets/images/user.PNG" alt="" class="center">
+		  </div>	
+		  <p style="font-size: 12px; text-align: center;"><b>Figure 3-32 User Form</b></p>
+
+	  <p>1. To logout from the system, click on the <strong>Down</strong> icon beside the name of the user.</p>
+	  <p>2. Click the <strong>Logout</strong> tab, the user will be directed to the main page of HRMIS.</p>
+	  </div>
+
+
+
+
+	  <div id="appendix" class="w3-container page w3-animate-left" style="display: none;">
+		<h2>Appendix A: HRMIS Reports</h2>
+
+
+	    <p>A.1 Personal Data Sheet</p>
+	
+			<div class="img-content">
+			  <img src="assets/appendix/A1.png" alt="" class="center">
+		  </div>	
+      </div>
+
+	  <div id="appendix1" class="w3-container page w3-animate-left" style="display: none;">
+		<h2>Appendix A: HRMIS Reports</h2>
+
+
+	    <p>A.1 Personal Data Sheet</p>
+	
+			<div class="img-content">
+			  <img src="assets/appendix/A1.png" alt="" class="center">
+		  </div>	
+      </div>
+
+	  <div id="appendix2" class="w3-container page w3-animate-left" style="display: none;">
+		<h2>Appendix A: HRMIS Reports</h2>
+
+
+	    <p>A.2 Service Record</p>
+	
+			<div class="img-content">
+			  <img src="assets/appendix/A2.png" alt="" class="center">
+		  </div>	
+      </div>
+
+	  <div id="appendix3" class="w3-container page w3-animate-left" style="display: none;">
+		<h2>Appendix A: HRMIS Reports</h2>
+
+
+	    <p>A.3 Daily Time Record</p>
+	
+			<div class="img-content">
+			  <img src="assets/appendix/A3.png" alt="" class="center">
+		  </div>	
+      </div>
+
+	  <div id="appendix4" class="w3-container page w3-animate-left" style="display: none;">
+		<h2>Appendix A: HRMIS Reports</h2>
+
+
+	    <p>A.4 Official Business Slip</p>
+	
+			<div class="img-content">
+			  <img src="assets/appendix/A4.png" alt="" class="center">
+		  </div>	
+      </div>
+
+	  <div id="appendix5" class="w3-container page w3-animate-left" style="display: none;">
+		<h2>Appendix A: HRMIS Reports</h2>
+
+
+	    <p>A.5 Application for Leave</p>
+	
+			<div class="img-content">
+			  <img src="assets/appendix/A5.png" alt="" class="center">
+		  </div>	
+      </div>
+
+	  <div id="appendix6" class="w3-container page w3-animate-left" style="display: none;">
+		<h2>Appendix A: HRMIS Reports</h2>
+
+
+	    <p>A.6 Travel Order</p>
+	
+			<div class="img-content">
+			  <img src="assets/appendix/A6.png" alt="" class="center">
+		  </div>	
+      </div>
+	  
+	  <div id="appendix7" class="w3-container page w3-animate-left" style="display: none;">
+		<h2>Appendix A: HRMIS Reports</h2>
+
+
+	    <p>A.7 Employee Payslip</p>
+	
+			<div class="img-content">
+			  <img src="assets/appendix/A7.jpg" alt="" class="center">
+		  </div>	
+      </div>
+
+	  <div id="appendix8" class="w3-container page w3-animate-left" style="display: none;">
+		<h2>Appendix A: HRMIS Reports</h2>
+
+
+	    <p>A.8 Remittances
+
+		</p>
+	
+			<div class="img-content">
+			  <img src="assets/appendix/A8.png" alt="" class="center">
+		  </div>	
+      </div>
+
+	  <div id="appendix9" class="w3-container page w3-animate-left" style="display: none;">
+		<h2>Appendix A: HRMIS Reports</h2>
+
+
+	    <p>A.9 Acceptance of Resignation</p>
+	
+			<div class="img-content">
+			  <img src="assets/appendix/A9.png" alt="" class="center">
+		  </div>	
+      </div>
+
+	  <div id="appendix10" class="w3-container page w3-animate-left" style="display: none;">
+		<h2>Appendix A: HRMIS Reports</h2>
+
+
+	    <p>A.10 Accumulated Leave Credits</p>
+	
+			<div class="img-content">
+			  <img src="assets/appendix/A10.png" alt="" class="center">
+		  </div>	
+      </div>
+
+	  <div id="appendix11" class="w3-container page w3-animate-left" style="display: none;">
+		<h2>Appendix A: HRMIS Reports</h2>
+
+
+	    <p>A.11 Accumulated Report by Office</p>
+	
+			<div class="img-content">
+			  <img src="assets/appendix/A11.png" alt="" class="center">
+		  </div>	
+      </div>
+
+	  <div id="appendix12" class="w3-container page w3-animate-left" style="display: none;">
+		<h2>Appendix A: HRMIS Reports</h2>
+
+
+	    <p>A.12 Assumption of Duties and Responsibilities</p>
+	
+			<div class="img-content">
+			  <img src="assets/appendix/A12.png" alt="" class="center">
+		  </div>	
+      </div>
+
+	  <div id="appendix13" class="w3-container page w3-animate-left" style="display: none;">
+		<h2>Appendix A: HRMIS Reports</h2>
+
+
+	    <p>A.13 Certificate of Duties and Responsibilities</p>
+	
+			<div class="img-content">
+			  <img src="assets/appendix/A13.png" alt="" class="center">
+		  </div>	
+      </div>
+
+	  <div id="appendix14" class="w3-container page w3-animate-left" style="display: none;">
+		<h2>Appendix A: HRMIS Reports</h2>
+
+
+	    <p>A.14 Certificate of Employees Compensation</p>
+	
+			<div class="img-content">
+			  <img src="assets/appendix/A14.png" alt="" class="center">
+		  </div>	
+      </div>
+
+	  <div id="appendix15" class="w3-container page w3-animate-left" style="display: none;">
+		<h2>Appendix A: HRMIS Reports</h2>
+
+
+	    <p>A.15 Certificate of No Administrative Charge</p>
+	
+			<div class="img-content">
+			  <img src="assets/appendix/A15.png" alt="" class="center">
+		  </div>	
+      </div>
+
+	  <div id="appendix16" class="w3-container page w3-animate-left" style="display: none;">
+		<h2>Appendix A: HRMIS Reports</h2>
+
+
+	    <p>A.16 Certificate of No Administrative Charge (for Legal Purposes)</p>
+	
+			<div class="img-content">
+			  <img src="assets/appendix/A16a.png" alt="" class="center">
+		  </div>	
+
+		  <div class="img-content" style="margin-top: 20px;">
+			<img src="assets/appendix/A16b.png" alt="" class="center">
+		</div>	
+      </div>
+
+	  <div id="appendix17" class="w3-container page w3-animate-left" style="display: none;">
+		<h2>Appendix A: HRMIS Reports</h2>
+
+
+	    <p>A.17 Certificate of Service Loyalty Award</p>
+	
+			<div class="img-content">
+			  <img src="assets/appendix/A17.png" alt="" class="center">
+		  </div>	
+      </div>
+
+	  <div id="appendix18" class="w3-container page w3-animate-left" style="display: none;">
+		<h2>Appendix A: HRMIS Reports</h2>
+
+
+	    <p>A.18 Comparative Analysis of Candidates' Qualification</p>
+	
+			<div class="img-content">
+			  <img src="assets/appendix/A18.png" alt="" class="center">
+		  </div>	
+      </div>
+
+	  <div id="appendix19" class="w3-container page w3-animate-left" style="display: none;">
+		<h2>Appendix A: HRMIS Reports</h2>
+
+
+	    <p>A.19 Employees First Day of Service</p>
+	
+			<div class="img-content">
+			  <img src="assets/appendix/A19.png" alt="" class="center">
+		  </div>	
+      </div>
+
+
+	  <div id="appendix20" class="w3-container page w3-animate-left" style="display: none;">
+		<h2>Appendix A: HRMIS Reports</h2>
+
+
+	    <p>A.20 Employee Profile		</p>
+	
+			<div class="img-content">
+			  <img src="assets/appendix/A20.png" alt="" class="center">
+		  </div>	
+      </div>
+
+
+	  <div id="appendix21" class="w3-container page w3-animate-left" style="display: none;">
+		<h2>Appendix A: HRMIS Reports</h2>
+
+
+	    <p>A.21 List of Educational Attainment</p>
+	
+			<div class="img-content">
+			  <img src="assets/appendix/A20.png" alt="" class="center">
+		  </div>	
+      </div>
+
+	  <div id="appendix22" class="w3-container page w3-animate-left" style="display: none;">
+		<h2>Appendix A: HRMIS Reports</h2>
+
+
+	    <p>A.22 List of Employees by Age</p>
+	
+			<div class="img-content">
+			  <img src="assets/appendix/A22.png" alt="" class="center">
+		  </div>	
+      </div>
+
+	  <div id="appendix23" class="w3-container page w3-animate-left" style="display: none;">
+		<h2>Appendix A: HRMIS Reports</h2>
+
+
+	    <p>A.23 List of Employees by Date Hired</p>
+	
+			<div class="img-content">
+			  <img src="assets/appendix/A23.png" alt="" class="center">
+		  </div>	
+      </div>
+
+	  <div id="appendix24" class="w3-container page w3-animate-left" style="display: none;">
+		<h2>Appendix A: HRMIS Reports</h2>
+
+
+	    <p>A.24 List of Employees by Date of Birth</p>
+	
+			<div class="img-content">
+			  <img src="assets/appendix/A24a.png" alt="" class="center">
+		  </div>	
+
+		  <div class="img-content" style="margin-top: 20px;">
+			<img src="assets/appendix/A24b.png" alt="" class="center">
+		</div>
+      </div>
+
+	  <div id="appendix25" class="w3-container page w3-animate-left" style="display: none;">
+		<h2>Appendix A: HRMIS Reports</h2>
+
+
+	    <p>A.25 List of Employees by Educational Attainment</p>
+	
+			<div class="img-content">
+			  <img src="assets/appendix/A25.png" alt="" class="center">
+		  </div>	
+      </div>
+
+	  <div id="appendix26" class="w3-container page w3-animate-left" style="display: none;">
+		<h2>Appendix A: HRMIS Reports</h2>
+
+
+	    <p>A.26 List of Employees by Gender</p>
+	
+			<div class="img-content">
+			  <img src="assets/appendix/A26.png" alt="" class="center">
+		  </div>	
+      </div>
+
+	  <div id="appendix27" class="w3-container page w3-animate-left" style="display: none;">
+		<h2>Appendix A: HRMIS Reports</h2>
+
+
+	    <p>A.27 List of Employees by Length of Service</p>
+	
+			<div class="img-content">
+			  <img src="assets/appendix/A27.png" alt="" class="center">
+		  </div>	
+      </div>
+
+
+	  <div id="appendix28" class="w3-container page w3-animate-left" style="display: none;">
+		<h2>Appendix A: HRMIS Reports</h2>
+
+
+	    <p>A.28 List of Employees by Salary Grade</p>
+	
+			<div class="img-content">
+			  <img src="assets/appendix/A28.png" alt="" class="center">
+		  </div>	
+      </div>
+
+	  <div id="appendix29" class="w3-container page w3-animate-left" style="display: none;">
+		<h2>Appendix A: HRMIS Reports</h2>
+
+
+	    <p>A.29 List of Employees by Salary Grade (Alphabetical)</p>
+	
+			<div class="img-content">
+			  <img src="assets/appendix/A29.png" alt="" class="center">
+		  </div>	
+      </div>
+
+	  <div id="appendix30" class="w3-container page w3-animate-left" style="display: none;">
+		<h2>Appendix A: HRMIS Reports</h2>
+
+
+	    <p>A.30 List of Employees' Date of Birth (Alphabetical)</p>
+	
+			<div class="img-content">
+			  <img src="assets/appendix/A30.png" alt="" class="center">
+		  </div>	
+      </div>
+
+	  <div id="appendix31" class="w3-container page w3-animate-left" style="display: none;">
+		<h2>Appendix A: HRMIS Reports</h2>
+
+
+	    <p>A.31 List of Employees' Training</p>
+	
+			<div class="img-content">
+			  <img src="assets/appendix/A31.png" alt="" class="center">
+		  </div>	
+      </div>
+
+	  <div id="appendix32" class="w3-container page w3-animate-left" style="display: none;">
+		<h2>Appendix A: HRMIS Reports</h2>
+
+
+	    <p>A.32 List of Retirees</p>
+	
+			<div class="img-content">
+			  <img src="assets/appendix/A32.png" alt="" class="center">
+		  </div>	
+      </div>
+
+	  <div id="appendix33" class="w3-container page w3-animate-left" style="display: none;">
+		<h2>Appendix A: HRMIS Reports</h2>
+
+
+	    <p>A.33 List of Training Programss</p>
+	
+			<div class="img-content">
+			  <img src="assets/appendix/A33.png" alt="" class="center">
+		  </div>	
+      </div>
+
+	  <div id="appendix34" class="w3-container page w3-animate-left" style="display: none;">
+		<h2>Appendix A: HRMIS Reports</h2>
+
+
+	    <p>A.34 List of Vacant Position(s)</p>
+	
+			<div class="img-content">
+			  <img src="assets/appendix/A34.png" alt="" class="center">
+		  </div>	
+      </div>
+
+	  <div id="appendix35" class="w3-container page w3-animate-left" style="display: none;">
+		<h2>Appendix A: HRMIS Reports</h2>
+
+
+	    <p>A.35 Loyalty Report</p>
+	
+			<div class="img-content">
+			  <img src="assets/appendix/A35.png" alt="" class="center">
+		  </div>	
+      </div>
+
+	  <div id="appendix36" class="w3-container page w3-animate-left" style="display: none;">
+		<h2>Appendix A: HRMIS Reports</h2>
+
+
+	    <p>A.36 Panunumpa sa Katungkulan</p>
+	
+			<div class="img-content">
+			  <img src="assets/appendix/A36.png" alt="" class="center">
+		  </div>	
+      </div>
+
+	  <div id="appendix37" class="w3-container page w3-animate-left" style="display: none;">
+		<h2>Appendix A: HRMIS Reports</h2>
+
+
+	    <p>A.37 Plantilla of Personnel</p>
+	
+			<div class="img-content">
+			  <img src="assets/appendix/A37.png" alt="" class="center">
+		  </div>	
+      </div>
+
+	  <div id="appendix38" class="w3-container page w3-animate-left" style="display: none;">
+		<h2>Appendix A: HRMIS Reports</h2>
+
+
+	    <p>A.38 Report on Tardiness</p>
+	
+			<div class="img-content">
+			  <img src="assets/appendix/A38.png" alt="" class="center">
+		  </div>	
+      </div>
+
+	  <div id="appendix39" class="w3-container page w3-animate-left" style="display: none;">
+		<h2>Appendix A: HRMIS Reports</h2>
+
+
+	    <p>A.39 Report on Tardiness, Undertime and Absences</p>
+	
+			<div class="img-content">
+			  <img src="assets/appendix/A39.png" alt="" class="center">
+		  </div>	
+      </div>
+
+	  <div id="appendix40" class="w3-container page w3-animate-left" style="display: none;">
+		<h2>Appendix A: HRMIS Reports</h2>
+
+
+	    <p>A.40 Trainings of Staff</p>
+	
+			<div class="img-content">
+			  <img src="assets/appendix/A40.png" alt="" class="center">
+		  </div>	
+      </div>
+
+
+<!--endDisplaycontent-->
+</div>
+
+
+<!--ToastMessage-->	  
+<div class="position-fixed bottom-0 end-0 p-3" style="z-index: 5">
+	<div role="alert" aria-live="assertive" aria-atomic="true" class="toast" data-bs-autohide="false">
+		<div class="toast-header">
+		  <img src="assets/logo.png" class="rounded me-2" alt="..." style="width: 20px; height: 20px;">
+		  <strong class="me-auto">DOST</strong>
+		  <small>Online Help</small>
+		  <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+		</div>
+		<div class="toast-body" id="text-body">
+		</div>
+	  </div>
+</div>
+
+
+<!--endmain-->
+</div>
+
+<!--JavaScript Functions-->
+	<script src="app.js"></script>
+	<script src="btn.js"></script>
+	<script src="sidebar.js"></script>
+</body>
+</html>

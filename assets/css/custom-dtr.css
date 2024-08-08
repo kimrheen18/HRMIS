@@ -1,0 +1,128 @@
+.code {
+    display: block;
+    padding: 9.5px;
+    margin: 0 0 10px;
+    font-size: 13px;
+    line-height: 1.42857;
+    word-break: break-all;
+    word-wrap: break-word;
+    background-color: #f5f5f5;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: Menlo,Monaco,Consolas,"Courier New",monospace;
+}
+
+.clock {
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    /*top: 450px;*/
+    /*position: absolute;*/
+    font-size: 4.2em;
+    font-weight: 900;
+    /*right: 38px;*/
+    text-shadow: 0px 0 #48b4c1, 0 1px #48b4c1, 1px 0 #48b4c1, 0 -1px #48b4c1;
+}
+
+.datenow, .daynow {
+    width: 100%;
+    text-align: center;
+    color: #48b4c1;
+    /*top: 450px;*/
+    /*position: absolute;*/
+    font-size: 2em;
+    font-weight: 900;
+    /*right: 38px;*/
+    /*text-shadow: 0px 0 #48b4c1, 0 1px #48b4c1, 1px 0 #48b4c1, 0 -1px #48b4c1;*/
+}
+
+.login .content .form-actions .btn {
+    margin-top: -9px;
+}
+
+.content {
+    background-color: #ffffff00!important;
+    padding: 0 !important;
+}
+
+.bold {
+    font-weight: bolder !important;
+}
+
+.right {
+    text-align: right;
+}
+
+[v-cloak] { display: none; }
+#table-employees > tbody {
+    cursor: pointer;
+}
+.login {
+    background-color: #2a4b75!important;
+}
+h1.hrmisLogo {
+    display: inline-block;
+    margin-left: 10px;
+    font-weight: bolder;
+    position: absolute;
+    top: 5px;
+    color: #2a4b75;
+    font-size: 40px;
+}
+div.small {
+    display: inline-table;
+    position: absolute;
+    top: 70px;
+    color: #2a4b75;
+    margin-left: 13px;
+    font-weight: 500;
+}
+p.small{
+    text-align: justify;
+    padding: 0 23px;
+    color: #eceef1;
+}
+ul.profile-info-employee li {
+    list-style: none !important;
+    margin-left: -41px !important;
+}
+input.form-control.input-sm.input-small.input-inline {
+    margin-left: 7px;
+}
+div.dataTables_paginate {
+    float: right;
+}
+/*.page-logo {
+    width: 256px !important;
+}*/
+tr.inactive {
+    color: #ca0010;
+}
+.page-header.navbar.navbar-fixed-top {
+    background-color: #2987c7;
+}
+h3.logodost, h3.logohrmis {
+    color: #eceef1;
+    font-weight: 800;
+    line-height: 10px;
+    display: inline-block;
+}
+h3.logohrmis {
+    color: #2a4b75;
+}
+
+.login .copyright {
+    /*position:absolute;*/
+    bottom:0;
+    width:100%;
+    height:60px;
+}
+
+
+/*media query*/
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  [class*=".icon-btn"] {
+    display: none;
+  }
+}

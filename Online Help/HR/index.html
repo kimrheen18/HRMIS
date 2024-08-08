@@ -1,0 +1,3838 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link rel="shortcut icon" type="image/png" href="assets/favicon.ico">
+	<link rel="stylesheet" href="style.css">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="w3.css">
+	
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	
+	<!--Title-->	
+	<title>HRMIS | Online Help</title>
+</head>
+<body onload="typeWriter()">
+
+
+ 
+
+	<!--Sidebar -->
+<div class=" w3-sidebar w3-bar-block w3-black w3-collapse w3-card w3-animate-left" style="width:230px; z-index: 5;" id="mySidebar">
+
+	
+	<button class="w3-bar-item w3-button w3-medium w3-hide-large w3-hover-red" onclick="sidebar_close()">Close &times;</button>
+
+	<div class="w3-bar-item " style="margin-top: 10px;">
+		<img src="assets/logo.png" alt="logo" width="20px" height="20px"> Online Help</div>
+
+	<input class="w3-input w3-border w3-padding sticky-sm-top sticky-top" type="text" placeholder="Search..." id="myInput" onkeyup="myFunction()" style="margin-top: 5px; margin-bottom: 10px;">
+
+	<!--Loginbtn-->
+	<div class="w3-dropdown-click">
+	<button class="w3-bar-item w3-button tablink w3-cyan" onclick="openLink(event, 'login')">Login<i class="btn w3-right w3-tiny" onclick=" myDropFunc()"></i></button>	
+	<div id="Drop" class="w3-bar-block w3-hide  w3-card w3-hover-white ">
+		<button  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'Howtologin')">How to Login</button>
+   </div>
+   </div>
+	
+	<button class="w3-bar-item w3-button tablink" onclick="openLink(event, 'DefaultScreen')">Default Screen</button>
+	<button class="w3-bar-item w3-button tablink" onclick="openLink(event, 'HRmodule')">HR Module</button>
+	<button class="w3-bar-item w3-button tablink" onclick="openLink(event, 'notif')">Notification</button>
+	<button class="w3-bar-item w3-button tablink" onclick="openLink(event, 'Notification')">Dashboard</button>
+	
+	<div class="w3-dropdown-click">
+	<button class="w3-bar-item w3-button tablink" onclick="openLink(event, '201File')">201 File<i class="btn w3-right w3-tiny" onclick="myDropFunc201()"></i></button>
+	<div id="201Drop" class="w3-bar-block w3-hide  w3-card w3-hover-white">
+	<a  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'AddEmployee')" >How to Add New Employee </a>
+	<a  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'UploadImg')" >How to Upload Image </a>
+	<a  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'PrintForm')" >How to Download/Print CSC Form 212</a>
+   </div>
+   </div>
+	
+	<div class="w3-dropdown-click">
+	<button class="w3-bar-item w3-button tablink" onclick="openLink(event, 'Attendance')">Attendance <i class="btn w3-right w3-tiny" onclick="myDropFuncAtt()"></i></button>
+	<div id="AttDrop" class="w3-bar-block w3-hide  w3-card w3-hover-white">
+		<a  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'ConTable')" >How to View Conversion Table </a>
+	</div>
+     </div>
+
+
+	 <div class="w3-dropdown-click">
+		<button class="w3-bar-item w3-button tablink" onclick="openLink(event, 'Reports')">Reports <i class="btn w3-right w3-tiny" onclick="myDropFuncRep()"></i></button>
+		<div id="RepDrop" class="w3-bar-block w3-hide  w3-card w3-hover-white">
+			<a  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'GenReports')" >How to Generate Reports </a>
+			<a  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'SaveReports')" >How to Save Reports </a>
+			<a  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'PrintReports')" >How to Print Reports </a>
+		</div>
+		 </div>
+		 
+		 
+		 <div class="w3-dropdown-click">
+		 <button class="w3-bar-item w3-button tablink" onclick="openLink(event, 'tasks')">Request Tab<i class="btn w3-right w3-tiny" onclick=" myDropFuncTaskP()"></i></button>
+		 <div id="Droptask" class="w3-bar-block w3-hide  w3-card w3-hover-white ">
+			<button  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'reqst')">OB Request</button>
+			<button  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'leavereqst')">Leave Request</button>
+			<button  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'travelreqst')">Travel Order Request</button>
+			<button  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'pdsreqst')">PDS Update</button>
+			<button  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'leaveMonetreqst')">Leave Monetization</button>
+			<button  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'dtrreqst')">DTR Update</button>
+			<button  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'comptimereqst')">Compensatory Time off</button>
+	   </div>
+	   </div>
+
+
+	   <div class="w3-dropdown-click">
+		<button class="w3-bar-item w3-button tablink" onclick="openLink(event, 'lib')">Libraries<i class="btn w3-right w3-tiny" onclick=" myDropFuncLib()"></i></button>
+		<div id="DropLib" class="w3-bar-block w3-hide  w3-card w3-hover-white ">
+		   
+			<button  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'agencyInfo')">Agency Information</button>
+		   
+		   <div class="w3-dropdown-click">
+		   <button  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'appointStats')">Appointment Status<i class="btn w3-right w3-tiny" onclick=" myDropFuncApp()"></i></button>
+		   <div id="DropApp" class="w3-bar-block w3-hide  w3-card w3-hover-white ">
+			<button  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'addApp')">How to Add New Appointment Status</button>
+			<button  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'editApp')">How to Edit Existing Appointment Status</button>
+		   </div>
+	  </div>
+
+	  <div class="w3-dropdown-click">
+	  <button  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'attendscheme')">Attendance Scheme<span class="btn w3-right w3-tiny" onclick=" myDropFuncScheme()"></span></button>
+	  <div id="DropScheme" class="w3-bar-block w3-hide  w3-card w3-hover-white ">
+		<button  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'addscheme')">How to Add New Attendance Scheme</button>
+		<button  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'editscheme')">How to Edit Existing Attendance Scheme</button>
+		<button  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'dltscheme')">How to Delete Existing Attendance Scheme</button>
+	   </div>
+	  </div>
+	
+	  <button  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'backup')">Backup</button>
+		   
+	  <div class="w3-dropdown-click">
+	  <button  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'course')">Courses<i class="btn w3-right w3-tiny" onclick=" myDropFuncCourse()"></i></button>
+	  <div id="DropCourse" class="w3-bar-block w3-hide  w3-card w3-hover-white ">
+		<button  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'addcourse')">How to Add New Course</button>
+		<button  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'editcourse')">How to Edit Existing Course</button>
+		<button  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'dltcourse')">How to Delete Existing Course</button>
+	   </div>
+	</div>
+	
+	<div class="w3-dropdown-click">
+	<button  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'country')">Country<i class="btn w3-right w3-tiny" onclick=" myDropFuncCountry()"></i></button>
+	<div id="DropCountry" class="w3-bar-block w3-hide  w3-card w3-hover-white ">
+		<button  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'addcountry')">How to Add New Country</button>
+		<button  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'editcountry')">How to Edit Existing Country</button>
+		<button  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'dltcountry')">How to Delete Existing Country</button>
+	   </div>
+	</div>
+
+	<div class="w3-dropdown-click">
+	<button  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'educlevel')">Educational Level<i class="btn w3-right w3-tiny" onclick=" myDropFuncEduc()"></i></button>
+	<div id="DropEduc" class="w3-bar-block w3-hide  w3-card w3-hover-white ">
+		<button  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'addeduc')">How to Add New Educational Level</button>
+		<button  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'editeduc')">How to Edit Existing Educational Level</button>
+		<button  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'dlteduc')">How to Delete Existing Educational Level</button>
+	   </div>
+	</div>
+
+
+	<div class="w3-dropdown-click">
+	<button  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'employmentStats')">Employment Status<i class="btn w3-right w3-tiny" onclick=" myDropFuncEmploy()"></i></button>
+	<div id="DropEmploy" class="w3-bar-block w3-hide  w3-card w3-hover-white ">
+		<button  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'addemploy')">How to Add New Employment Status</button>
+	   </div>
+    </div>
+	
+	
+	<div class="w3-dropdown-click">
+	<button  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'examType')">Exam Type<i class="btn w3-right w3-tiny" onclick=" myDropFuncExam()"></i></button>
+	<div id="DropExam" class="w3-bar-block w3-hide  w3-card w3-hover-white ">
+		<button  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'addexam')">How to Add New Exam Type</button>
+		<button  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'editexam')">How to Edit Existing Exam Type</button>
+		<button  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'dltexam')">How to Delete Existing Exam Type</button>
+	   </div>
+   </div>
+
+   <div class="w3-dropdown-click">
+   <button  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'holiday')">Holiday<i class="btn w3-right w3-tiny" onclick=" myDropFuncHoliday()"></i></button>
+   <div id="DropHoliday" class="w3-bar-block w3-hide  w3-card w3-hover-white ">
+	
+	<div class="w3-dropdown-click">
+	<button  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'addholiday')">Add Holiday Name<span class="btn w3-right w3-tiny" onclick=" myDropFuncAddHoliday()"></span></button>
+	<div id="DropAddHoliday" class="w3-bar-block w3-hide  w3-card w3-hover-white ">
+		<button  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'addholidayNa')">How to Add New Holiday Name</button>
+		<button  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'editholidayNa')">How to Edit Existing Holiday Name</button>
+		<button  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'dltholidayNa')">How to Delete Existing Holiday Name</button>
+	   </div>
+    </div>
+	
+	<div class="w3-dropdown-click">
+	<button  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'manageHoliday')">Manage Holiday<span class="btn w3-right w3-tiny" onclick=" myDropFuncManageDay()"></span></button>
+	<div id="DropManageDay" class="w3-bar-block w3-hide  w3-card w3-hover-white ">
+		<button  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'addmanageDay')">How to Add New Holiday Date</button>
+		<button  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'editmanageDay')">How to Edit Existing Holiday Date</button>
+		<button  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'dltmanageDay')">How to Delete Existing Holiday Date</button>
+	   </div>
+    </div>
+   
+	<div class="w3-dropdown-click">
+	<button  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'localHoliday')">Manage Local Holiday<span class="btn w3-right w3-tiny" onclick=" myDropFuncManageLDay()"></span></button>
+	<div id="DropManageLDay" class="w3-bar-block w3-hide  w3-card w3-hover-white ">
+		<button  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'addmanageLDay')">How to Add New Local Holiday</button>
+		<button  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'editmanageLDay')">How to Edit Existing Local Holiday</button>
+		<button  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'dltmanageLDay')">How to Delete Existing local Holiday</button>
+	   </div>
+   </div>
+
+
+   <div class="w3-dropdown-click">
+	<button  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'workSuspension')">Manage<br>Work Suspension<span class="btn w3-right w3-tiny" onclick=" myDropFuncManageWork()"></span></button>
+	<div id="DropManageWork" class="w3-bar-block w3-hide  w3-card w3-hover-white ">
+		<button  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'addmanageWork')">How to Add New Manage Work Suspension</button>
+		<button  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'editmanageWork')">How to Edit Existing Manage Work Suspension</button>
+		<button  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'dltmanageWork')">How to Delete Existing Manage Work Suspension</button>
+	   </div>
+   </div>
+</div>
+   </div>
+
+   <div class="w3-dropdown-click">
+   <button  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'Leavetype')">Leave Type<i class="btn w3-right w3-tiny" onclick=" myDropFuncLtype()"></i></button>
+   <div id="DropLtype" class="w3-bar-block w3-hide  w3-card w3-hover-white ">
+	
+	<div class="w3-dropdown-click">
+	<button  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'leavebutton')">Leave Type Button<i class="btn w3-right w3-tiny" onclick=" myDropFuncLtypebtn()"></i></button>
+	<div id="DropLtypeBtn" class="w3-bar-block w3-hide  w3-card w3-hover-white ">
+		<button  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'addLtype')">How to Add New Leave Type</button>
+		<button  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'editLtype')">How to Edit Existing Leave Type</button>
+	   </div>
+</div>
+	
+<div class="w3-dropdown-click">
+	<button  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'specifyleave')">Specify Leave Button<i class="btn w3-right w3-tiny" onclick=" myDropFuncStypebtn()"></i></button>
+	<div id="DropStypeBtn" class="w3-bar-block w3-hide  w3-card w3-hover-white ">
+		<button  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'addStype')">How to Add New Specific Leave</button>
+		<button  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'editStype')">How to Edit Existing Specific Leave</button>
+		<button  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'dltStype')">How to Delete Existing Specific Leave</button>
+	   </div>
+</div>
+	
+
+
+
+
+
+   </div>
+   </div>
+
+   <div class="w3-dropdown-click">
+   <button  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'orgStructure')">Organizational <br>Structure<i class="btn w3-right w3-tiny" onclick=" myDropFuncOrgStruct()"></i></button>
+   <div id="DropOrgStruct" class="w3-bar-block w3-hide  w3-card w3-hover-white ">
+	
+	<div class="w3-dropdown-click">
+	<button  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'exeOffice')">Executive Office<i class="btn w3-right w3-tiny" onclick=" myDropFuncExeOff()"></i></button>
+	<div id="DropExeOff" class="w3-bar-block w3-hide  w3-card w3-hover-white ">
+		<button  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'addexeOffice')">How to Add New Executive Office Details</button>
+		<button  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'editexeOffice')">How to Edit Existing Executive Office Details</button>
+		<button  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'dltexeOffice')">How to Delete Existing Executive Office Details</button>
+	   </div>
+</div>
+	
+<div class="w3-dropdown-click">
+	<button  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'service')">Service<i class="btn w3-right w3-tiny" onclick=" myDropFuncService()"></i></button>
+	<div id="DropService" class="w3-bar-block w3-hide  w3-card w3-hover-white ">
+		<button  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'addService')">How to Add New Service Details</button>
+		<button  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'editService')">How to Edit Existing Service Details</button>
+		<button  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'dltService')">How to Delete Existing Service Details</button>
+	   </div>
+</div>
+
+<div class="w3-dropdown-click">
+	<button  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'division')">Division<i class="btn w3-right w3-tiny" onclick=" myDropFuncDivision()"></i></button>
+	<div id="DropDivision" class="w3-bar-block w3-hide  w3-card w3-hover-white ">
+		<button  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'adddivison')">How to Add New Division Details</button>
+		<button  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'editdivision')">How to Edit Existing Division Details</button>
+		<button  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'dltdivision')">How to Delete Existing Division Details</button>
+	   </div>
+</div>
+
+
+<div class="w3-dropdown-click">
+	<button  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'section')">Section<i class="btn w3-right w3-tiny" onclick=" myDropFuncSection()"></i></button>
+	<div id="DropSection" class="w3-bar-block w3-hide  w3-card w3-hover-white ">
+		<button  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'addSection')">How to Add New Section Details</button>
+		<button  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'editSection')">How to Edit Existing Section Details</button>
+		<button  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'dltSection')">How to Delete Existing Section Details</button>
+	   </div>
+</div>
+	
+
+
+
+
+
+   </div>
+ </div>
+
+ <div class="w3-dropdown-click">
+	<button  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'payroll')">Payroll Group<i class="btn w3-right w3-tiny" onclick=" myDropFuncPayroll()"></i></button>
+	<div id="DropPayroll" class="w3-bar-block w3-hide  w3-card w3-hover-white ">
+		<button  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'addpayroll')">How to Add New Payroll Group Details</button>
+		<button  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'editpayroll')">How to Edit Existing Payroll Group Details</button>
+		<button  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'dltpayroll')">How to Delete Existing Payroll Group Details</button>
+	   </div>
+    </div>
+
+	<div class="w3-dropdown-click">
+		<button  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'philhealth')">PhilHealth Range<i class="btn w3-right w3-tiny" onclick=" myDropFuncPhilhealth()"></i></button>
+		<div id="DropPhilhealth" class="w3-bar-block w3-hide  w3-card w3-hover-white ">
+			<button  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'addphilhealth')">How to Add New PhilHealth Range</button>
+			<button  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'editphilhealth')">How to Edit Existing PhilHealth Range Details</button>
+			<button  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'dltphilhealth')">How to Delete Existing PhilHealth Range Details</button>
+		   </div>
+		</div>
+
+		<div class="w3-dropdown-click">
+			<button  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'plantilla')">Plantilla<i class="btn w3-right w3-tiny" onclick=" myDropFuncPlantilla()"></i></button>
+			<div id="DropPlantilla" class="w3-bar-block w3-hide  w3-card w3-hover-white ">
+				<button  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'addplantilla')">How to Add New Plantilla</button>
+				<button  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'editplantilla')">How to Edit Existing Plantilla</button>
+				<button  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'dltplantilla')">How to Delete Existing Plantilla</button>
+			   </div>
+			</div>
+
+			<div class="w3-dropdown-click">
+				<button  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'plantillaG')">Plantilla Group<i class="btn w3-right w3-tiny" onclick=" myDropFuncPlantillaG()"></i></button>
+				<div id="DropPlantillaG" class="w3-bar-block w3-hide  w3-card w3-hover-white ">
+					<button  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'addplantillaG')">How to Add New Plantilla Group</button>
+					<button  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'editplantillaG')">How to Edit Existing Plantilla Group</button>
+					<button  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'dltplantillaG')">How to Delete Existing Plantilla Group</button>
+				   </div>
+				</div>
+		
+				<div class="w3-dropdown-click">
+					<button  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'position')">Position Code<i class="btn w3-right w3-tiny" onclick=" myDropFuncPosition()"></i></button>
+					<div id="DropPosition" class="w3-bar-block w3-hide  w3-card w3-hover-white ">
+						<button  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'addposition')">How to Add New Position Code</button>
+						<button  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'editposition')">How to Edit Existing Position Code</button>
+						<button  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'dltposition')">How to Delete Existing Position Code</button>
+					   </div>
+					</div>
+			
+	
+					<div class="w3-dropdown-click">
+						<button  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'project')">Project Code<i class="btn w3-right w3-tiny" onclick=" myDropFuncProject()"></i></button>
+						<div id="DropProject" class="w3-bar-block w3-hide  w3-card w3-hover-white ">
+							<button  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'addproject')">How to Add New Project Code</button>
+							<button  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'editproject')">How to Edit Existing ProjectCode</button>
+							<button  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'dltproject')">How to Delete Existing Project Code</button>
+						   </div>
+						</div>
+ 
+						<div class="w3-dropdown-click">
+							<button  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'req')">Request<i class="btn w3-right w3-tiny" onclick=" myDropFuncReq()"></i></button>
+							<div id="DropReq" class="w3-bar-block w3-hide  w3-card w3-hover-white ">
+								<button  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'addreq')">How to Add New Request</button>
+								<button  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'editreq')">How to Edit Existing Request</button>
+								<button  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'dltreq')">How to Delete Existing Request</button>
+							   </div>
+							</div>
+	 
+
+							<div class="w3-dropdown-click">
+								<button  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'salarySched')">Salary Schedule<i class="btn w3-right w3-tiny" onclick=" myDropFuncSalarySched()"></i></button>
+								<div id="DropSalarySched" class="w3-bar-block w3-hide  w3-card w3-hover-white ">
+									<button  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'createNSalary')">How to Create New Salary Schedule Name</button>
+									<button  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'createESalary')">How to Create New Salary Schedule from Existing</button>
+									<button  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'addNSalary')">How to Add New Salary Schedule</button>
+								   </div>
+								</div>
+
+								<div class="w3-dropdown-click">
+									<button  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'scholarship')">Scholarship<i class="btn w3-right w3-tiny" onclick=" myDropFuncScholarship()"></i></button>
+									<div id="DropScholarship" class="w3-bar-block w3-hide  w3-card w3-hover-white ">
+										<button  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'addscholar')">How to Add New Scholarship</button>
+										<button  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'editscholar')">How to Edit Existing Scholarship</button>
+										<button  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'dltscholar')">How to Delete Existing Scholarship</button>
+									   </div>
+									</div>
+
+									<div class="w3-dropdown-click">
+										<button  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'serviceCode')">Service Code<i class="btn w3-right w3-tiny" onclick=" myDropFuncServiceCode()"></i></button>
+										<div id="DropServiceCode" class="w3-bar-block w3-hide  w3-card w3-hover-white ">
+											<button  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'addserviceCode')">How to Add New Service Code</button>
+											<button  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'editserviceCode')">How to Edit Existing Service Code</button>
+											<button  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'dltserviceCode')">How to Delete Existing Service Code</button>
+										   </div>
+										</div>
+
+										<div class="w3-dropdown-click">
+											<button  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'signatory')">Signatory<i class="btn w3-right w3-tiny" onclick=" myDropFuncSignatory()"></i></button>
+											<div id="DropSignatory" class="w3-bar-block w3-hide  w3-card w3-hover-white ">
+												<button  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'addsignatory')">How to Add New Signatory</button>
+												<button  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'editsignatory')">How to Edit Existing Signatory</button>
+											   </div>
+											</div>
+		
+
+											<div class="w3-dropdown-click">
+												<button  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'userAccount')">User Account<i class="btn w3-right w3-tiny" onclick=" myDropFuncUserAccount()"></i></button>
+												<div id="DropUserAccount" class="w3-bar-block w3-hide  w3-card w3-hover-white ">
+													<button  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'adduser')">How to Add New User Account</button>
+													<button  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'edituser')">How to Edit Existing User Account</button>
+													<button  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'dltuser')">How to Delete Existing User Account</button>
+													<button  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'searchuser')">How to Search a User Account</button>
+												   </div>
+												</div>
+
+												
+</div>
+</div>
+
+<div class="w3-dropdown-click">
+	<button class="w3-bar-item w3-button tablink" onclick="openLink(event, 'compensation')">Compensation<i class="btn w3-right w3-tiny" onclick="myDropFuncCompensation()"></i></button>
+	<div id="DropCompensation" class="w3-bar-block w3-hide  w3-card w3-hover-white">
+		<a  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'Personnelprofile')" >Personnel Profile </a>
+		<a  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'income')" >Income </a>
+		<a  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'summarydeduc')" >Deduction Summary </a>
+		<a  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'premloans')" >Premiums and Loans </a>
+		<a  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'remittance')" >Remittances </a>
+	</div>
+	 </div>
+
+	 <div class="w3-dropdown-click">
+		<button class="w3-bar-item w3-button tablink" onclick="openLink(event, 'user')">User<i class="btn w3-right w3-tiny" onclick="myDropFuncUser()"></i></button>
+		<div id="DropUser" class="w3-bar-block w3-hide  w3-card w3-hover-white">
+			<a  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'switchuser')" >How to Switch to Employee Module</a>
+			<a  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'logoutuser')" >How to Switch to Logout</a>
+		</div>
+		 </div>
+
+		 <div class="w3-dropdown-click">
+			<button class="w3-bar-item w3-button tablink" onclick="openLink(event, 'appendix')">Appendix A. HRMIS Reports<i class="btn w3-right w3-tiny" onclick="myDropFuncAppendix()"></i></button>
+			<div id="DropAppendix" class="w3-bar-block w3-hide  w3-card w3-hover-white">
+				<a  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'appendix1')" >Appendix A.1 Plantilla Position</a>
+				<a  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'appendix2')" >Appendix A.2 Gender</a>
+				<a  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'appendix3')" >Appendix A.3 Educational Attainment</a>
+				<a  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'appendix4')" >Appendix A.4 Leave Monetization</a>
+				<a  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'appendix5')" >Appendix A.5 Daily Time Record</a>
+				<a  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'appendix6')" >Appendix A.6 Acceptance of Resignation</a>
+				<a  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'appendix7')" >Appendix A.7 Accumulated Leave Credits</a>
+				<a  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'appendix8')" >Appendix A.8 Accumulated Report by Office</a>
+				<a  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'appendix9')" >Appendix A.9 Application for Leave Form</a>
+				<a  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'appendix10')" >Appendix A.10 Assumption of Duties and Responsibilities</a>
+				<a  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'appendix11')" >Appendix A.11 Certificate of Duties and Responsibilities</a>
+				<a  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'appendix12')" >Appendix A.12 Certificate of Employees Compensation</a>
+				<a  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'appendix13')" >Appendix A.13 Certificate of No Administrative Charge</a>
+				<a  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'appendix14')" >Appendix A.14 Certificate of No Administrative Charge (for Legal Purposes)</a>
+				<a  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'appendix15')" >Appendix A.15 Certification of Service Loyalty Award</a>
+				<a  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'appendix16')" >Appendix A.16 Comparative Analysis of Candidates Qualification</a>
+				<a  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'appendix17')" >Appendix A.17 Employees First Day of Service</a>
+				<a  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'appendix18')" >Appendix A.18 Employee Profiler</a>
+				<a  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'appendix19')" >Appendix A.19 List of Educational Attainment</a>
+				<a  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'appendix20')" >Appendix A.20 List of Employees by Age</a>
+				<a  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'appendix21')" >Appendix A.21 List of Employees by Date Hired</a>
+				<a  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'appendix22')" >Appendix A.22 List of Employees by Date of Birth</a>
+				<a  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'appendix23')" >Appendix A.23 List of Employees by Educational Attainment</a>
+				<a  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'appendix24')" >Appendix A.24 List of Employees by Gender</a>
+				<a  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'appendix25')" >Appendix A.25 List of Employees by Length of Service</a>
+				<a  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'appendix26')" >Appendix A.26 List of Employees by Salary Grade</a>
+				<a  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'appendix27')" >Appendix A.27 List of Employees by Salary Grade (Alphabetical)</a>
+				<a  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'appendix28')" >Appendix A.28 List of Employee's Date of Birth (Alphabetical)</a>
+				<a  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'appendix29')" >Appendix A.29 List of Employee's Training</a>
+				<a  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'appendix30')" >Appendix A.30 List of Retirees</a>
+				<a  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'appendix31')" >Appendix A.31 List of Training Programs</a>
+				<a  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'appendix32')" >Appendix A.32 List of Vacant Position</a>
+				<a  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'appendix33')" >Appendix A.33 Loyalty Report</a>
+				<a  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'appendix34')" >Appendix A.34 Official Business Slip</a>
+				<a  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'appendix35')" >Appendix A.35 Panunumpa sa Katungkulan</a>
+				<a  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'appendix36')" >Appendix A.36 Personal Data Sheet</a>
+				<a  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'appendix37')" >Appendix A.37 Plantilla of Personnel</a>
+				<a  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'appendix38')" >Appendix A.38 Report on Tardiness</a>
+				<a  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'appendix39')" >Appendix A.39 Report on Tardiness, Undertime and Absences</a>
+				<a  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'appendix40')" >Appendix A.40 Service Record</a>
+				<a  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'appendix41')" >Appendix A.41 Trainings of Staff</a>
+			</div>
+			 </div>
+	
+
+
+<!--sidebarEndtag-->
+</div>
+
+<!--Header-->
+<div id="main">
+<!--overlayEffect-->	
+<div class="w3-overlay" onclick="sidebar_close()" style="cursor:pointer" id="myOverlay"></div>
+
+<!--navbar-->
+  <nav class="navbar sticky-top w3-main" style="background: rgb(58, 134, 206); margin-left: 230px;">
+	<div class="container-fluid">
+		<a class="navbar-brand" href="#"><button id="openNav" class="w3-button w3-hover-blue-gray w3-xlarge w3-hide-large" onclick="sidebar_open()" id="openNav">&#9776;</button> <img src="assets/logo.png" alt="logo" width="30px" height="30px"> 
+		</a>		
+	</div>
+  </nav>
+
+
+
+	<!--displayContent-->
+<div class="w3-main " style="margin-left:250px">
+	
+	
+	<!--loginPage-->
+	<div class="loginPage">
+	<div id="login" class="w3-container page w3-animate-left">
+	  <h2>Login</h2>
+	  <p>To login to the system, the user is required to enter a valid username and password on 
+		  the Login Form at the center of the Main Page (See Figure 1-1).</p>
+
+		  <div class="img-content">
+			<img src="assets/images/LoginPage.PNG" alt="" class="center">
+		</div>	
+		<p style="font-size: 12px; text-align: center;"><b>Figure 1-1 DOST-CO HRMIS Main Page</b></p>		
+	</div>
+</div>
+
+<!--HowtoLogin-->
+	<div id="Howtologin" class="w3-container page w3-animate-left" style="display:none">
+		<h2>How to Login</h2>
+		<p>1. Enter Username and Password on the entry boxes labeled respectively. 
+			Then click Login button  (See Figure 1-2).
+		</p>
+
+		<div class="img-content">
+			<img src="assets/images/loginForm.PNG" alt="" class="center" style="width: 30%;">
+		</div>	
+		<p style="font-size: 12px; text-align: center;"><b>Figure 1-2 Login Form</b></p>
+		<p>2. If login is successful, you will be directed to the Default Screen</a>.</p>
+	  
+	</div>
+
+
+<!--DefaultScreen-->
+	<div id="DefaultScreen" class="w3-container page w3-animate-left" style="display:none">
+		
+		<div class="defaultScreen">
+	  <h2>Default Screen</h2>
+	  <p>Once logged in to the system you will be automatically directed to the Notification Section (See Figure 2).</p>
+	  
+	  <div class="img-content">
+		<img src="assets/images/DefaultScreen.PNG" alt="" class="center">
+	</div>	
+	<p style="font-size: 12px; text-align: center;"><b>Figure 2 Default Page</b></p>
+	
+	
+	</div>
+
+
+<!--DefaultScreenComponents-->
+<p>These are the components of the Default Screen and a brief description of what they are:</p>
+<div class="accordion" id="accordionExample" >
+	<div class="accordion-item ">
+	  <h2 class="accordion-header" id="headingOne">
+		<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+			<strong>User</strong>
+		</button>
+	  </h2>
+	  <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+		<div class="accordion-body">
+			displays the username of the logged-in user, 
+			provides links to Switch to Employee Module, Switch to ERMS, Switch to PMS, 
+			Connect to Other Servers and Logout sub-section
+		</div>
+	  </div>
+	</div>
+	<div class="accordion-item">
+	  <h2 class="accordion-header" id="headingTwo">
+		<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+			<strong>Dashboard Section</strong>
+		</button>
+	  </h2>
+	  <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+		<div class="accordion-body">
+			Provides links to Tasks and Reminders sub-sections
+		</div>
+	  </div>
+	</div>
+	<div class="accordion-item">
+	  <h2 class="accordion-header" id="headingThree">
+		<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+			<strong>201 File Section</strong>
+		</button>
+	  </h2>
+	  <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+		<div class="accordion-body">
+			Provides links to Add Employee, List of Employees, 
+			Personal Information, Family Background, Education, Examination, Work Experience,
+			 Voluntary Work, Trainings, Other Information, Position Details, 
+			 Duties and Responsibilities, Appointment Issued, Edit/Modify Employee Number and 
+			 Documents sub-sections
+		</div>
+	  </div>
+	</div>
+	
+	<div class="accordion-item">
+		<h2 class="accordion-header" id="headingFour">
+		  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+			  <strong>Attendance Section</strong>
+		  </button>
+		</h2>
+		<div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+		  <div class="accordion-body">
+			Provides links to Conversion Table II, 
+			Conversion Table III, Conversion Table IV, Attendance Summary, Leave Balance, 
+			Leave Monetization, Filed Request, Daily Time Record and Override sub-sections
+		  </div>
+		</div>
+	  </div>
+
+	  <div class="accordion-item">
+		<h2 class="accordion-header" id="headingFive">
+		  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+			  <strong>Reports Section</strong>
+		  </button>
+		</h2>
+		<div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
+		  <div class="accordion-body">
+			Provides link to Report sub-section
+		  </div>
+		</div>
+	  </div>
+
+	  <div class="accordion-item">
+		<h2 class="accordion-header" id="headingSix">
+		  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+			  <strong>Libraries Section</strong>
+		  </button>
+		</h2>
+		<div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#accordionExample">
+		  <div class="accordion-body">
+			Provides links to Agency Information, Appointment Status, Attendance Scheme, 
+			Back-up, Contact, Courses, Duties and Responsibilities, Educational Level, Exam Type, 
+			Holiday, Leave Type, Organizational Structure, Payroll Group, PhilHealth Range, Plantilla, 
+			Plantilla Group, Plantilla Duties, Position Code, Project Code, Request, Salary Schedule, 
+			Scholarship, Separation Mode, Service Code, Tax Exemption, Tax Range, 
+			User Account and Zone sub-sections
+		  </div>
+		</div>
+	  </div>
+
+	  
+	  <div class="accordion-item">
+		<h2 class="accordion-header" id="headingSeven">
+		  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+			  <strong>Compensation Section</strong>
+		  </button>
+		</h2>
+		<div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven" data-bs-parent="#accordionExample">
+		  <div class="accordion-body">
+			Provides links to Personnel Profile, Income, 
+			Deduction Summary, Premium/Loans, and Remittances sub-sections
+		  </div>
+		</div>
+	  </div>
+<!--endTag-->	
+	</div>
+</div>
+<!--ComponentsEndtag-->
+
+	<div id="HRmodule" class="w3-container page w3-animate-left" style="display:none">
+	  <h2>HR Module</h2>
+	  <p>The HR Module is one of DOST-CO HRMIS component that allows HR personnel to manage personal data of employees, 
+		  notifies HR personnel of filed requests from employees and other admin related reminders. It also manages leave balance and daily attendance of employees. 
+		  It also includes features for system maintenance, account security and reports generation.</p>
+        <br>
+		  <p>The HR Module allows employees to:</p>
+		 
+			<div class="accordion" id="accordionExample">
+			<div class="accordion-item">
+			  
+				<h2 class="accordion-header" id="headingEight">
+				<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEight" aria-expanded="true" aria-controls="collapseEight">
+					<strong>Dashboard Section</strong> 
+				</button>
+			  </h2>
+			  <div id="collapseEight" class="accordion-collapse collapse" aria-labelledby="headingEight" data-bs-parent="#accordionExample">
+				<div class="accordion-body">	
+					  <ul class="list-group w3-animate-right">
+						<li class="list-group-item tablink">Manage Notifications on Employees Requests</li>
+						<li class="list-group-item">View Reminders</li>
+					  </ul>
+				</div>
+			  </div>
+			</div>
+
+		<div class="accordion-item">
+			  <h2 class="accordion-header" id="headingNine">
+				<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
+					<strong>201 File Section</strong>
+				</button>
+			  </h2>
+			  <div id="collapseNine" class="accordion-collapse collapse" aria-labelledby="headingNine" data-bs-parent="#accordionExample">
+				<div class="accordion-body">
+					  <ul class="list-group w3-animate-right">
+						<li class="list-group-item">Add Employee</li>
+						<li class="list-group-item">View List of Employees</li>
+						<li class="list-group-item">Print Personal Data Sheet of Employees </li>
+						<li class="list-group-item">Manage Personal Information</li>
+						<li class="list-group-item">Manage Family Background</li>
+						<li class="list-group-item">Manage Education</li>
+						<li class="list-group-item">Manage Examination</li>
+						<li class="list-group-item">Manage Work Experience </li>
+						<li class="list-group-item">Manage Voluntary Work</li>
+						<li class="list-group-item">Manage Trainings</li>
+						<li class="list-group-item">Manage Other Information</li>
+						<li class="list-group-item">Manage Position Details</li>
+						<li class="list-group-item">Manage Duties and Responsibilities</li>
+						<li class="list-group-item">Manage Appointment Issued</li>
+						<li class="list-group-item">Edit Employee Number</li>
+						<li class="list-group-item">View Documents</li>
+					  </ul>
+				</div>
+			  </div>
+			</div>
+
+
+			<div class="accordion-item">
+			  
+				<h2 class="accordion-header" id="headingTen">
+				<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTen" aria-expanded="false" aria-controls="collapseTen">
+					<strong>Attendance Section</strong> 
+				</button>
+			  </h2>
+			  <div id="collapseTen" class="accordion-collapse collapse" aria-labelledby="headingTen" data-bs-parent="#accordionExample">
+				<div class="accordion-body">	
+					  <ul class="list-group w3-animate-right">
+						<li class="list-group-item">View Conversion Tables</li>
+						<li class="list-group-item">View Attendance Summary</li>
+						<li class="list-group-item">Manage Leave Balance</li>
+						<li class="list-group-item">View Filed Requests of Employees</li>
+						<li class="list-group-item">Manage Daily Time Records</li>
+						<li class="list-group-item">Update Override</li>
+					  </ul>
+				</div>
+			  </div>
+			</div>
+
+			<div class="accordion-item">
+			  
+				<h2 class="accordion-header" id="headingEleven">
+				<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEleven" aria-expanded="false" aria-controls="collapseEleven">
+					<strong>Reports Section</strong> 
+				</button>
+			  </h2>
+			  <div id="collapseEleven" class="accordion-collapse collapse" aria-labelledby="headingEleven" data-bs-parent="#accordionExample">
+				<div class="accordion-body">	
+					  <ul class="list-group w3-animate-right">
+						<li class="list-group-item">View and Print Reports</li>
+					  </ul>
+				</div>
+			  </div>
+			</div>
+
+			<div class="accordion-item">
+			  
+				<h2 class="accordion-header" id="headingTwelve">
+				<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwelve" aria-expanded="false" aria-controls="collapseTwelve">
+					<strong>Request Section</strong> 
+				</button>
+			  </h2>
+			  <div id="collapseTwelve" class="accordion-collapse collapse" aria-labelledby="headingEleven" data-bs-parent="#accordionExample">
+				<div class="accordion-body">	
+					  <ul class="list-group w3-animate-right">
+						<li class="list-group-item">Manage Official Business Request</li>
+						<li class="list-group-item">Manage Leave Request</li>
+						<li class="list-group-item">Manage Travel Order Request</li>
+						<li class="list-group-item">Manage PDS Update</li>
+						<li class="list-group-item">Manage Leave Monetization</li>
+						<li class="list-group-item">Manage DTR Update</li>
+						<li class="list-group-item">Manage Compensatory Time off</li>
+					  </ul>
+				</div>
+			  </div>
+			</div>
+
+
+			<div class="accordion-item">
+			  
+				<h2 class="accordion-header" id="headingThirtheen">
+				<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThirtheen" aria-expanded="false" aria-controls="collapseThirtheen">
+					<strong>Libraries Section</strong> 
+				</button>
+			  </h2>
+			  <div id="collapseThirtheen" class="accordion-collapse collapse" aria-labelledby="headingEleven" data-bs-parent="#accordionExample">
+				<div class="accordion-body">	
+					  <ul class="list-group w3-animate-right">
+						<li class="list-group-item">Manage Agency Information</li>
+						<li class="list-group-item">Manage Appointment Status</li>
+						<li class="list-group-item">Manage Attendance Scheme</li>
+						<li class="list-group-item">Manage Back-up</li>
+						<li class="list-group-item">Manage Country Code</li>
+						<li class="list-group-item">Manage Course</li>
+						<li class="list-group-item">Manage Duties and Responsibilities</li>
+						<li class="list-group-item">Manage Education Level</li>
+						<li class="list-group-item">Manage Employment Status</li>
+						<li class="list-group-item">Manage Attendance Scheme</li>
+						<li class="list-group-item">Manage Exam Type</li>
+						<li class="list-group-item">Manage Holiday</li>
+						<li class="list-group-item">Manage Leave Type</li>
+						<li class="list-group-item">Manage Org Structure</li>
+						<li class="list-group-item">Manage Payroll Group</li>
+						<li class="list-group-item">Manage PhilHealth Range</li>
+						<li class="list-group-item">Manage Plantilla</li>
+						<li class="list-group-item">Manage Plantilla Group</li>
+						<li class="list-group-item">Manage Plantilla Duties</li>
+						<li class="list-group-item">Manage Position Code</li>
+						<li class="list-group-item">Manage Project Code</li>
+						<li class="list-group-item">Manage Request</li>
+						<li class="list-group-item">Manage Salary Schedule</li>
+						<li class="list-group-item">Manage Scholarship</li>
+						<li class="list-group-item">Manage Service Code</li>
+						<li class="list-group-item">Manage Signatory</li>
+						<li class="list-group-item">Manage User Account</li>
+					  </ul>
+				</div>
+			  </div>
+			</div>
+
+
+			<div class="accordion-item">
+			  
+				<h2 class="accordion-header" id="headingFourtheen">
+				<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFourtheen" aria-expanded="false" aria-controls="collapseFourtheen">
+					<strong>Compensation Section</strong> 
+				</button>
+			  </h2>
+			  <div id="collapseFourtheen" class="accordion-collapse collapse" aria-labelledby="headingFourtheen" data-bs-parent="#accordionExample">
+				<div class="accordion-body">	
+					  <ul class="list-group w3-animate-right">
+						<li class="list-group-item">View Personnel Profile</li>
+						<li class="list-group-item">View Income</li>
+						<li class="list-group-item">View Summary Deduction</li>
+						<li class="list-group-item">View Premiums and Loans</li>
+						<li class="list-group-item">View Remittances</li>
+						<li class="list-group-item">View and Print Reports</li>
+					  </ul>
+				</div>
+			  </div>
+			</div>
+
+			
+			<div class="accordion-item">
+			  
+				<h2 class="accordion-header" id="headingFiftheen">
+				<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFiftheen" aria-expanded="false" aria-controls="collapseFiftheen">
+					<strong>User Section</strong> 
+				</button>
+			  </h2>
+			  <div id="collapseFiftheen" class="accordion-collapse collapse" aria-labelledby="headingFiftheen" data-bs-parent="#accordionExample">
+				<div class="accordion-body">	
+					  <ul class="list-group w3-animate-right">
+						<li class="list-group-item">Switch to Employee Module</li>	
+						<li class="list-group-item">Logout from the system</li>
+					  </ul>
+				</div>
+			  </div>
+			</div>
+		
+		
+		</div>	
+		  </div>
+		<!--HREndTag-->  
+		
+		<div id="notif" class="w3-container page w3-animate-left" style="display:none">
+			<h2>Notification</h2>
+			<p>This part of the section contains details regarding requests filed by the employees that need to be addressed by HR personnel. This includes Official Business Request, Seminars/Trainings attendance, Leave application, Travel Order authority, employee’s Personal Data Sheet update and 201 update. 
+				This section also includes reminders regarding employee’s birthdays, 
+				retiring employees and vacant positions available.</p>
+			  <br>
+				<p>To access the Notification page, click the <strong>Notification bell</strong> (See Figure 3-1).</p>
+			  
+				<div class="img-content">
+					<img src="assets/images/NotificationPage.PNG" alt="" class="center">
+				</div>	
+				<p style="font-size: 12px; text-align: center;"><b>Figure 3-1 Notification page</b></p>	
+				
+		  </div>
+
+	<div id="Notification" class="w3-container page w3-animate-left" style="display:none">
+		<h2>Dashboard</h2>
+		<p> This section also includes reminders regarding employee’s birthdays, 
+			retiring employees and vacant positions available.</p>
+		  <br>
+			<p>To access the Dashboard page, click the <strong>Dashboard tab</strong> (See Figure 3-2).</p>
+		  
+			<div class="img-content">
+				<img src="assets/images/DashboardPage.PNG" alt="" class="center">
+			</div>	
+			<p style="font-size: 12px; text-align: center;"><b>Figure 3-2 Dashboard page</b></p>	
+			
+	  </div>
+	
+  
+	<div id="201File" class="w3-container page w3-animate-left" style="display:none">
+	  <h2>201 File</h2>
+	  <p>This part of the section contains details regarding the list of employees according to appointment status or mode of separation.
+		   This includes Employee Number, Employee Name, Position and Office (See Figure 3-3).</p> 
+
+<!--Alert-->
+<div class="alert alert-warning alert-dismissible fade show" role="alert" style="font-size: 10px;">
+	<strong>Note:</strong> The default list of employees shown is that of current permanent employees.
+	<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  </div>
+
+
+		   <div class="img-content">
+			<img src="assets/images/201File.PNG" alt="" class="center">
+		</div>	
+		<p style="font-size: 12px; text-align: center;"><b>Figure 3-3 201 File page</b></p>
+	</div>
+
+	<div id="AddEmployee" class="w3-container page w3-animate-left" style="display:none">
+		<h2>How to Add New Employee</h2>
+		<p>To add new employee details, 
+			click the <strong>Add Employee</strong> link on the center of PDS page to view the Add New Employee page (See Figure 3-4).</p> 
+
+  
+			 <div class="img-content">
+			  <img src="assets/images/201File.PNG" alt="" class="center">
+		  </div>	
+		  <p style="font-size: 12px; text-align: center;"><b>Figure 3-4 201 File page</b></p>
+	  </div>
+
+	  <div id="UploadImg" class="w3-container page w3-animate-left" style="display:none">
+		<h2>How to Upload Image</h2>
+		<p>To browse for the image, click <strong>Choose File</strong> button . A File Upload window will appear. 
+			Locate the file to be uploaded, then click Open button .</p> 
+
+  
+			 <div class="img-content">
+			  <img src="assets/images/UploadImage.PNG" alt="" class="center">
+		  </div>	
+		  <p style="font-size: 12px; text-align: center;"><b>Figure 3-5 Upload Image page</b></p>
+	  </div>
+
+	  <div id="PrintForm" class="w3-container page w3-animate-left" style="display:none">
+		<h2>How to Download/Print CSC Form 212</h2>
+		<p>To print a copy of CSC Form 212 (Revised 2005), click <strong>Print CSC-212 Form</strong> button.</p> 
+
+  
+			 <div class="img-content">
+			  <img src="assets/images/201File.PNG" alt="" class="center">
+		  </div>	
+		  <p style="font-size: 12px; text-align: center;"><b>Figure 3-6 201 File page</b></p>
+
+		  <ul class="w3-ul w3-border">
+			<li>To print, open the Personal Data Sheet file then look for the Print icon  on the application and click it.</li>
+			<li>You will be prompted to specify your printing options. Printing options depend on your printer.</li>
+			<li>Click <strong>Ok</strong> to proceed.</li>
+		  </ul>
+		 
+	  </div>
+  
+	
+	<div id="Attendance" class="w3-container page w3-animate-left" style="display:none">
+		<h2>Attendance</h2>
+		<p>This part of the section contains details regarding the attendance of all employees within the agency. It includes information such as the number of leave credits available, 
+			number of leave credits that can be monetized, filed requests of employees, DTR options and override.</p>
+		  <br>
+			<p>To access the Attendance section, click the <strong>Attendance </strong> tab(See Figure 3-7).</p>
+		  
+			<div class="img-content">
+				<img src="assets/images/AttendancePage.PNG" alt="" class="center">
+			</div>	
+			<p style="font-size: 12px; text-align: center;"><b>Figure 3-7 HR Module Attendance page</b></p>	
+			
+	  </div>
+
+	  <div id="ConTable" class="w3-container page w3-animate-left" style="display:none">
+		<h2>How to View Conversion Table</h2>
+		<p>This part of the section contains details regarding the attendance of all employees within the agency. It includes information such as the number of leave credits available, 
+			number of leave credits that can be monetized, filed requests of employees, DTR options and override.</p>
+		  <br>
+			<p>To view conversion tables, click the <strong>Conversion Tables </strong>link (Conversion Table II-IV) corresponding to the conversion table to view (See Figure 3-8).</p>
+		  
+			<div class="img-content">
+				<img src="assets/images/ConversionTablePage.PNG" alt="" class="center">
+			</div>	
+			<p style="font-size: 12px; text-align: center;"><b>Figure 3-8 Conversion Table page</b></p>	
+			
+	  </div>
+
+	  <div id="Reports" class="w3-container page w3-animate-left" style="display:none">
+		<h2>Reports</h2>
+		<p>This section allows user to generate and print various reports.</p>
+		  <br>
+			<p>To access the <strong>Reports</strong> page, click the Reports tab (See Figure 3-9).</p>
+		  
+			<div class="img-content">
+				<img src="assets/images/ReportsPage.PNG" alt="" class="center">
+			</div>	
+			<p style="font-size: 12px; text-align: center;"><b>Figure 3-9 Reports page</b></p>	
+			
+	  </div>
+
+	  <div id="GenReports" class="w3-container page w3-animate-left" style="display:none">
+		<h2>How to Generate Reports</h2>
+		<p>1. Depending on the type of report chosen, supply the parameter(s) it may require using the entry box(es) and drop-down lists. It may be the name of employee(s), date or appointment status.</p>
+		<p>2. When done, click <strong>Print/Preview</strong> button to generate report.</p>
+		  
+		
+			<!--Alert-->
+<div class="alert alert-warning alert-dismissible fade show" role="alert" style="font-size: 10px;">
+	<strong>Note:</strong> If All Employees is chosen, the report will include all the employees in the agency.
+	 Otherwise, if Per Employee is chosen, select the name of the employee(s) from the drop-down list.
+	<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  </div>
+
+  <div class="alert alert-warning alert-dismissible fade show" role="alert" style="font-size: 10px;">
+	<strong>Note:</strong> To include agency letterhead, place a tick mark in the Include Letterhead checkbox.
+	<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  </div>
+
+			<div class="img-content">
+				<img src="assets/images/ReportsPage.PNG" alt="" class="center">
+			</div>	
+			<p style="font-size: 12px; text-align: center;"><b>Figure 3-10 Reports page</b></p>	
+
+			
+	  </div>
+
+	  <div id="SaveReports" class="w3-container page w3-animate-left" style="display:none">
+		<h2>How to Save Reports</h2>
+		<p>This section allows user to generate and print various reports.</p>
+		  <br>
+			<p>To access the <strong>Reports</strong> page, click the Reports tab (See Figure 3-11).</p>
+		  
+			<div class="img-content">
+				<img src="assets/images/ReportsPage.PNG" alt="" class="center">
+			</div>	
+			<p style="font-size: 12px; text-align: center;"><b>Figure 3-11 Reports page</b></p>	
+			
+	  </div>
+
+	  <div id="PrintReports" class="w3-container page w3-animate-left" style="display:none">
+		<h2>How to Print Reports</h2>
+		<p>This section allows user to generate and print various reports.</p>
+		  <br>
+			<p>To access the <strong>Reports</strong> page, click the Reports tab (See Figure 3-12).</p>
+		  
+			<div class="img-content">
+				<img src="assets/images/ReportsPage.PNG" alt="" class="center">
+			</div>	
+			<p style="font-size: 12px; text-align: center;"><b>Figure 3-12 Reports page</b></p>	
+			
+	  </div>
+
+	  <div class="TaskPage">
+		<div id="tasks" class="w3-container page w3-animate-left" style="display: none;">
+		  <h2>Request Tab</h2>
+		  <p>This part of the section contains details regarding the tasks addressed to the HR personnel.
+			   This includes requests sent by employees that need approval from the HR (See Figure 3-13).</p>
+		<!--Alert-->
+<div class="alert alert-warning alert-dismissible fade show" role="alert" style="font-size: 10px;">
+	<strong>Note:</strong> The number inside the braces indicates the number of request for each task.
+	<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  </div>
+			  <div class="img-content">
+				<img src="assets/images/RequestTab.PNG" alt="" class="center">
+			</div>	
+			<p style="font-size: 12px; text-align: center;"><b>Figure 3-13 Request Tab Page</b></p>		
+		</div>
+	</div>
+
+	<div id="reqst" class="w3-container page w3-animate-left" style="display: none;">
+		<h2>Official Business Request</h2>
+		<p> 1. Click the <strong>Official Business</strong> on the top of the navigation tabs to view the OB Request page (See Figure 3-14).</p>
+ 
+	
+			<div class="img-content">
+			  <img src="assets/images/RequestTab.PNG" alt="" class="center">
+		  </div>	
+		  <p style="font-size: 12px; text-align: center;"><b>Figure 3-14 Request Tab Page</b></p>	
+		  
+		  
+		  <p> 2. To view details of the OB request, click the <strong>Print Preview</strong> button corresponding to the request to view (See Figure 3-15).
+		</p>
+
+		<div class="img-content">
+			<img src="assets/images/OBrequestDetails.PNG" alt="" class="center">
+		</div>	
+		<p style="font-size: 12px; text-align: center;"><b>Figure 3-15 OB Request Details</b></p>
+
+		<p>3. Type in <strong>Remarks</strong> (if there is any) on the entry box provided.</p>
+		<p>4. When done, click <strong>Certify</strong> button  to certify the OB request.</p>
+	  </div>
+
+	  <div id="leavereqst" class="w3-container page w3-animate-left" style="display: none;">
+		<h2>Leave Request</h2>
+		<p> 1. Click the <strong>Leave Request</strong>  on the top of the Navigation Tab to view the Leave Request page (See Figure 3-16).</p>
+ 
+	
+			<div class="img-content">
+			  <img src="assets/images/LeaveRequestpage.PNG" alt="" class="center">
+		  </div>	
+		  <p style="font-size: 12px; text-align: center;"><b>Figure 3-16 Leave Request Page</b></p>	
+		  
+		  
+		  <p> 2. To view details of the OB request, click the <strong>Print Preview</strong> button corresponding to the request to view (See Figure 3-17).
+		</p>
+
+		<div class="img-content">
+			<img src="assets/images/LeaveRequestDetails.PNG" alt="" class="center">
+		</div>	
+		<p style="font-size: 12px; text-align: center;"><b>Figure 3-17 Leave Request Details</b></p>
+
+		<p>3. Type in <strong>Remarks</strong> (if there is any) on the entry box provided.</p>
+		<p>4. When done, click <strong>Certify</strong> button  to certify the OB request.</p>
+	  </div>
+
+	  <div id="travelreqst" class="w3-container page w3-animate-left" style="display: none;">
+		<h2>Travel Order Request</h2>
+		<p> 1. Click the <strong>Leave Request</strong>  on the top of the Navigation Tab to view the Leave Request page (See Figure 3-18).</p>
+ 
+	
+			<div class="img-content">
+			  <img src="assets/images/TravelOrderPage.PNG" alt="" class="center">
+		  </div>	
+		  <p style="font-size: 12px; text-align: center;"><b>Figure 3-18 Travel Order Request Page</b></p>	
+		  
+		  
+		  <p> 2. To view details of the Travel Order request, click the <strong>Print Preview</strong> button corresponding to the request to view (See Figure 3-19).
+		</p>
+
+		<div class="img-content">
+			<img src="assets/images/TravelOrderDetails.PNG" alt="" class="center">
+		</div>	
+		<p style="font-size: 12px; text-align: center;"><b>Figure 3-19 Travel Order Request Details</b></p>
+
+		<p>3. Type in <strong>Remarks</strong> (if there is any) on the entry box provided.</p>
+		<p>4. When done, click <strong>Certify</strong> button  to certify the OB request.</p>
+	  </div>
+
+	  <div id="pdsreqst" class="w3-container page w3-animate-left" style="display: none;">
+		<h2>PDS Update</h2>
+		<p> 1. Click the <strong>PDS Update</strong>  on the top of the Navigation Tab to view the PDS Update page (See Figure 3-20).</p>
+ 
+	
+			<div class="img-content">
+			  <img src="assets/images/pdsUpdatepage.PNG" alt="" class="center">
+		  </div>	
+		  <p style="font-size: 12px; text-align: center;"><b>Figure 3-20 PDS Update Page</b></p>	
+		  
+		  
+	  </div>
+
+	  <div id="leaveMonetreqst" class="w3-container page w3-animate-left" style="display: none;">
+		<h2>Leave Monetization</h2>
+		<p> 1. Click the <strong>Leave Monetization</strong>  on the top of the Navigation Tab to view the Leave Monetization page (See Figure 3-21).</p>
+ 
+	
+			<div class="img-content">
+			  <img src="assets/images/leaveMonetizationPage.PNG" alt="" class="center">
+		  </div>	
+		  <p style="font-size: 12px; text-align: center;"><b>Figure 3-21 Leave Monetization Page</b></p>	
+		  
+		  <p> 2. To view details of the Leave Monetization request, click the <strong>Print Preview</strong> button corresponding to the request to view (See Figure 3-22).
+		  </p>
+  
+		  <div class="img-content">
+			  <img src="assets/images/leaveMonetizationDetails.PNG" alt="" class="center">
+		  </div>	
+		  <p style="font-size: 12px; text-align: center;"><b>Figure 3-22 Leave Monetization Request Details</b></p>
+  
+		  <p>3. To approve Leave Monetization, click <strong>Certify</strong> button </p>
+		  <p>4. To disapprove Leave Monetization request, click <strong>Disapprove</strong> button </p>
+		  
+	  </div>
+
+	  <div id="dtrreqst" class="w3-container page w3-animate-left" style="display: none;">
+		<h2>DTR Update</h2>
+		<p> 1. Click the <strong>DTR Update</strong>  on the top of the Navigation Tab to view the DTR Update page (See Figure 3-23).</p>
+ 
+	
+			<div class="img-content">
+			  <img src="assets/images/DTRupdatePage.PNG" alt="" class="center">
+		  </div>	
+		  <p style="font-size: 12px; text-align: center;"><b>Figure 3-23 DTR Update Page</b></p>	
+		  
+		  <p> 2. To view details of the DTR Update request, click the <strong>Print Preview</strong> button corresponding to the request to view (See Figure 3-24).
+		  </p>
+  
+		  <div class="img-content">
+			  <img src="assets/images/DtrUpdatedetails.PNG" alt="" class="center">
+		  </div>	
+		  <p style="font-size: 12px; text-align: center;"><b>Figure 3-24 DTR Update Request Details</b></p>
+  
+		  <p>3. To approve DTR Request, click <strong>Certify</strong> button </p>
+		  <p>4. To disapprove DTR request, click <strong>Disapprove</strong> button </p>
+		  
+	  </div>
+
+	  <div id="comptimereqst" class="w3-container page w3-animate-left" style="display: none;">
+		<h2>Compensatory Time Off</h2>
+		<p> 1. Click the <strong>Compensatory Time Off</strong>  on the top of the Navigation Tab to view the Compensatory Time Off page (See Figure 3-25).</p>
+ 
+	
+			<div class="img-content">
+			  <img src="assets/images/CompensatoryTimeoff.PNG" alt="" class="center">
+		  </div>	
+		  <p style="font-size: 12px; text-align: center;"><b>Figure 3-25 Compensatory Time off Page</b></p>	
+		  
+		  
+	  </div>
+
+	  <div id="lib" class="w3-container page w3-animate-left" style="display: none;">
+		<h2>Libraries</h2>
+		<p> This part of the section contains details regarding predefined values assigned by the HR personnel. 
+			It includes information about the Agency Information, Appointment Status , Attendance Scheme , Back-up , 
+			Contact , Courses , Duties and Responsibilities , Educational Level , Exam Type , Holiday , Leave Type , 
+			Org. Structure , Payroll Group , PhilHealth Range , Plantilla , Plantilla Group , Plantilla Duties , 
+			Position Code , Project Code , Request , Salary Schedule , Scholarship ,
+			 Separation Mode , Service Code , Tax Exemption , Tax Range , User Account and Zone sub-sections.</p>
+ 
+			 <p>1. To access the Libraries section, click the <b>Libraries</b> tab (See Figure 3-26).
+			</p>
+	
+			<div class="img-content">
+			  <img src="assets/images/AgencyInfopage.PNG" alt="" class="center">
+		  </div>	
+		  <p style="font-size: 12px; text-align: center;"><b>Figure 3-26 Libraries Page</b></p>	
+		  
+		  
+	  </div>
+
+	  <div id="agencyInfo" class="w3-container page w3-animate-left" style="display: none;">
+		<h2>Agency Information</h2>
+		<p> 1. Click the <strong>Agency Information</strong>  on the dropdown list of the Libraries Tab to view the Agency Information page (See Figure 3-27).</p>
+ 
+	
+			<div class="img-content">
+			  <img src="assets/images/AgencyInfopage.PNG" alt="" class="center">
+		  </div>	
+		  <p style="font-size: 12px; text-align: center;"><b>Figure 3-27 Agency Information Page</b></p>	
+		  
+		  <p>2. To edit agency information, click <strong>Edit</strong> button</p>
+		  <p>3. Information that can be updated includes <strong> Name</strong>, <strong> Code</strong>, <strong>Region</strong>, <strong>TIN Number</strong> and <Strong>Address</Strong> among others (See Figure 3-28).</p>
+
+		  <div class="img-content">
+			<img src="assets/images/editAgencyInformation.PNG" alt="" class="center">
+		</div>	
+		<p style="font-size: 12px; text-align: center;"><b>Figure 3-28 Edit Agency Information form</b></p>
+
+		<p>4. When done, click <strong>Save</strong> button to update agency information or <strong>Cancel</strong> button to cancel operation.</p>
+	  </div>
+
+	  <div id="appointStats" class="w3-container page w3-animate-left" style="display: none;">
+		<h2>Appointment Status</h2>
+		<p> 1. Click the <strong>Appointment Status</strong>  on the dropdown list of the Libraries Tab to view the Appointment Status page (See Figure 3-29).</p>
+ 
+	
+			<div class="img-content">
+			  <img src="assets/images/appointmentStatuspage.PNG" alt="" class="center">
+		  </div>	
+		  <p style="font-size: 12px; text-align: center;"><b>Figure 3-29 Appointment Status Page</b></p>	
+		  
+		  
+	  </div>
+
+	  <div id="addApp" class="w3-container page w3-animate-left" style="display: none;">
+		<h2>How to Add New Appointment Status</h2>
+		<p>1. To add appointment status, fill-up the entry boxes that constitute the parameters for adding new appointment status in Figure 3-30.
+		</p>
+ 
+	
+			<div class="img-content">
+			  <img src="assets/images/addnewAppointment.PNG" alt="" class="center">
+		  </div>	
+		  <p style="font-size: 12px; text-align: center;"><b>Figure 3-30 Add Appointment Status Form</b></p>	
+		  
+		  <p>2. Type in the <strong>Appointment Code</strong>  and <strong>Appointment Description</strong> on the entry boxes provided.
+		</p>
+
+		<p>3. Select <strong>Leave Entitled</strong> and <Strong>Included in Plantilla</Strong> on the dropdown list (Y/N). 
+		</p>
+
+		<p>4. When done, click <strong>Add</strong> button to add new Appointment Status or the <strong>Cancel</strong> button  to cancel the operation.</p>
+		  
+	  </div>
+
+	  <div id="editApp" class="w3-container page w3-animate-left" style="display: none;">
+		<h2>How to Edit Existing Appointment Status</h2>
+		<p>1. To edit existing appointment status, click the Edit button corresponding to the details of the appointment status to edit. </p>
+		<p>2. Information that can be updated includes <b>Appointment Code</b>, <b>Appointment Status</b> , <b>Leave Entitled</b> and <b>Included in Plantilla</b> (See Figure 3-31).</p>
+ 
+	
+			<div class="img-content">
+			  <img src="assets/images/editAppointmentstatus.PNG" alt="" class="center">
+		  </div>	
+		  <p style="font-size: 12px; text-align: center;"><b>Figure 3-31 Edit Appointment Status form</b></p>	
+		  
+		  <p>3. When done, click <b>Save</b> button  to update information or <b>Cancel</b> button  to cancel operation.</p>
+	  </div>
+
+	  <div id="attendscheme" class="w3-container page w3-animate-left" style="display: none;">
+		<h2>Attendance Scheme</h2>
+
+			<!--Alert-->
+<div class="alert alert-warning alert-dismissible fade show" role="alert" style="font-size: 10px;">
+	<strong>Note:</strong> The Sliding Attendance scheme has sliding time-in from 7:00-9:00 AM, however the Fixed Attendance scheme has fixed time-in until 8:00 AM.
+	<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  </div>
+
+		<p> 1. Click the <strong>Attendance Scheme</strong>  on the dropdown list of the Libraries Tab to view the Attendance Scheme page (See Figure 3-32).</p>
+ 
+	
+			<div class="img-content">
+			  <img src="assets/images/AttendanceSchemepage.PNG" alt="" class="center">
+		  </div>	
+		  <p style="font-size: 12px; text-align: center;"><b>Figure 3-32 Attendance Sceheme Page</b></p>	
+		  
+		  
+	  </div>
+
+	  <div id="addscheme" class="w3-container page w3-animate-left" style="display: none;">
+		<h2>How to Add New Attendance Scheme</h2>
+
+
+		<p>1. To add new attendance scheme, fill-up the entry boxes that constitute the parameters for adding new Attendance Scheme in Figure 3-33).
+		</p>
+ 
+	
+			<div class="img-content">
+			  <img src="assets/images/AddAttendanceScheme.PNG" alt="" class="center">
+		  </div>	
+		  <p style="font-size: 12px; text-align: center;"><b>Figure 3-33 Add New Attendance Sceheme form</b></p>	
+
+		  <p>2. Specify the <b>Scheme Type</b> from the drop-down list.</p>
+          <p>3. Type in the <b>Scheme Code</b> and <b>Scheme Name</b> on the entry boxes provided.</p>
+		  <p>4. Place a tick mark on the appropriate answer in the given set of questions.</p>
+		  <p>5. When done, click <b>Add</b> button to add new attendance scheme.</p>
+	  </div>
+
+	  <div id="editscheme" class="w3-container page w3-animate-left" style="display: none;">
+		<h2>How to Edit Existing Attendance Scheme</h2>
+
+
+		<p>1. To edit existing attendance scheme, click the <b>Edit</b> button corresponding to the details of the attendance scheme to edit.</p>
+        <p>2. Information that can be updated includes Scheme Name, Time In and Time Out among others (See Figure 3-34).</p>
+	
+			<div class="img-content">
+			  <img src="assets/images/editScheme.PNG" alt="" class="center">
+		  </div>	
+		  <p style="font-size: 12px; text-align: center;"><b>Figure 3-34 Edit Attendance Sceheme form</b></p>	
+		  
+		  <p>3. When done, click <b>Save</b> button to update information or <b>Cancel</b> button to cancel operation.</p>
+		  
+	  </div>
+
+	  <div id="dltscheme" class="w3-container page w3-animate-left" style="display: none;">
+		<h2>How to Delete Existing Attendance Scheme</h2>
+
+
+		<p>1. To delete existing attendance scheme, click the <b>Delete</b> button corresponding to the details of the attendance scheme to delete.</p>
+        <p>2. Once you click the Delete button, You will redirected to the Delete Attendance Scheme Page (See Figure 3-35).</p>
+	
+			<div class="img-content">
+			  <img src="assets/images/deleteAttendanceScheme.PNG" alt="" class="center">
+		  </div>	
+		  <p style="font-size: 12px; text-align: center;"><b>Figure 3-35 Delete Existing Attendance Scheme page</b></p>	
+		  
+		  <p>3. Click <b>Yes</b> button to proceed or click <b>Cancel</b> button to do otherwise. A confirmation message will be displayed if the action is successful.</p>
+		  
+	  </div>
+
+
+	  <div id="backup" class="w3-container page w3-animate-left" style="display: none;">
+		<h2>Backup</h2>
+
+
+		<p> 1. Click the <strong>Backup</strong>  on the dropdown list of the Libraries Tab to view the Backup page (See Figure 3-36).</p>
+ 
+	
+			<div class="img-content">
+			  <img src="assets/images/backupPage.PNG" alt="" class="center">
+		  </div>	
+		  <p style="font-size: 12px; text-align: center;"><b>Figure 3-36 Backup Page</b></p>	
+
+	  </div>
+
+	  <div id="course" class="w3-container page w3-animate-left" style="display: none;">
+		<h2>Courses</h2>
+
+
+		<p> 1. Click the <strong>Courses</strong>  on the dropdown list of the Libraries Tab to view the Backup page (See Figure 3-37).</p>
+ 
+	
+			<div class="img-content">
+			  <img src="assets/images/coursesPage.PNG" alt="" class="center">
+		  </div>	
+		  <p style="font-size: 12px; text-align: center;"><b>Figure 3-37 Courses Page</b></p>	
+
+	  </div>
+
+	  <div id="addcourse" class="w3-container page w3-animate-left" style="display: none;">
+		<h2>How to Add New Course</h2>
+
+
+		<p>1. To add new course, fill-up the entry boxes that constitute the parameters for adding new course in Figure 3-38).
+		</p>
+ 
+	
+			<div class="img-content">
+			  <img src="assets/images/addCourse.PNG" alt="" class="center">
+		  </div>	
+		  <p style="font-size: 12px; text-align: center;"><b>Figure 3-38 Add New Course form</b></p>	
+
+		  <p>2. Type in the <b>Course Code</b> and the <b>Course Description</b> on the entry boxes provided.</p>
+          <p>3. When done, click <b>Add</b> button to add new Course or the <b>Cancel</b> button  to cancel operation.</p>
+	  </div>
+
+	  <div id="editcourse" class="w3-container page w3-animate-left" style="display: none;">
+		<h2>How to Edit Existing Course</h2>
+
+        <p>1. To edit existing course, click the <b>Edit</b> button corresponding to the details of the course to edit.</p>
+		<p>2. Information that can be updated is <b>Course Description</b> only (See Figure 3-39).
+		</p>
+ 
+	
+			<div class="img-content">
+			  <img src="assets/images/editCourse.PNG" alt="" class="center">
+		  </div>	
+		  <p style="font-size: 12px; text-align: center;"><b>Figure 3-39 Edit Course form</b></p>	
+
+		  <p>3. When done, click <b>Save</b> button to update information or <b>Cancel</b> button to cancel operation.</p>
+	  </div>
+
+	  <div id="dltcourse" class="w3-container page w3-animate-left" style="display: none;">
+		<h2>How to Delete Existing Course</h2>
+
+
+		<p>1. To delete existing course, click the <b>Delete</b> button corresponding details of the course to delete.
+		</p>
+		<p>2. Once you click the <b>Delete</b> button, You will redirected to the Delete Course Page (See Figure 3-40).</p>
+ 
+	
+			<div class="img-content">
+			  <img src="assets/images/deleteCourse.PNG" alt="" class="center">
+		  </div>	
+		  <p style="font-size: 12px; text-align: center;"><b>Figure 3-40 Delete Course Page</b></p>	
+
+		  <p>3. Click <b>Yes</b> button to proceed or click <b>Cancel</b> button to do otherwise. A confirmation message will be displayed if the action is successful.</p>
+	  </div>
+
+
+	  <div id="country" class="w3-container page w3-animate-left" style="display: none;">
+		<h2>Country</h2>
+
+
+		<p>1. Click the <strong>Country</strong>  on the dropdown list of the Libraries Tab to view the Country Page (See Figure 3-41).
+		</p>
+ 
+	
+			<div class="img-content">
+			  <img src="assets/images/CountryPage.PNG" alt="" class="center">
+		  </div>	
+		  <p style="font-size: 12px; text-align: center;"><b>Figure 3-41 Country page</b></p>	
+
+      </div>
+
+	  <div id="addcountry" class="w3-container page w3-animate-left" style="display: none;">
+		<h2>How to Add New Country</h2>
+
+
+		<p>1. To add new country, fill-up the entry boxes that constitute the parameters for adding new country in Figure 3-42).
+		</p>
+ 
+	
+			<div class="img-content">
+			  <img src="assets/images/addCountry.PNG" alt="" class="center">
+		  </div>	
+		  <p style="font-size: 12px; text-align: center;"><b>Figure 3-42 Add New Country form</b></p>	
+
+		  <p>2. Type in the <b>Country Code</b> and the <b>Country name</b> on the entry boxes provided.</p>
+          <p>3. When done, click <b>Add</b> button to add new Country or the <b>Cancel</b> button to cancel operation.</p>
+
+      </div>
+
+	  <div id="editcountry" class="w3-container page w3-animate-left" style="display: none;">
+		<h2>How to Edit Existing Country</h2>
+
+        <p>1. To edit existing country, click the <b>Edit</b> button corresponding to the details of the country to edit.</p>
+		<p>2. Information that can be updated is <b>Country Name</b> only (See Figure 3-43).
+		</p>
+ 
+	
+			<div class="img-content">
+			  <img src="assets/images/editCountry.PNG" alt="" class="center">
+		  </div>	
+		  <p style="font-size: 12px; text-align: center;"><b>Figure 3-43 Edit Country form</b></p>	
+
+		  <p>3. When done, click <b>Save</b> button to update information or <b>Cancel</b> button to cancel operation.</p>
+	  </div>
+
+	  <div id="dltcountry" class="w3-container page w3-animate-left" style="display: none;">
+		<h2>How to Delete Existing Country</h2>
+
+
+		<p>1. To delete existing country, click the <b>Delete</b> button corresponding details of the country to delete.
+		</p>
+		<p>2. Once you click the <b>Delete</b> button, You will redirected to the Delete Country Page (See Figure 3-44).</p>
+ 
+	
+			<div class="img-content">
+			  <img src="assets/images/delelteCountry.PNG" alt="" class="center">
+		  </div>	
+		  <p style="font-size: 12px; text-align: center;"><b>Figure 3-44 Delete Country Page</b></p>	
+
+		  <p>3. Click <b>Yes</b> button to proceed or click <b>Cancel</b> button to do otherwise. A confirmation message will be displayed if the action is successful.</p>
+	  </div>
+
+	  <div id="educlevel" class="w3-container page w3-animate-left" style="display: none;">
+		<h2>Educational Level</h2>
+
+
+		<p>1. Click the <strong>Educational Level</strong>  on the dropdown list of the Libraries Tab to view the Educational Level Page (See Figure 3-45).
+		</p>
+ 
+	
+			<div class="img-content">
+			  <img src="assets/images/EducationLevelpage.PNG" alt="" class="center">
+		  </div>	
+		  <p style="font-size: 12px; text-align: center;"><b>Figure 3-45 Country page</b></p>	
+
+      </div>
+
+	  <div id="addeduc" class="w3-container page w3-animate-left" style="display: none;">
+		<h2>How to Add New Country</h2>
+
+
+		<p>1. To add new educational level, fill-up the entry boxes that constitute the parameters for adding new educational level in (Figure 3-46).
+		</p>
+ 
+	
+			<div class="img-content">
+			  <img src="assets/images/addEducationalLevel.PNG" alt="" class="center">
+		  </div>	
+		  <p style="font-size: 12px; text-align: center;"><b>Figure 3-46 Add New Educational Level form</b></p>	
+
+		  <p>2. Type in the <b>Level Code</b> and the <b>Level Description</b> on the entry boxes provided.</p>
+          <p>3. When done, click <b>Add</b> button to add new Educational Level or the <b>Cancel</b> button to cancel operation.</p>
+
+      </div>
+
+	  <div id="editeduc" class="w3-container page w3-animate-left" style="display: none;">
+		<h2>How to Edit Existing Country</h2>
+
+        <p>1. To edit existing educational level, click the <b>Edit</b> button corresponding to the details of the educational level to edit.</p>
+		<p>2. Information that can be updated includes <b>Level Code</b> and <b>Level Description</b> (See Figure 3-47).
+		</p>
+ 
+	
+			<div class="img-content">
+			  <img src="assets/images/editEducationalLevel.PNG" alt="" class="center">
+		  </div>	
+		  <p style="font-size: 12px; text-align: center;"><b>Figure 3-47 Edit Educational Level form</b></p>	
+
+		  <p>3. When done, click <b>Save</b> button to update information or <b>Cancel</b> button to cancel operation.</p>
+	  </div>
+
+	  <div id="dlteduc" class="w3-container page w3-animate-left" style="display: none;">
+		<h2>How to Delete Existing Delete Educational Level</h2>
+
+
+		<p>1. To delete existing educational level, click the <b>Delete</b> button corresponding details of the educational level to delete.
+		</p>
+		<p>2. Once you click the <b>Delete</b> button, You will redirected to the Delete Country Page (See Figure 3-48).</p>
+ 
+	
+			<div class="img-content">
+			  <img src="assets/images/deleteEducationalLevel.PNG" alt="" class="center">
+		  </div>	
+		  <p style="font-size: 12px; text-align: center;"><b>Figure 3-48 Delete Educational Level Page</b></p>	
+
+		  <p>3. Click <b>Yes</b> button to proceed or click <b>Cancel</b> button to do otherwise. A confirmation message will be displayed if the action is successful.</p>
+	  </div>
+
+	  <div id="employmentStats" class="w3-container page w3-animate-left" style="display: none;">
+		<h2>Employment Status</h2>
+
+
+		<p>1. Click the <strong>Employment Status</strong>  on the dropdown list of the Libraries Tab to view the Employment Status Page (See Figure 3-49).
+		</p>
+ 
+	
+			<div class="img-content">
+			  <img src="assets/images/employmentStatuspage.PNG" alt="" class="center">
+		  </div>	
+		  <p style="font-size: 12px; text-align: center;"><b>Figure 3-49 Employment Status page</b></p>	
+
+      </div>
+
+	  <div id="addemploy" class="w3-container page w3-animate-left" style="display: none;">
+		<h2>How to Add New Employment Status</h2>
+
+
+		<p>1. To add new employment status, fill-up the entry boxes that constitute the parameters for adding new employment status in Figure 3-50).
+		</p>
+ 
+	
+			<div class="img-content">
+			  <img src="assets/images/addEmploymentStatus.PNG" alt="" class="center">
+		  </div>	
+		  <p style="font-size: 12px; text-align: center;"><b>Figure 3-50 Add New Employment Status form</b></p>	
+
+		  <p>2. Type in the <b>Employment Status</b> on the entry boxes provided.</p>
+          <p>3. When done, click <b>Add</b> button to add new Employment Status or the <b>Cancel</b> button to cancel operation.</p>
+
+      </div>
+
+	  <div id="examType" class="w3-container page w3-animate-left" style="display: none;">
+		<h2>Exam Type</h2>
+
+
+		<p>1. Click the <strong>Exam Type</strong>  on the dropdown list of the Libraries Tab to view the Exam Type Page (See Figure 3-51).
+		</p>
+ 
+	
+			<div class="img-content">
+			  <img src="assets/images/ExamType.PNG" alt="" class="center">
+		  </div>	
+		  <p style="font-size: 12px; text-align: center;"><b>Figure 3-51 Exam Type page</b></p>	
+
+      </div>
+
+
+	  <div id="addexam" class="w3-container page w3-animate-left" style="display: none;">
+		<h2>How to Add New Exam Type</h2>
+
+
+		<p>1. To add new exam type, fill-up the entry boxes that constitute the parameters for adding new exam type in (Figure 3-52).
+		</p>
+ 
+	
+			<div class="img-content">
+			  <img src="assets/images/addExamtype.PNG" alt="" class="center">
+		  </div>	
+		  <p style="font-size: 12px; text-align: center;"><b>Figure 3-52 Add New Exam Type form</b></p>	
+
+		  <p>2. Type in the <b>Exam Code</b> and the <b>Exam Description</b> on the entry boxes provided.</p>
+		  <p>3. Specify the <b>CSC Eligibility</b> in the drop-down list.</p>
+          <p>4. When done, click <b>Add</b> button to add new Educational Level or the <b>Cancel</b> button to cancel operation.</p>
+
+      </div>
+
+	  <div id="editexam" class="w3-container page w3-animate-left" style="display: none;">
+		<h2>How to Edit Existing Exam Type</h2>
+
+        <p>1. To edit existing exam type, click the <b>Edit</b> button corresponding to the details of the exam type to edit.</p>
+		<p>2. Information that can be updated includes <b>Exam Description</b> and <b>CSC Eligible</b> (See Figure 3-53).
+		</p>
+ 
+	
+			<div class="img-content">
+			  <img src="assets/images/editExamtype.PNG" alt="" class="center">
+		  </div>	
+		  <p style="font-size: 12px; text-align: center;"><b>Figure 3-53 Edit Exam Type form</b></p>	
+
+		  <p>3. When done, click <b>Save</b> button to update information or <b>Cancel</b> button to cancel operation.</p>
+	  </div>
+
+	  <div id="dltexam" class="w3-container page w3-animate-left" style="display: none;">
+		<h2>How to Delete Existing Exam Type</h2>
+
+
+		<p>1. To delete existing exam type, click the <b>Delete</b> button corresponding details of the exam type to delete.
+		</p>
+		<p>2. Once you click the <b>Delete</b> button, You will redirected to the Delete Exam Type Page (See Figure 3-54).</p>
+ 
+	
+			<div class="img-content">
+			  <img src="assets/images/deleteExamtype.PNG" alt="" class="center">
+		  </div>	
+		  <p style="font-size: 12px; text-align: center;"><b>Figure 3-54 Delete Exam Type Page</b></p>	
+
+		  <p>3. Click <b>Yes</b> button to proceed or click <b>Cancel</b> button to do otherwise. A confirmation message will be displayed if the action is successful.</p>
+	  </div>
+
+
+	  <div id="holiday" class="w3-container page w3-animate-left" style="display: none;">
+		<h2>Holiday</h2>
+
+
+		<p>1. Click the <strong>Holiday</strong>  on the dropdown list of the Libraries Tab to view the Holiday Page (See Figure 3-55).
+		</p>
+ 
+	
+			<div class="img-content">
+			  <img src="assets/images/holidayPage.PNG" alt="" class="center">
+		  </div>	
+		  <p style="font-size: 12px; text-align: center;"><b>Figure 3-55 Holiday page</b></p>	
+
+      </div>
+
+	  <div id="addholiday" class="w3-container page w3-animate-left" style="display: none;">
+		<h2>How to Add New Holiday Name</h2>
+
+
+		<p>1. To add new holiday name, fill-up the entry boxes that constitute the parameters for adding new holiday name in (Figure 3-56).
+		</p>
+ 
+	
+			<div class="img-content">
+			  <img src="assets/images/addHoliday.PNG" alt="" class="center">
+		  </div>	
+		  <p style="font-size: 12px; text-align: center;"><b>Figure 3-56 Add New Holiday form</b></p>	
+
+		  <p>2. Type in the <b>Holiday Code</b> and the <b>Holiday Name</b> on the entry boxes provided.</p>
+		 
+          <p>3. When done, click <b>Add</b> button to add new Educational Level or the <b>Cancel</b> button to cancel operation.</p>
+
+      </div>
+
+	  <div id="addholidayNa" class="w3-container page w3-animate-left" style="display: none;">
+		<h2>How to Add New Holiday Name</h2>
+
+
+		<p>1. To add new holiday name, fill-up the entry boxes that constitute the parameters for adding new holiday name in (Figure 3-56).
+		</p>
+ 
+	
+			<div class="img-content">
+			  <img src="assets/images/addHoliday.PNG" alt="" class="center">
+		  </div>	
+		  <p style="font-size: 12px; text-align: center;"><b>Figure 3-56 Add New Holiday form</b></p>	
+
+		  <p>2. Type in the <b>Holiday Code</b> and the <b>Holiday Name</b> on the entry boxes provided.</p>
+		 
+          <p>3. When done, click <b>Add</b> button to add new Educational Level or the <b>Cancel</b> button to cancel operation.</p>
+
+      </div>
+
+	  <div id="editholidayNa" class="w3-container page w3-animate-left" style="display: none;">
+		<h2>How to Edit Existing Holiday Name</h2>
+
+        <p>1. To edit existing holiday name, click the <b>Edit</b> button corresponding to the details of the holiday name to edit.</p>
+		<p>2. Information that can be updated is <b>Holiday Name</b> (See Figure 3-57).
+		</p>
+ 
+	
+			<div class="img-content">
+			  <img src="assets/images/editHoliday.PNG" alt="" class="center">
+		  </div>	
+		  <p style="font-size: 12px; text-align: center;"><b>Figure 3-57 Edit Holiday form</b></p>	
+
+		  <p>3. When done, click <b>Save</b> button to update information or <b>Cancel</b> button to cancel operation.</p>
+	  </div>
+
+	  <div id="dltholidayNa" class="w3-container page w3-animate-left" style="display: none;">
+		<h2>How to Delete Existing Holiday Name</h2>
+
+
+		<p>1. To delete existing holiday name, click the <b>Delete</b> button corresponding details of the holiday name to delete.
+		</p>
+		<p>2. Once you click the <b>Delete</b> button, You will redirected to the Delete Holiday Name Page (See Figure 3-58).</p>
+ 
+	
+			<div class="img-content">
+			  <img src="assets/images/deleteHoliday.PNG" alt="" class="center">
+		  </div>	
+		  <p style="font-size: 12px; text-align: center;"><b>Figure 3-58 Delete Holiday Page</b></p>	
+
+		  <p>3. Click <b>Yes</b> button to proceed or click <b>Cancel</b> button to do otherwise. A confirmation message will be displayed if the action is successful.</p>
+	  </div>
+
+	  <div id="manageHoliday" class="w3-container page w3-animate-left" style="display: none;">
+		<h2>Manage Holiday</h2>
+
+
+		<p>1. Click the Manage Holiday button to view the Manage Holiday page (See Figure 3-59).
+		</p>
+ 
+	
+			<div class="img-content">
+			  <img src="assets/images/manageHolidaypage.PNG" alt="" class="center">
+		  </div>	
+		  <p style="font-size: 12px; text-align: center;"><b>Figure 3-59 Manage Holiday page</b></p>	
+
+      </div>
+
+	  <div id="addmanageDay" class="w3-container page w3-animate-left" style="display: none;">
+		<h2>How to Add New Holiday Date</h2>
+
+
+		<p>1. To add new holiday date, fill-up the entry boxes that constitute the parameters for adding new holiday date in (Figure 3-60).
+		</p>
+ 
+	
+			<div class="img-content">
+			  <img src="assets/images/addHolidayDate.PNG" alt="" class="center">
+		  </div>	
+		  <p style="font-size: 12px; text-align: center;"><b>Figure 3-60 Add New Holiday Date form</b></p>	
+
+		  <p>2. Specify the <b>Holiday Name</b> and <b>Date</b> (Year, Month and Day) of the Holiday from the drop-down list.</p>
+		 
+          <p>3. When done, click <b>Add</b> button to add new Holiday Date or the <b>Cancel</b> button to cancel operation.</p>
+
+      </div>
+
+	  <div id="editmanageDay" class="w3-container page w3-animate-left" style="display: none;">
+		<h2>How to Edit Existing Holiday Date</h2>
+
+        <p>1. To edit existing holiday date, click the <b>Edit</b> button corresponding to the details of the holiday date to edit.</p>
+		<p>2. Information that can be updated includes <b>Holiday Name</b> and the <b>Year</b>, <b>Month</b> and <b>Day</b> of the Holiday (See Figure 3-61).
+		</p>
+ 
+	
+			<div class="img-content">
+			  <img src="assets/images/editHoliday.PNG" alt="" class="center">
+		  </div>	
+		  <p style="font-size: 12px; text-align: center;"><b>Figure 3-61 Edit Holiday Date form</b></p>	
+
+		  <p>3. When done, click <b>Save</b> button to update information or <b>Cancel</b> button to cancel operation.</p>
+	  </div>
+
+	  <div id="dltmanageDay" class="w3-container page w3-animate-left" style="display: none;">
+		<h2>How to Delete Existing Holiday Date</h2>
+
+
+		<p>1. To delete existing holiday date, click the <b>Delete</b> button corresponding details of the holiday date to delete.
+		</p>
+		<p>2. Once you click the <b>Delete</b> button, You will redirected to the Delete Holiday Date Page (See Figure 3-62).</p>
+ 
+	
+			<div class="img-content">
+			  <img src="assets/images/deleteHolidayDate.PNG" alt="" class="center">
+		  </div>	
+		  <p style="font-size: 12px; text-align: center;"><b>Figure 3-62 Delete Holiday Date Page</b></p>	
+
+		  <p>3. Click <b>Yes</b> button to proceed or click <b>Cancel</b> button to do otherwise. A confirmation message will be displayed if the action is successful.</p>
+	  </div>
+
+
+	  <div id="localHoliday" class="w3-container page w3-animate-left" style="display: none;">
+		<h2>Manage Local Holiday</h2>
+
+
+		<p>1. Click the Manage Local Holiday button to view the Manage Holiday page (See Figure 3-63).
+		</p>
+ 
+	
+			<div class="img-content">
+			  <img src="assets/images/manageLocalHoliday.PNG" alt="" class="center">
+		  </div>	
+		  <p style="font-size: 12px; text-align: center;"><b>Figure 3-63 Manage Local Holiday page</b></p>	
+
+      </div>
+
+	  <div id="addmanageLDay" class="w3-container page w3-animate-left" style="display: none;">
+		<h2>How to Add New Local Holiday</h2>
+
+
+		<p>1. To add new Local Holiday, specify the Holiday Name from the drop-down list in (Figure 3-64).
+		</p>
+ 
+	
+			<div class="img-content">
+			  <img src="assets/images/addmanageLocalHolidaypage.PNG" alt="" class="center">
+		  </div>	
+		  <p style="font-size: 12px; text-align: center;"><b>Figure 3-64 Add New Local Holiday form</b></p>	
+		 
+          <p>2. When done, click <b>Add</b> button to add new Local Holiday or the <b>Cancel</b> button to cancel operation.</p>
+
+      </div>
+
+	  <div id="editmanageLDay" class="w3-container page w3-animate-left" style="display: none;">
+		<h2>How to Edit Existing Local Holiday</h2>
+
+        <p>1. To edit existing local holiday, click the <b>Edit</b> button corresponding to the details of the local holiday to edit.</p>
+		<p>2. Information that can be updated includes  the <b>Year</b>, <b>Month</b> and <b>Day</b> of the Local Holiday (See Figure 3-65).
+		</p>
+ 
+	
+			<div class="img-content">
+			  <img src="assets/images/editlocalHoliday.PNG" alt="" class="center">
+		  </div>	
+		  <p style="font-size: 12px; text-align: center;"><b>Figure 3-65 Edit Local Holiday form</b></p>	
+
+		  <p>3. When done, click <b>Save</b> button to update information or <b>Cancel</b> button to cancel operation.</p>
+	  </div>
+
+	  <div id="dltmanageLDay" class="w3-container page w3-animate-left" style="display: none;">
+		<h2>How to Delete Existing Local Holiday</h2>
+
+
+		<p>1. To delete existing local holiday, click the <b>Delete</b> button corresponding details of the local holiday to delete.
+		</p>
+		<p>2. Once you click the <b>Delete</b> button, You will redirected to the Delete Local Holiday Page (See Figure 3-66).</p>
+ 
+	
+			<div class="img-content">
+			  <img src="assets/images/deleteLocalHoliday.PNG" alt="" class="center">
+		  </div>	
+		  <p style="font-size: 12px; text-align: center;"><b>Figure 3-66 Delete Local Holiday Page</b></p>	
+
+		  <p>3. Click <b>Yes</b> button to proceed or click <b>Cancel</b> button to do otherwise. A confirmation message will be displayed if the action is successful.</p>
+	  </div>
+
+	  <div id="workSuspension" class="w3-container page w3-animate-left" style="display: none;">
+		<h2>Manage Work Suspension</h2>
+
+
+		<p>1. Click the Manage Work Suspension button to view the Manage Work Suspension page (See Figure 3-67).
+		</p>
+ 
+	
+			<div class="img-content">
+			  <img src="assets/images/manageWorkSuspensionpage.PNG" alt="" class="center">
+		  </div>	
+		  <p style="font-size: 12px; text-align: center;"><b>Figure 3-67 Manage Work Suspension page</b></p>	
+
+      </div>
+
+	  <div id="addmanageWork" class="w3-container page w3-animate-left" style="display: none;">
+		<h2>How to Add New Manage Work Suspension</h2>
+
+
+		<p>1. To add new Manage Work Suspension, specify the Work Suspension Date in (Figure 3-68).
+		</p>
+ 
+	
+			<div class="img-content">
+			  <img src="assets/images/addManageWork.PNG" alt="" class="center">
+		  </div>	
+		  <p style="font-size: 12px; text-align: center;"><b>Figure 3-68 Add New Manage Work Suspension form</b></p>	
+		 
+          <p>2. When done, click <b>Add</b> button to add new Manage Work Suspension or the <b>Cancel</b> button to cancel operation.</p>
+
+      </div>
+
+	  <div id="editmanageWork" class="w3-container page w3-animate-left" style="display: none;">
+		<h2>How to Edit Existing Manage Work Suspension</h2>
+
+        <p>1. To edit existing Manage Work Suspension, click the <b>Edit</b> button corresponding to the details of the Manage Work Suspension to edit.</p>
+		<p>2. Information that can be updated includes the <b>Work Suspension Date</b> and <b>Work Suspension Time</b> of the Manage Work Suspension (See Figure 3-69).
+		</p>
+ 
+	
+			<div class="img-content">
+			  <img src="assets/images/editWorkSuspension.PNG" alt="" class="center">
+		  </div>	
+		  <p style="font-size: 12px; text-align: center;"><b>Figure 3-69 Edit Manage Work Suspension form</b></p>	
+
+		  <p>3. When done, click <b>Save</b> button to update information or <b>Cancel</b> button to cancel operation.</p>
+	  </div>
+
+	  <div id="dltmanageWork" class="w3-container page w3-animate-left" style="display: none;">
+		<h2>How to Delete Existing Manage Work Suspension</h2>
+
+
+		<p>1. To delete existing Manage Work Suspension, click the <b>Delete</b> button corresponding details of the Manage Work Suspension to delete.
+		</p>
+		<p>2. Once you click the <b>Delete</b> button, You will redirected to the Delete Manage Work Suspension Page (See Figure 3-70).</p>
+ 
+	
+			<div class="img-content">
+			  <img src="assets/images/deleteWorkSuspension.PNG" alt="" class="center">
+		  </div>	
+		  <p style="font-size: 12px; text-align: center;"><b>Figure 3-70 Delete Manage Work Suspension Page</b></p>	
+
+		  <p>3. Click <b>Yes</b> button to proceed or click <b>Cancel</b> button to do otherwise. A confirmation message will be displayed if the action is successful.</p>
+	  </div>
+
+	  <div id="Leavetype" class="w3-container page w3-animate-left" style="display: none;">
+		<h2>Leave Type</h2>
+
+
+		<p>1. Click the <strong>Leave Type</strong>  on the dropdown list of the Libraries Tab to view the Leave Type Page (See Figure 3-71).
+		</p>
+ 
+	
+			<div class="img-content">
+			  <img src="assets/images/leaveTypepage.PNG" alt="" class="center">
+		  </div>	
+		  <p style="font-size: 12px; text-align: center;"><b>Figure 3-71 Leave Type page</b></p>	
+
+      </div>
+
+	  <div id="leavebutton" class="w3-container page w3-animate-left" style="display: none;">
+		<h2>Leave Type</h2>
+
+
+		<p>1. Click the <strong>Leave Type</strong>  below at the Leave Type header to view the Leave Type Page (See Figure 3-71).
+		</p>
+ 
+	
+			<div class="img-content">
+			  <img src="assets/images/leaveTypepage.PNG" alt="" class="center">
+		  </div>	
+		  <p style="font-size: 12px; text-align: center;"><b>Figure 3-71 Leave Type page</b></p>	
+
+      </div>
+
+	  <div id="addLtype" class="w3-container page w3-animate-left" style="display: none;">
+		<h2>How to Add New Leave Type</h2>
+
+
+		<p>1. To add new leave type, fill-up the entry boxes that constitute the parameters for adding new Leave Type in (Figure 3-72).
+		</p>
+ 
+	
+			<div class="img-content">
+			  <img src="assets/images/addLeavetype.PNG" alt="" class="center">
+		  </div>	
+		  <p style="font-size: 12px; text-align: center;"><b>Figure 3-72 Add New Leave Type form</b></p>	
+
+		  <p>2. Type in the <b>Leave Code</b>, <b>Leave Type</b> and <b>Number of Days</b> on the entry boxes provided</p>
+          <p>2. When done, click <b>Add</b> button to add new Leave Type or the <b>Cancel</b> button to cancel operation.</p>
+      </div>
+
+	  <div id="editLtype" class="w3-container page w3-animate-left" style="display: none;">
+		<h2>How to Edit Existing Leave Type</h2>
+
+        <p>1. To edit existing Leave Type, click the <b>Edit</b> button corresponding to the details of the Leave Type to edit.</p>
+		<p>2. Information that can be updated includes the <b>Leave Type</b> and <b>Number of Days</b> of the Manage Work Suspension (See Figure 3-73).
+		</p>
+ 
+	
+			<div class="img-content">
+			  <img src="assets/images/editLeavetype.PNG" alt="" class="center">
+		  </div>	
+		  <p style="font-size: 12px; text-align: center;"><b>Figure 3-73 Edit Leave Type form</b></p>	
+
+		  <p>3. When done, click <b>Save</b> button to update information or <b>Cancel</b> button to cancel operation.</p>
+	  </div>
+
+	  <div id="specifyleave" class="w3-container page w3-animate-left" style="display: none;">
+		<h2>Specify Leave</h2>
+
+
+		<p>1. Click the <strong>Specify Leave button</strong>  below at the Leave Type header to view the Leave Type Page (See Figure 3-74).
+		</p>
+ 
+	
+			<div class="img-content">
+			  <img src="assets/images/leaveTypepage.PNG" alt="" class="center">
+		  </div>	
+		  <p style="font-size: 12px; text-align: center;"><b>Figure 3-74 Specify Leave Type page</b></p>	
+
+      </div>
+
+	  <div id="addStype" class="w3-container page w3-animate-left" style="display: none;">
+		<h2>How to Add New Specific Leave</h2>
+
+
+		<p>1. To add new Specific Leave, fill-up the entry boxes that constitute the parameters for adding new Specific Leave in (Figure 3-75).
+		</p>
+ 
+	
+			<div class="img-content">
+			  <img src="assets/images/specificleavepage.PNG" alt="" class="center">
+		  </div>	
+		  <p style="font-size: 12px; text-align: center;"><b>Figure 3-75 Add New Specific Leave Type form</b></p>	
+
+		  <p>2. Specify the <b>Leave Code</b> from the drop-down list.</p>
+		  <p>3. Type the <b>Specific Leave Description</b> on the entry box provided.</p>
+          <p>4. When done, click <b>Add</b> button to add new Leave Type or the <b>Cancel</b> button to cancel operation.</p>
+      </div>
+
+	  <div id="editStype" class="w3-container page w3-animate-left" style="display: none;">
+		<h2>How to Edit Existing Specific Leave</h2>
+
+        <p>1. To edit existing specific leave, click the <b>Edit</b> button corresponding to the details of the specific leave to edit.</p>
+		<p>2. Information that can be updated is <b>Specific Leave Description</b> of the Specific Leave (See Figure 3-76).
+		</p>
+ 
+	
+			<div class="img-content">
+			  <img src="assets/images/editSpecificLeave.PNG" alt="" class="center">
+		  </div>	
+		  <p style="font-size: 12px; text-align: center;"><b>Figure 3-76 Edit Specific Leave form</b></p>	
+
+		  <p>3. When done, click <b>Save</b> button to update information or <b>Cancel</b> button to cancel operation.</p>
+	  </div>
+
+	  <div id="dltStype" class="w3-container page w3-animate-left" style="display: none;">
+		<h2>How to Delete Specific Leave</h2>
+
+		<p>1. To delete existing Leave Type, click the <b>Delete</b> button corresponding details of the Leave type to delete.
+		</p>
+		<p>2. Once you click the <b>Delete</b> button, You will redirected to the Delete Leave Page (See Figure 3-77).</p>
+
+		<!--Alert-->
+<div class="alert alert-warning alert-dismissible fade show" role="alert" style="font-size: 10px;">
+	<strong>Note:</strong> Only user declared Leave Type can be deleted.
+	<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  </div>
+
+ 
+	
+			<div class="img-content">
+			  <img src="assets/images/deleteSpecificLeave.PNG" alt="" class="center">
+		  </div>	
+		  <p style="font-size: 12px; text-align: center;"><b>Figure 3-77 Delete Leave Type Page</b></p>	
+
+		  <p>3. Click <b>Yes</b> button to proceed or click <b>Cancel</b> button to do otherwise. A confirmation message will be displayed if the action is successful.</p>
+	  </div>
+
+	  <div id="orgStructure" class="w3-container page w3-animate-left" style="display: none;">
+		<h2>Organizational Structure</h2>
+
+
+		<p>1.  Click the <strong>Org Structure</strong>  on the dropdown list of the Libraries Tab to view the Organizational Structure Page (See Figure 3-78).
+		</p>
+ 
+	
+			<div class="img-content">
+			  <img src="assets/images/OrgStructurepage.PNG" alt="" class="center">
+		  </div>	
+		  <p style="font-size: 12px; text-align: center;"><b>Figure 3-78 Organizational Structure page</b></p>	
+
+		  	<!--Alert-->
+<div class="alert alert-warning alert-dismissible fade show" role="alert" style="font-size: 10px;">
+	<strong>Note:</strong> The sub-section of Organizational Structure depends on the configuration file of the system. 
+	Configuration file can be manually set by System Administrator during installation.
+	<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  </div>
+
+      </div>
+
+	  <div id="exeOffice" class="w3-container page w3-animate-left" style="display: none;">
+		<h2>Executive Office</h2>
+
+
+		<p>1. Click the <strong>Executive Office</strong> tab to view the Leave Type Page (See Figure 3-79).
+		</p>
+ 
+	
+			<div class="img-content">
+			  <img src="assets/images/OrgStructurepage.PNG" alt="" class="center">
+		  </div>	
+		  <p style="font-size: 12px; text-align: center;"><b>Figure 3-79 Executive Office page</b></p>	
+
+      </div>
+
+	  <div id="addexeOffice" class="w3-container page w3-animate-left" style="display: none;">
+		<h2>How to Add New Executive Office Details</h2>
+
+
+		<p>1. To add new executive office details, fill-up the entry boxes that constitute the parameters for adding new executive office details in (Figure 3-80).
+		</p>
+ 
+	
+			<div class="img-content">
+			  <img src="assets/images/addexeOffice.PNG" alt="" class="center">
+		  </div>	
+		  <p style="font-size: 12px; text-align: center;"><b>Figure 3-80 Add New Executive Office Details form</b></p>	
+
+		  <p>2. Type in the <b>Executive Office Code</b> and <b>Executive Office Name</b> on the entry boxes provided. </p>
+		  <p>3. Specify the <b>Executive Office Head</b> from the drop-down lists.</p>
+		  <p>4. Type in the <b>Executive Office Head Title</b> on the entry box provided.</p>
+		  <p>5. Specify the <b>Executive Office Secretary</b> from the drop-down list.</p>
+          <p>6. When done, click <b>Add</b> button to add new Executive Office Details or the <b>Cancel</b> button to cancel operation.</p>
+      </div>
+
+	  <div id="editexeOffice" class="w3-container page w3-animate-left" style="display: none;">
+		<h2>How to Edit Existing Executive Office Details</h2>
+
+        <p>1. To edit existing executive office details, click the <b>Edit</b> button corresponding to the details of the executive office to edit.</p>
+		<p>2. Information that can be updated includes <b>Executive Office Name</b>, 
+			<b>Executive Office Head</b>, <b>Executive Office Head Title</b> and <b>Executive Office Secretary</b> (See Figure 3-81).
+		</p>
+ 
+	
+			<div class="img-content">
+			  <img src="assets/images/editexeOffice.PNG" alt="" class="center">
+		  </div>	
+		  <p style="font-size: 12px; text-align: center;"><b>Figure 3-81  Edit Executive Office Details form</b></p>	
+
+		  <p>3. When done, click <b>Save</b> button to update information or <b>Cancel</b> button to cancel operation.</p>
+	  </div>
+
+	  <div id="dltexeOffice" class="w3-container page w3-animate-left" style="display: none;">
+		<h2>How to Delete Existing Executive Office Details</h2>
+
+		<p>1. To delete existing executive office, click the <b>Delete</b> button corresponding details of the executive office to delete.
+		</p>
+		<p>2. Once you click the <b>Delete</b> button, You will redirected to the Delete Leave Page (See Figure 3-82).</p>
+
+	
+			<div class="img-content">
+			  <img src="assets/images/deleteSpecificLeave.PNG" alt="" class="center">
+		  </div>	
+		  <p style="font-size: 12px; text-align: center;"><b>Figure 3-82 Delete Organizational Structure Page</b></p>	
+
+		  <p>3. Click <b>Yes</b> button to proceed or click <b>Cancel</b> button to do otherwise. A confirmation message will be displayed if the action is successful.</p>
+	  </div>
+
+	  <div id="service" class="w3-container page w3-animate-left" style="display: none;">
+		<h2>Service</h2>
+
+
+		<p>1. Click the <strong>Service</strong> tab to view the Leave Type Page (See Figure 3-83).
+		</p>
+ 
+	
+			<div class="img-content">
+			  <img src="assets/images/ServicePage.PNG" alt="" class="center">
+		  </div>	
+		  <p style="font-size: 12px; text-align: center;"><b>Figure 3-82 Service page</b></p>	
+      </div>
+
+	  <div id="addService" class="w3-container page w3-animate-left" style="display: none;">
+		<h2>How to Add New Service Details</h2>
+
+
+		<p>1. To add new service details, fill-up the entry boxes that constitute the parameters for adding new service details in (Figure 3-84).
+		</p>
+ 
+	
+			<div class="img-content">
+			  <img src="assets/images/addService.PNG" alt="" class="center">
+		  </div>	
+		  <p style="font-size: 12px; text-align: center;"><b>Figure 3-84 Add New Service Details form</b></p>	
+
+		  <p>2. Specify the <b>Executive Office</b> from the drop-down list. </p>
+		  <p>3. Type in the <b>Service Code</b> and <b>Service Name</b> on the entry boxes provided.</p>
+		  <p>4. Specify the <b>Service Head</b> from the drop-down lists.</p>
+		  <p>5. Type in the <b>Service Head Title</b> on the entry box provided.</p>
+		  <p>6. Specify the <b>Service Secretary</b> from the drop-down list.</p>
+          <p>7. When done, click <b>Add</b> button to add new Executive Office Details or the <b>Cancel</b> button to cancel operation.</p>
+      </div>
+
+	  <div id="editService" class="w3-container page w3-animate-left" style="display: none;">
+		<h2>How to Edit Existing Service Details</h2>
+
+        <p>1. To edit existing  service details, click the <b>Edit</b> button corresponding to the details of the service to edit.</p>
+		<p>2. Information that can be updated includes <b>Executive Office</b>, <b>Service Name</b>, 
+			<b>Service Head</b>, <b>Service Head Title</b> and <b>Service Secretary</b> (See Figure 3-85).
+		</p>
+ 
+	
+			<div class="img-content">
+			  <img src="assets/images/editService.PNG" alt="" class="center">
+		  </div>	
+		  <p style="font-size: 12px; text-align: center;"><b>Figure 3-85 Edit Service Details form</b></p>	
+
+		  <p>3. When done, click <b>Save</b> button to update information or <b>Cancel</b> button to cancel operation.</p>
+	  </div>
+
+	  <div id="dltService" class="w3-container page w3-animate-left" style="display: none;">
+		<h2>How to Edit Existing Service Details</h2>
+
+		<p>1. To delete existing service details, click the <b>Delete</b> button corresponding details of the service to delete.
+		</p>
+		<p>2. Once you click the <b>Delete</b> button, You will redirected to the Delete Leave Page (See Figure 3-86).</p>
+
+	
+			<div class="img-content">
+			  <img src="assets/images/deleteService.PNG" alt="" class="center">
+		  </div>	
+		  <p style="font-size: 12px; text-align: center;"><b>Figure 3-82 Delete Service Name Page</b></p>	
+
+		  <p>3. Click <b>Yes</b> button to proceed or click <b>Cancel</b> button to do otherwise. A confirmation message will be displayed if the action is successful.</p>
+	  </div>
+
+	  <div id="division" class="w3-container page w3-animate-left" style="display: none;">
+		<h2>Division</h2>
+
+
+		<p>1. Click the <strong>Division</strong> tab to view the Leave Type Page (See Figure 3-87).
+		</p>
+ 
+	
+			<div class="img-content">
+			  <img src="assets/images/Divisionpage.PNG" alt="" class="center">
+		  </div>	
+		  <p style="font-size: 12px; text-align: center;"><b>Figure 3-87 Division page</b></p>	
+      </div>
+
+	  <div id="adddivison" class="w3-container page w3-animate-left" style="display: none;">
+		<h2>How to Add New Division Details</h2>
+
+
+		<p>1. To add new division details, fill-up the entry boxes that constitute the parameters for adding new division details in (Figure 3-88).
+		</p>
+ 
+	
+			<div class="img-content">
+			  <img src="assets/images/addDivision.PNG" alt="" class="center">
+		  </div>	
+		  <p style="font-size: 12px; text-align: center;"><b>Figure 3-88 Add New Division Details form</b></p>	
+
+		  <p>2. Specify the <b>Executive Office</b> and <b>Service</b> from the drop-down lists. </p>
+		  <p>3. Type in the <b>Division Code</b> and <b>Division Name</b> on the entry boxes provided.</p>
+		  <p>4. Specify the <b>Division Head</b> from the drop-down lists.</p>
+		  <p>5. Type in the <b>Division Head Title</b> on the entry box provided.</p>
+		  <p>6. Specify the <b>Division Secretary</b> from the drop-down lists.</p>
+          <p>7. When done, click <b>Add</b> button to add new Executive Office Details or the <b>Cancel</b> button to cancel operation.</p>
+      </div>
+
+	  <div id="editdivision" class="w3-container page w3-animate-left" style="display: none;">
+		<h2>How to Edit Existing Division Details</h2>
+
+        <p>1. To edit existing division details, click the <b>Edit</b> button corresponding to the details of the division to edit.</p>
+		<p>2. Information that can be updated includes <b>Executive Office</b>, <b>Service</b>, <b>Division Name</b>, 
+			<b>Division Head</b>, <b>Division Head Title</b> and <b>Division Secretary</b> (See Figure 3-89).
+		</p>
+ 
+	
+			<div class="img-content">
+			  <img src="assets/images/editDivision.PNG" alt="" class="center">
+		  </div>	
+		  <p style="font-size: 12px; text-align: center;"><b>Figure 3-89 Edit Division Details form</b></p>	
+
+		  <p>3. When done, click <b>Save</b> button to update information or <b>Cancel</b> button to cancel operation.</p>
+	  </div>
+
+	  <div id="dltdivision" class="w3-container page w3-animate-left" style="display: none;">
+		<h2>How to Delete Existing Division Details</h2>
+
+		<p>1. To delete existing division details, click the <b>Delete</b> button corresponding details of the division to delete.
+		</p>
+		<p>2. Once you click the <b>Delete</b> button, You will redirected to the Delete Division Name Page (See Figure 3-90).</p>
+
+	
+			<div class="img-content">
+			  <img src="assets/images/deleteDivision.PNG" alt="" class="center">
+		  </div>	
+		  <p style="font-size: 12px; text-align: center;"><b>Figure 3-90 Delete Division Name Page</b></p>	
+
+		  <p>3. Click <b>Yes</b> button to proceed or click <b>Cancel</b> button to do otherwise. A confirmation message will be displayed if the action is successful.</p>
+	  </div>
+
+	  <div id="section" class="w3-container page w3-animate-left" style="display: none;">
+		<h2>Section</h2>
+
+
+		<p>1. Click the <strong>Section</strong> tab to view the Leave Type Page (See Figure 3-91).
+		</p>
+ 
+	
+			<div class="img-content">
+			  <img src="assets/images/sectionPage.PNG" alt="" class="center">
+		  </div>	
+		  <p style="font-size: 12px; text-align: center;"><b>Figure 3-91 Section page</b></p>	
+      </div>
+
+	  <div id="addSection" class="w3-container page w3-animate-left" style="display: none;">
+		<h2>How to Add New Section Details</h2>
+
+
+		<p>1. To add new section details, fill-up the entry boxes that constitute the parameters for adding new section details in (Figure 3-92).
+		</p>
+ 
+	
+			<div class="img-content">
+			  <img src="assets/images/addSection.PNG" alt="" class="center">
+		  </div>	
+		  <p style="font-size: 12px; text-align: center;"><b>Figure 3-92 Add New Section Details form</b></p>	
+
+		  <p>2. Specify the <b>Executive Office</b> and <b>Divsion</b> from the drop-down lists. </p>
+		  <p>3. Type in the <b>Section Code</b> and <b>Section Name</b> on the entry boxes provided.</p>
+		  <p>4. Specify the <b>Section Head</b> from the drop-down lists.</p>
+		  <p>5. Type in the <b>Section Head Title</b> on the entry box provided.</p>
+		  <p>6. Specify the <b>Section Secretary</b> from the drop-down lists.</p>
+          <p>7. When done, click <b>Add</b> button to add new Executive Office Details or the <b>Cancel</b> button to cancel operation.</p>
+      </div>
+
+	  <div id="editSection" class="w3-container page w3-animate-left" style="display: none;">
+		<h2>How to Edit Existing Section Details</h2>
+
+        <p>1. To edit existing section details, click the <b>Edit</b> button corresponding to the details of the section to edit.</p>
+		<p>2. Information that can be updated includes <b>Executive Office</b>, <b>Service</b>, <b>Division</b>, <b>Section Name</b>, 
+			<b>Section Head</b>, <b>Section Head Title</b> and <b>Section Secretary</b> (See Figure 3-93).
+		</p>
+ 
+	
+			<div class="img-content">
+			  <img src="assets/images/editSection.PNG" alt="" class="center">
+		  </div>	
+		  <p style="font-size: 12px; text-align: center;"><b>Figure 3-93 Edit Section Details form</b></p>	
+
+		  <p>3. When done, click <b>Save</b> button to update information or <b>Cancel</b> button to cancel operation.</p>
+	  </div>
+
+	  <div id="dltSection" class="w3-container page w3-animate-left" style="display: none;">
+		<h2>How to Delete Existing Section Details</h2>
+
+		<p>1. To delete existing section details, click the <b>Delete</b> button corresponding details of the section to delete.
+		</p>
+		<p>2. Once you click the <b>Delete</b> button, You will redirected to the Delete Section Name Page (See Figure 3-94).</p>
+
+	
+			<div class="img-content">
+			  <img src="assets/images/deleteSection.PNG" alt="" class="center">
+		  </div>	
+		  <p style="font-size: 12px; text-align: center;"><b>Figure 3-94 Delete Section Name Page</b></p>	
+
+		  <p>3. Click <b>Yes</b> button to proceed or click <b>Cancel</b> button to do otherwise. A confirmation message will be displayed if the action is successful.</p>
+	  </div>
+
+	  <div id="payroll" class="w3-container page w3-animate-left" style="display: none;">
+		<h2>Payroll Group</h2>
+
+
+		<p>1. Click the <strong>Payroll Group</strong>  on the dropdown list of the Libraries Tab to view the Payroll Group Page (See Figure 3-95).
+		</p>
+ 
+	
+			<div class="img-content">
+			  <img src="assets/images/PayrollGroup.PNG" alt="" class="center">
+		  </div>	
+		  <p style="font-size: 12px; text-align: center;"><b>Figure 3-95 Payroll Group page</b></p>	
+
+      </div>
+
+	  <div id="addpayroll" class="w3-container page w3-animate-left" style="display: none;">
+		<h2>How to Add New Payroll Group Details</h2>
+
+
+		<p>1. To add new payroll group details, fill-up the entry boxes that constitute the parameters for adding new payroll group details in (Figure 3-96).
+		</p>
+ 
+	
+			<div class="img-content">
+			  <img src="assets/images/addPayroll.PNG" alt="" class="center">
+		  </div>	
+		  <p style="font-size: 12px; text-align: center;"><b>Figure 3-96 Add New Payroll Group Details form</b></p>	
+
+		  <p>2. Specify the <b>Project Name</b> from the drop-down lists.</p>
+		  <p>3. Type in the Payroll Group Code, Payroll Group Description, Payroll Group Name and Responsibility Center on the entry boxes provided.</p>
+          <p>4. When done, click <b>Add</b> button to add new Executive Office Details or the <b>Cancel</b> button to cancel operation.</p>
+      </div>
+
+	  <div id="editpayroll" class="w3-container page w3-animate-left" style="display: none;">
+		<h2>How to Edit Existing Payroll Group Details</h2>
+
+        <p>1. To edit existing payroll group details, click the <b>Edit</b> button corresponding to the details of the payroll group to edit.</p>
+		<p>2.Information that can be updated includes <b>Project Name</b>, <b>Payroll Group Description</b>, 
+			<b>Payroll Group Order</b> and <b>Responsibility Center</b> (See Figure 3-97).
+		</p>
+ 
+	
+			<div class="img-content">
+			  <img src="assets/images/editPayroll.PNG" alt="" class="center">
+		  </div>	
+		  <p style="font-size: 12px; text-align: center;"><b>Figure 3-97 Edit Payroll Group Details form</b></p>	
+
+		  <p>3. When done, click <b>Save</b> button to update information or <b>Cancel</b> button to cancel operation.</p>
+	  </div>
+
+	  <div id="dltpayroll" class="w3-container page w3-animate-left" style="display: none;">
+		<h2>How to Delete Existing Payroll Group Details</h2>
+
+		<p>1. To delete existing payroll group details, click the <b>Delete</b> button corresponding details of the payroll group to delete.
+		</p>
+		<p>2. Once you click the <b>Delete</b> button, You will redirected to the Delete Payroll Group Page (See Figure 3-98).</p>
+
+	
+			<div class="img-content">
+			  <img src="assets/images/deletePayroll.PNG" alt="" class="center">
+		  </div>	
+		  <p style="font-size: 12px; text-align: center;"><b>Figure 3-98 Delete Payroll Group Page</b></p>	
+
+		  <p>3. Click <b>Delete</b> button to proceed or click <b>Cancel</b> button to do otherwise. A confirmation message will be displayed if the action is successful.</p>
+	  </div>
+
+	  <div id="philhealth" class="w3-container page w3-animate-left" style="display: none;">
+		<h2>PhilHealth Range</h2>
+
+
+		<p>1. Click the <strong>PhilHealth Range</strong>  on the dropdown list of the Libraries Tab to view the Payroll Group Page (See Figure 3-99).
+		</p>
+ 
+	
+			<div class="img-content">
+			  <img src="assets/images/philhealthpage.PNG" alt="" class="center">
+		  </div>	
+		  <p style="font-size: 12px; text-align: center;"><b>Figure 3-99 PhilHealth Range page</b></p>	
+
+      </div>
+
+	  <div id="addphilhealth" class="w3-container page w3-animate-left" style="display: none;">
+		<h2>How to Add New PhilHealth Range</h2>
+
+
+		<p>1. To add new Philhealth range details, fill-up the entry boxes that constitute the parameters for adding new Philhealth range details in (Figure 3-100).
+		</p>
+ 
+	
+			<div class="img-content">
+			  <img src="assets/images/addPhilhealth.PNG" alt="" class="center">
+		  </div>	
+		  <p style="font-size: 12px; text-align: center;"><b>Figure 3-100 Add New PhilHealth Range form</b></p>	
+
+		  <p>2. Type in the <b>Range</b>, <b>Salary Base</b> and <b>Total Monthly Contribution</b> on the entry boxes provided.</p>
+		  <p>3. When done, click <b>Add</b> button to add new Executive Office Details or the <b>Cancel</b> button to cancel operation.</p>
+      </div>
+
+	  <div id="editphilhealth" class="w3-container page w3-animate-left" style="display: none;">
+		<h2>How to Edit Existing PhilHealth Range Details</h2>
+
+        <p>1. To edit existing Philhealth range details, click the <b>Edit</b> button corresponding to the details of the Philhealth range to edit.</p>
+		<p>2. Information that can be updated includes <b>Range</b>, <b>Salary Base</b> and <b>Total Monthly Contribution</b> (See Figure 3-101).
+		</p>
+ 
+	
+			<div class="img-content">
+			  <img src="assets/images/editPhilhealth.PNG" alt="" class="center">
+		  </div>	
+		  <p style="font-size: 12px; text-align: center;"><b>Figure 3-101 Edit PhilHealth Range Details form</b></p>	
+
+		  <p>3. When done, click <b>Save</b> button to update information or <b>Cancel</b> button to cancel operation.</p>
+	  </div>
+
+	  <div id="dltphilhealth" class="w3-container page w3-animate-left" style="display: none;">
+		<h2>How to Delete Existing PhilHealth Range Details</h2>
+
+		<p>1. To delete existing Philhealth range details, click the <b>Delete</b> button corresponding details of the Philhealth range to delete.
+		</p>
+		<p>2. Once you click the <b>Delete</b> button, You will redirected to the Delete Payroll Group Page (See Figure 3-102).</p>
+
+	
+			<div class="img-content">
+			  <img src="assets/images/deletePhilhealth.PNG" alt="" class="center">
+		  </div>	
+		  <p style="font-size: 12px; text-align: center;"><b>Figure 3-98 Delete Philhealth Range Page</b></p>	
+
+		  <p>3. Click <b>Yes</b> button to proceed or click <b>Cancel</b> button to do otherwise. A confirmation message will be displayed if the action is successful.</p>
+	  </div>
+
+	  <div id="plantilla" class="w3-container page w3-animate-left" style="display: none;">
+		<h2>Plantilla</h2>
+
+
+		<p>1. Click the <strong>Plantilla</strong>  on the dropdown list of the Libraries Tab to view the Plantilla Page (See Figure 3-103).
+		</p>
+ 
+	
+			<div class="img-content">
+			  <img src="assets/images/PlantillaPage.PNG" alt="" class="center">
+		  </div>	
+		  <p style="font-size: 12px; text-align: center;"><b>Figure 3-103 Plantilla page</b></p>	
+
+      </div>
+
+	  <div id="addplantilla" class="w3-container page w3-animate-left" style="display: none;">
+		<h2>How to Add New Plantilla</h2>
+
+
+		<p>1. To add new Plantilla details, fill-up the entry boxes that constitute the parameters for adding new Plantilla details in (Figure 3-104).
+		</p>
+ 
+	
+			<div class="img-content">
+			  <img src="assets/images/addPlantilla.PNG" alt="" class="center">
+		  </div>	
+		  <p style="font-size: 12px; text-align: center;"><b>Figure 3-104 Add New Plantilla form</b></p>	
+
+		  <p>2. Type in the <b>Item Number</b> on the entry box provided.</p>
+		  <p>3. Specify the <b>Salary Grade Number</b>, <b>Position</b>, <b>Plantilla Group</b> and <b>Civil Service Eligibility</b> from the drop-down lists.</p>
+		  <p>4. Type in the <b>Area Code</b> and <b>Area Type</b> on the entry box provided. </p>
+		  <p>5. Type in the <b>Educational Requirements</b>, <b>Training Requirements</b> and <b>Experience Requirements</b> on the entry box provided.</p>
+		  <p>6. When done, click <b>Add</b> button to add new Executive Office Details or the <b>Cancel</b> button to cancel operation.</p>
+      </div>
+
+	  <div id="editplantilla" class="w3-container page w3-animate-left" style="display: none;">
+		<h2>How to Edit Existing Plantilla</h2>
+
+        <p>1. To edit existing Plantilla details, click the <b>Edit</b> button corresponding to the details of the Plantilla to edit.</p>
+		<p>2. Information that can be updated includes <b>Item Number</b>, <b>Salary Grade Number</b>, <b>Position</b>, 
+			<b>Plantilla Group</b>, <b>Area Code</b>, <b>Area Type</b>, <b>Civil Service Eligibility</b>, 
+			<b>Educational Requirements</b>, <b>Training Requirements</b>, <b>Experience Requirements</b> (See Figure 3-105). </p>
+ 
+	
+			<div class="img-content">
+			  <img src="assets/images/editPlantilla.PNG" alt="" class="center">
+		  </div>	
+		  <p style="font-size: 12px; text-align: center;"><b>Figure 3-105 Edit Plantilla Details form</b></p>	
+
+		  <p>3. When done, click <b>Save</b> button to update information or <b>Cancel</b> button to cancel operation.</p>
+	  </div>
+
+	  <div id="dltplantilla" class="w3-container page w3-animate-left" style="display: none;">
+		<h2>How to Delete Existing Plantilla Details</h2>
+
+		<p>1. To delete existing Plantilla details, click the <b>Delete</b> button corresponding details of the Plantilla to delete.
+		</p>
+		<p>2. Once you click the <b>Delete</b> button, You will redirected to the Delete Plantilla Page (See Figure 3-106).</p>
+
+	
+			<div class="img-content">
+			  <img src="assets/images/deletePlantilla.PNG" alt="" class="center">
+		  </div>	
+		  <p style="font-size: 12px; text-align: center;"><b>Figure 3-106 Delete Plantilla Page</b></p>	
+
+		  <p>3. Click <b>Yes</b> button to proceed or click <b>Cancel</b> button to do otherwise. A confirmation message will be displayed if the action is successful.</p>
+	  </div>
+
+	  <div id="plantillaG" class="w3-container page w3-animate-left" style="display: none;">
+		<h2>Plantilla Group</h2>
+
+
+		<p>1. Click the <strong>Plantilla Group</strong>  on the dropdown list of the Libraries Tab to view the Plantilla Group Page (See Figure 3-107).
+		</p>
+ 
+	
+			<div class="img-content">
+			  <img src="assets/images/PlantillaGrouppage.PNG" alt="" class="center">
+		  </div>	
+		  <p style="font-size: 12px; text-align: center;"><b>Figure 3-107 Plantilla Group page</b></p>	
+
+      </div>
+
+	  <div id="addplantillaG" class="w3-container page w3-animate-left" style="display: none;">
+		<h2>How to Add New Plantilla Group</h2>
+
+
+		<p>1. To add new Plantilla group details, fill-up the entry boxes that constitute the parameters for adding new Plantilla group details in (Figure 3-108).
+		</p>
+ 
+	
+			<div class="img-content">
+			  <img src="assets/images/addPlantillaGroup.PNG" alt="" class="center">
+		  </div>	
+		  <p style="font-size: 12px; text-align: center;"><b>Figure 3-108 Add New Plantilla Group form</b></p>	
+
+		  <p>2. Type in the <b>Plantilla Group Code</b>, <b>Plantilla Group Name</b> and <b>Plantilla Group Order</b> on the entry boxes provided.</p>
+		  <p>3. When done, click <b>Add</b> button to add new Executive Office Details or the <b>Cancel</b> button to cancel operation.</p>
+      </div>
+
+	  <div id="editplantillaG" class="w3-container page w3-animate-left" style="display: none;">
+		<h2>How to Edit Existing Plantilla Group</h2>
+
+        <p>1. To edit existing Plantilla group details, click the <b>Edit</b> button corresponding to the details of the Plantilla group to edit.</p>
+		<p>2. Information that can be updated includes <b>Plantilla Group Name</b> and <b>Plantilla Group Order</b> (See Figure 3-109). </p>
+ 
+	
+			<div class="img-content">
+			  <img src="assets/images/editPlantillaGroup.PNG" alt="" class="center">
+		  </div>	
+		  <p style="font-size: 12px; text-align: center;"><b>Figure 3-109 Edit Existing Plantilla Group form</b></p>	
+
+		  <p>3. When done, click <b>Save</b> button to update information or <b>Cancel</b> button to cancel operation.</p>
+	  </div>
+
+	  <div id="dltplantillaG" class="w3-container page w3-animate-left" style="display: none;">
+		<h2>How to Delete Existing Plantilla Group</h2>
+
+		<p>1. To delete existing Plantilla group details, click the <b>Delete</b> button corresponding details of the Plantilla group to delete.
+		</p>
+		<p>2. Once you click the <b>Delete</b> button, You will redirected to the Delete Plantilla Group Page (See Figure 3-110).</p>
+
+	
+			<div class="img-content">
+			  <img src="assets/images/deletePlantillaGroup.PNG" alt="" class="center">
+		  </div>	
+		  <p style="font-size: 12px; text-align: center;"><b>Figure 3-110 Delete Plantilla Group Page</b></p>	
+
+		  <p>3. Click <b>Yes</b> button to proceed or click <b>Cancel</b> button to do otherwise. A confirmation message will be displayed if the action is successful.</p>
+	  </div>
+
+	  <div id="position" class="w3-container page w3-animate-left" style="display: none;">
+		<h2>Position Code</h2>
+
+
+		<p>1. Click the <strong>Position Code</strong>  on the dropdown list of the Libraries Tab to view the Position Code Page (See Figure 3-111).
+		</p>
+ 
+	
+			<div class="img-content">
+			  <img src="assets/images/positionCodepage.PNG" alt="" class="center">
+		  </div>	
+		  <p style="font-size: 12px; text-align: center;"><b>Figure 3-111 Position Code page</b></p>	
+
+      </div>
+
+	  <div id="addposition" class="w3-container page w3-animate-left" style="display: none;">
+		<h2>How to Add New Position Code</h2>
+
+
+		<p>1. To add new Position code details, fill-up the entry boxes that constitute the parameters for adding new Position code details in (Figure 3-112).
+		</p>
+ 
+	
+			<div class="img-content">
+			  <img src="assets/images/addPosition.PNG" alt="" class="center">
+		  </div>	
+		  <p style="font-size: 12px; text-align: center;"><b>Figure 3-112 Add New Position Code form</b></p>	
+
+		  <p>2. Type in the <b>Position Code</b>, <b>Position Description</b> and <b>Position Abbreviation</b> on the entry boxes provided.</p>
+		  <p>3. When done, click <b>Add</b> button to add new Executive Office Details or the <b>Cancel</b> button to cancel operation.</p>
+      </div>
+
+	  <div id="editposition" class="w3-container page w3-animate-left" style="display: none;">
+		<h2>How to Edit Existing Position Code</h2>
+
+        <p>1. To edit existing Position code details, click the <b>Edit</b> button corresponding to the details of the Position code to edit.</p>
+		<p>2. Information that can be updated includes <b>Position Description</b> and <b>Position Abbreviation</b> (See Figure 3-113). </p>
+ 
+	
+			<div class="img-content">
+			  <img src="assets/images/editPosition.PNG" alt="" class="center">
+		  </div>	
+		  <p style="font-size: 12px; text-align: center;"><b>Figure 3-113 Edit Existing Position Code form</b></p>	
+
+		  <p>3. When done, click <b>Save</b> button to update information or <b>Cancel</b> button to cancel operation.</p>
+	  </div>
+
+	  <div id="dltposition" class="w3-container page w3-animate-left" style="display: none;">
+		<h2>How to Delete Existing Position Code</h2>
+
+		<p>1. To delete existing Position code details, click the <b>Delete</b> button corresponding details of the Position code to delete.
+		</p>
+		<p>2. Once you click the <b>Delete</b> button, You will redirected to the Delete Position Code Page (See Figure 3-114).</p>
+
+	
+			<div class="img-content">
+			  <img src="assets/images/deletePosition.PNG" alt="" class="center">
+		  </div>	
+		  <p style="font-size: 12px; text-align: center;"><b>Figure 3-114 Delete Position Code Page</b></p>	
+
+		  <p>3. Click <b>Yes</b> button to proceed or click <b>Cancel</b> button to do otherwise. A confirmation message will be displayed if the action is successful.</p>
+	  </div>
+
+	  <div id="project" class="w3-container page w3-animate-left" style="display: none;">
+		<h2>Project Code</h2>
+
+
+		<p>1. Click the <strong>Project Code</strong>  on the dropdown list of the Libraries Tab to view the Project Code Page (See Figure 3-115).
+		</p>
+ 
+	
+			<div class="img-content">
+			  <img src="assets/images/projectCodepage.PNG" alt="" class="center">
+		  </div>	
+		  <p style="font-size: 12px; text-align: center;"><b>Figure 3-115 Project Code page</b></p>	
+
+      </div>
+
+	  <div id="addproject" class="w3-container page w3-animate-left" style="display: none;">
+		<h2>How to Add New Project Code</h2>
+
+
+		<p>1. To add new Project code details, fill-up the entry boxes that constitute the parameters for adding new Project code details in (Figure 3-116).
+		</p>
+ 
+	
+			<div class="img-content">
+			  <img src="assets/images/addPosition.PNG" alt="" class="center">
+		  </div>	
+		  <p style="font-size: 12px; text-align: center;"><b>Figure 3-116 Add New Project Code form</b></p>	
+
+		  <p>2. Type in the <b>Project Code</b>, <b>Project Description</b> and <b>Project Order</b> on the entry boxes provided.</p>
+		  <p>3. When done, click <b>Add</b> button to add new Executive Office Details or the <b>Cancel</b> button to cancel operation.</p>
+      </div>
+
+	  <div id="editproject" class="w3-container page w3-animate-left" style="display: none;">
+		<h2>How to Edit Existing Project Code</h2>
+
+        <p>1. To edit existing Project code details, click the <b>Edit</b> button corresponding to the details of the Project code to edit.</p>
+		<p>2. Information that can be updated includes <b>Project Code</b>, <b>Project Description</b> and <b>Project Orde</b> (See Figure 3-117). </p>
+ 
+	
+			<div class="img-content">
+			  <img src="assets/images/editProject.PNG" alt="" class="center">
+		  </div>	
+		  <p style="font-size: 12px; text-align: center;"><b>Figure 3-117 Edit Existing Project Code form</b></p>	
+
+		  <p>3. When done, click <b>Save</b> button to update information or <b>Cancel</b> button to cancel operation.</p>
+	  </div>
+
+	  <div id="dltproject" class="w3-container page w3-animate-left" style="display: none;">
+		<h2>How to Delete Existing Project Code</h2>
+
+		<p>1. To delete existing Project code details, click the <b>Delete</b> button corresponding details of the Project code to delete.
+		</p>
+		<p>2. Once you click the <b>Delete</b> button, You will redirected to the Delete Project Code Page (See Figure 3-118).</p>
+
+	
+			<div class="img-content">
+			  <img src="assets/images/deleteProject.PNG" alt="" class="center">
+		  </div>	
+		  <p style="font-size: 12px; text-align: center;"><b>Figure 3-118 Delete Project Code Page</b></p>	
+
+		  <p>3. Click <b>Yes</b> button to proceed or click <b>Cancel</b> button to do otherwise. A confirmation message will be displayed if the action is successful.</p>
+	  </div>
+
+	  <div id="req" class="w3-container page w3-animate-left" style="display: none;">
+		<h2>Request</h2>
+
+
+		<p>1. Click the <strong>Request</strong>  on the dropdown list of the Libraries Tab to view the Request Page (See Figure 3-119).
+		</p>
+ 
+	
+			<div class="img-content">
+			  <img src="assets/images/requestPage.PNG" alt="" class="center">
+		  </div>	
+		  <p style="font-size: 12px; text-align: center;"><b>Figure 3-119 Request page</b></p>	
+
+      </div>
+
+	  <div id="addreq" class="w3-container page w3-animate-left" style="display: none;">	
+		<h2>How to Add New Request</h2>
+		<!--Alert-->
+<div class="alert alert-warning alert-dismissible fade show" role="alert" style="font-size: 10px;">
+	<strong>Note:</strong> Each type of request can have multiple request record.
+	<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  </div>
+
+		<p>1. To add new request, click <b>Add</b> button 
+		</p>
+
+		<p>2. Click the <b>Type of Request</b> then specify the Request Type from the drop-down list (See Figure 3-120).
+		</p>
+
+			<div class="img-content">
+			  <img src="assets/images/addRequest.PNG" alt="" class="center">
+		  </div>	
+		  <p style="font-size: 12px; text-align: center;"><b>Figure 3-120 Add New Request Type form</b></p>	
+
+		  	<!--Alert-->
+<div class="alert alert-warning alert-dismissible fade show" role="alert" style="font-size: 10px;">
+	<strong>Note:</strong>  Each type of request can have one record with multiple types of applicants. However,
+	if one applicant is already added to one particular type of request the particular type cannot be assigned again for similar type of request.
+	<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  </div>
+
+		  	  	<!--Alert-->
+<div class="alert alert-warning alert-dismissible fade show" role="alert" style="font-size: 10px;">
+	<strong>Note:</strong> There are a maximum number of four (4) signatories for each request record. Each signatory should only appear once each request record.
+	<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  </div>
+ 
+
+		  <p>3. Specify all the forms from the drop-down lists. </p>
+		  <p>4. When done, click <b>Submit</b> button to add new Executive Office Details or the <b>Cancel</b> button to cancel operation.</p>
+	
+      </div>
+
+	  <div id="editreq" class="w3-container page w3-animate-left" style="display: none;">
+		<h2>How to Edit Existing Request</h2>
+
+        <p>1. To edit existing Request, click the <b>Edit</b> button corresponding to the details of the Request to edit.</p>
+		<p>2. Information that can be updated includes <b>Type of Request</b>, <b>Applicant</b> and <b>Signatories</b> (See Figure 3-121). </p>
+ 
+	
+			<div class="img-content">
+			  <img src="assets/images/editRequest.PNG" alt="" class="center">
+		  </div>	
+		  <p style="font-size: 12px; text-align: center;"><b>Figure 3-121 Edit Existing Request Type form</b></p>	
+
+		  <p>3. When done, click <b>Save</b> button to update information or <b>Cancel</b> button to cancel operation.</p>
+	  </div>
+
+	  <div id="dltreq" class="w3-container page w3-animate-left" style="display: none;">
+		<h2>How to Delete Existing Request</h2>
+
+		<p>1. To delete existing Request, click the <b>Delete</b> button corresponding details of the Request to delete.
+		</p>
+		<p>2. Once you click the <b>Delete</b> button, You will redirected to the Delete Project Code Page (See Figure 3-122).</p>
+
+	
+			<div class="img-content">
+			  <img src="assets/images/deleteRequest.PNG" alt="" class="center">
+		  </div>	
+		  <p style="font-size: 12px; text-align: center;"><b>Figure 3-122 Delete Request Page</b></p>	
+
+		  <p>3. Click <b>Delete</b> button to proceed or click <b>Cancel</b> button to do otherwise. A confirmation message will be displayed if the action is successful.</p>
+	  </div>
+
+	  <div id="salarySched" class="w3-container page w3-animate-left" style="display: none;">
+		<h2>Salary Schedule</h2>
+
+
+		<p>1. Click the <strong>Salary Schedule</strong>  on the dropdown list of the Libraries Tab to view the Salary Schedule Page (See Figure 3-123).
+		</p>
+ 
+	
+			<div class="img-content">
+			  <img src="assets/images/salarySched.PNG" alt="" class="center">
+		  </div>	
+		  <p style="font-size: 12px; text-align: center;"><b>Figure 3-123 Salary Schedule page</b></p>	
+
+      </div>
+
+	  <div id="createNSalary" class="w3-container page w3-animate-left" style="display: none;">
+		<h2>New Salary Schedule</h2>
+
+
+		<p>1. To add new Salary Schedule details, fill-up the entry boxes that constitute the parameters for adding new Salary schedule details in (Figure 3-124).
+		</p>
+ 
+	
+			<div class="img-content">
+			  <img src="assets/images/createSalaryScheduleName.PNG" alt="" class="center">
+		  </div>	
+		  <p style="font-size: 12px; text-align: center;"><b>Figure 3-124 Add New Salary Schedule form</b></p>	
+
+		  <p>2. Type in the <b>Title</b> and <b>Descriptionr</b> on the entry boxes provided.</p>
+		  <p>3. Fill-in the <b>Date of Effectivity</b> by typing the date on the textbox (in the following format: YYYY-MM-DD) or by clicking on the drop-down calendar.</p>
+		  <p>4. When done, click <b>Add</b> button to add new Executive Office Details or the <b>Cancel</b> button to cancel operation.</p>
+      </div>
+
+	  <div id="createESalary" class="w3-container page w3-animate-left" style="display: none;">
+		<h2>New Salary Schedule from Existing</h2>
+
+
+		<p>1. To add new Salary Schedule from Existing, fill-up the entry boxes that constitute the parameters for adding new Salary schedule details in (Figure 3-125).
+		</p>
+ 
+	
+			<div class="img-content">
+			  <img src="assets/images/createExistingSalary.PNG" alt="" class="center">
+		  </div>	
+		  <p style="font-size: 12px; text-align: center;"><b>Figure 3-125 Add New Salary Schedule from Existing form</b></p>	
+
+		  <p>2. Type in the <b>Title</b> and <b>Descriptionr</b> on the entry boxes provided.</p>
+		  <p>3. Fill-in the <b>Date of Effectivity</b> by typing the date on the textbox (in the following format: YYYY-MM-DD) or by clicking on the drop-down calendar.</p>
+		  <p>4. When done, click <b>Add</b> button to add new Executive Office Details or the <b>Cancel</b> button to cancel operation.</p>
+      </div>
+
+	  <div id="addNSalary" class="w3-container page w3-animate-left" style="display: none;">
+		<h2>How to Add New Salary Grade</h2>
+
+		<p>1. To add new Salary Grade details, fill-up the entry boxes that constitute the parameters for adding new Salary grade details in (Figure 3-126).
+		</p>
+ 
+			<div class="img-content">
+			  <img src="assets/images/addSalarySched.PNG" alt="" class="center">
+		  </div>	
+		  <p style="font-size: 12px; text-align: center;"><b>Figure 3-126 Add New Salary Grade form</b></p>	
+
+		  <p>2. Specify the <b>Salary Schedule</b>, <b>Salary Grade Number</b>, <b>Step Number</b> and <b>Actual Salary</b> from the drop-down list.</p>
+		  <p>3. Type in the <b>Actual Salary</b> and on the entry boxes provided.</p>
+		  <p>4. When done, click <b>Add</b> button to add new Executive Office Details or the <b>Cancel</b> button to cancel operation.</p>
+      </div>
+
+	  <div id="scholarship" class="w3-container page w3-animate-left" style="display: none;">
+		<h2>Sacholarship</h2>
+
+
+		<p>1. Click the <strong>Scholarship</strong>  on the dropdown list of the Libraries Tab to view the Scholarship Page (See Figure 3-127).
+		</p>
+ 
+	
+			<div class="img-content">
+			  <img src="assets/images/scholarship.PNG" alt="" class="center">
+		  </div>	
+		  <p style="font-size: 12px; text-align: center;"><b>Figure 3-127 Scholarship page</b></p>	
+
+      </div>
+
+	  <div id="addscholar" class="w3-container page w3-animate-left" style="display: none;">
+		<h2>How to Add New Scholarship</h2>
+
+
+		<p>1. To add new scholarship details, fill-up the entry boxes that constitute the parameters for adding new scholarship details in (Figure 3-128).
+		</p>
+ 
+	
+			<div class="img-content">
+			  <img src="assets/images/addScholarship.PNG" alt="" class="center">
+		  </div>	
+		  <p style="font-size: 12px; text-align: center;"><b>Figure 3-128 Add New Scholarship form</b></p>	
+
+		  <p>2. Type in the <b>Scholarship Description</b> on the entry box provided.</p>
+		  <p>3. When done, click <b>Add</b> button to add new Executive Office Details or the <b>Cancel</b> button to cancel operation.</p>
+      </div>
+
+	  <div id="editscholar" class="w3-container page w3-animate-left" style="display: none;">
+		<h2>How to Edit Existing Scholarship</h2>
+
+        <p>1. To edit existing Project code details, click the <b>Edit</b> button corresponding to the details of the Project code to edit.</p>
+		<p>2. Information that can be updated includes <b>Project Description</b> (See Figure 3-129). </p>
+ 
+	
+			<div class="img-content">
+			  <img src="assets/images/editScholarship.PNG" alt="" class="center">
+		  </div>	
+		  <p style="font-size: 12px; text-align: center;"><b>Figure 3-129 Edit Scholarship Details form</b></p>	
+
+		  <p>3. When done, click <b>Save</b> button to update information or <b>Cancel</b> button to cancel operation.</p>
+	  </div>
+
+	  <div id="dltscholar" class="w3-container page w3-animate-left" style="display: none;">
+		<h2>How to Delete Existing Scholarship</h2>
+
+		<p>1. To delete existing scholarship, click the <b>Delete</b> button corresponding details of the scholarship to delete.
+		</p>
+		<p>2. Once you click the <b>Delete</b> button, You will redirected to the Delete Scholarship Page (See Figure 3-130).</p>
+
+	
+			<div class="img-content">
+			  <img src="assets/images/deleteScholarship.PNG" alt="" class="center">
+		  </div>	
+		  <p style="font-size: 12px; text-align: center;"><b>Figure 3-130 Delete Scholarship Page</b></p>	
+
+		  <p>3. Click <b>Yes</b> button to proceed or click <b>Cancel</b> button to do otherwise. A confirmation message will be displayed if the action is successful.</p>
+	  </div>
+
+	  <div id="serviceCode" class="w3-container page w3-animate-left" style="display: none;">
+		<h2>Service Code</h2>
+
+
+		<p>1. Click the <strong>Service Code</strong>  on the dropdown list of the Libraries Tab to view the Service Code Page (See Figure 3-131).
+		</p>
+ 
+	
+			<div class="img-content">
+			  <img src="assets/images/serviceCodepage.PNG" alt="" class="center">
+		  </div>	
+		  <p style="font-size: 12px; text-align: center;"><b>Figure 3-131 Service Code page</b></p>	
+
+      </div>
+
+	  <div id="addserviceCode" class="w3-container page w3-animate-left" style="display: none;">
+		<h2>How to Add New Service Code</h2>
+
+
+		<p>1. To add new service code details, fill-up the entry boxes that constitute the parameters for adding new service code details in (Figure 3-132).
+		</p>
+ 
+	
+			<div class="img-content">
+			  <img src="assets/images/addScholarship.PNG" alt="" class="center">
+		  </div>	
+		  <p style="font-size: 12px; text-align: center;"><b>Figure 3-132 Add New Service Code form</b></p>	
+
+		  <p>2. Type in the <b>Service Code</b> and <b>Service Description</b> on the entry boxes provided.</p>
+		  <p>3. When done, click <b>Add</b> button to add new Executive Office Details or the <b>Cancel</b> button to cancel operation.</p>
+      </div>
+
+	  <div id="editserviceCode" class="w3-container page w3-animate-left" style="display: none;">
+		<h2>How to Edit Existing Service Code</h2>
+
+        <p>1. To edit existing Service code details, click the <b>Edit</b> button corresponding to the details of the Service code to edit.</p>
+		<p>2. Information that can be updated is <b>Service Description</b> (See Figure 3-133). </p>
+ 
+	
+			<div class="img-content">
+			  <img src="assets/images/editServiceCode.PNG" alt="" class="center">
+		  </div>	
+		  <p style="font-size: 12px; text-align: center;"><b>Figure 3-133 Edit Service Code Details form</b></p>	
+
+		  <p>3. When done, click <b>Save</b> button to update information or <b>Cancel</b> button to cancel operation.</p>
+	  </div>
+
+	  <div id="dltserviceCode" class="w3-container page w3-animate-left" style="display: none;">
+		<h2>How to Delete Existing Service Code</h2>
+
+		<p>1. To delete existing service code, click the <b>Delete</b> button corresponding details of the service code to delete.
+		</p>
+		<p>2. Once you click the <b>Delete</b> button, You will redirected to the Delete Service Code Page (See Figure 3-134).</p>
+
+	
+			<div class="img-content">
+			  <img src="assets/images/deleteServiceCode.PNG" alt="" class="center">
+		  </div>	
+		  <p style="font-size: 12px; text-align: center;"><b>Figure 3-134 Delete Service Code Page</b></p>	
+
+		  <p>3. Click <b>Yes</b> button to proceed or click <b>Cancel</b> button to do otherwise. A confirmation message will be displayed if the action is successful.</p>
+	  </div>
+
+	  <div id="signatory" class="w3-container page w3-animate-left" style="display: none;">
+		<h2>Signatory</h2>
+
+
+		<p>1. Click the <strong>Signatory</strong>  on the dropdown list of the Libraries Tab to view the Signatory Page (See Figure 3-135).
+		</p>
+ 
+	
+			<div class="img-content">
+			  <img src="assets/images/signatoryPage.PNG" alt="" class="center">
+		  </div>	
+		  <p style="font-size: 12px; text-align: center;"><b>Figure 3-135 Signatory page</b></p>	
+
+      </div>
+
+	  <div id="addsignatory" class="w3-container page w3-animate-left" style="display: none;">
+		<h2>How to Add New Signatory</h2>
+
+
+		<p>1. To add new signatory details, fill-up the entry boxes that constitute the parameters for adding new signatory details in (Figure 3-136).
+		</p>
+ 
+	
+			<div class="img-content">
+			  <img src="assets/images/addSignatory.PNG" alt="" class="center">
+		  </div>	
+		  <p style="font-size: 12px; text-align: center;"><b>Figure 3-136 Add New Signatory form</b></p>	
+
+		  <p>2. Type in the <b>Signatory Name</b> and <b>Position</b> on the entry boxes provided.</p>
+		  <p>3. When done, click <b>Add</b> button to add new Executive Office Details or the <b>Cancel</b> button to cancel operation.</p>
+      </div>
+	 
+	  <div id="editsignatory" class="w3-container page w3-animate-left" style="display: none;">
+		<h2>How to Edit Existing Signatory</h2>
+
+        <p>1. To edit existing Signatory details, click the <b>Edit</b> button corresponding to the details of the Signatory to edit.</p>
+		<p>2. Information that can be updated includes <b>Signatory Name</b> and <b>Position</b>.</p>
+		<p>3. When done, click <b>Save</b> button to update information or <b>Cancel</b> button to cancel operation.</p>
+	
+			<div class="img-content">
+			  <img src="#" alt="" class="center">
+		  </div>	
+		  <p style="font-size: 12px; text-align: center;"></p>	
+
+		 
+	  </div>
+
+	  
+	  <div id="userAccount" class="w3-container page w3-animate-left" style="display: none;">
+		<h2>User Account</h2>
+
+
+		<p>1. Click the <strong>User Account</strong>  on the dropdown list of the Libraries Tab to view the User Account Page (See Figure 3-137).
+		</p>
+ 
+	
+			<div class="img-content">
+			  <img src="assets/images/UserAccountpage.PNG" alt="" class="center">
+		  </div>	
+		  <p style="font-size: 12px; text-align: center;"><b>Figure 3-137 User Account page</b></p>	
+
+      </div>
+
+	  <div id="adduser" class="w3-container page w3-animate-left" style="display: none;">
+		<h2>How to Add New User Account</h2>
+
+
+		<p>1. Specify the <b>Access Level</b> from the drop-down list. </p>
+		<p>2. For HR Module, fill-up the entry boxes that constitute the parameters for adding new User Account in Figure 3-138.</p>
+ 
+	
+			<div class="img-content">
+			  <img src="assets/images/addUserAccount.PNG" alt="" class="center">
+		  </div>	
+		  <p style="font-size: 12px; text-align: center;"><b>Figure 3-138 HR Module User Account form</b></p>	
+
+		  <p>2. Place a tick mark on the <b>Assistant</b> check box if the employee is assigned as HR Assistant then place a tick 
+			  mark on the check box of the section(s) that the employee can access.</p>
+		  <p>4. Place a tick mark on the <b>HR Officer</b> check box if the employee is assigned as HR Officer then place a tick mark on the 
+			  all section check box to access all sections.</p>
+
+		  <p>5. For Finance/Payroll Module, fill-up the entry boxes that constitute the parameters for adding new User Account in Figure 3-139. </p>
+
+		  <div class="img-content">
+			<img src="assets/images/addUserAccountFinance.PNG" alt="" class="center">
+		</div>	
+		<p style="font-size: 12px; text-align: center;"><b>Figure 3-139 Payroll Module User Account form</b></p>
+		
+		<p>6. Place a tick mark on the <b>Assistant</b> check box if the employee is assigned as Cashier Assistant then place a
+			 tick mark on the check box of the section(s) that the employee can access.</p>
+
+		<p>7. Specify the <b>Payroll Group</b> assigned to the Cashier Assistant from the drop-down list.</p>
+		<p>8. Place a tick mark on the <b>Finance Officer</b> check box if the employee is assigned as Finance Officer then place a 
+			tick mark on the all section check box to access all sections.</p>
+
+		<p>9. For Employee Module, Officer Module and Execom Module, 
+			fill-up the entry boxes that constitute the parameters for adding new User Account in Figure 3-140.</p>
+
+			<div class="img-content">
+				<img src="assets/images/addUserAccountEmployee.PNG" alt="" class="center">
+			</div>	
+			<p style="font-size: 12px; text-align: center;"><b>Figure 3-140 Employee Module User Account form</b></p>
+
+		<p>10. Specify the <b>Employee Name</b> from the drop-down list.</p>
+		<p>11. Type in the <b>Username</b> and <b>Password</b> on the entry boxes provided.</p>
+		<p>12. When done click <b>Add</b> button to add new User Account or the <b>Cancel</b> button to cancel operation.</p>
+			
+      </div>
+
+	  <div id="edituser" class="w3-container page w3-animate-left" style="display: none;">
+		<h2>How to Edit Existing User Account</h2>
+
+        <p>1. To edit existing user account details, click the <b>Edit</b> button corresponding to the details of the user aaccount to edit.</p>
+		<p>2. Information that can be updated includes <b>Access Level</b>, <b>Username</b> and <b>Password</b> (See Figure 3-141). </p>
+ 
+	
+			<div class="img-content">
+			  <img src="assets/images/editUserAccount.PNG" alt="" class="center">
+		  </div>	
+		  <p style="font-size: 12px; text-align: center;"><b>Figure 3-141 Edit User Account form</b></p>	
+
+		  <p>3. When done, click <b>Edit</b> button to update information or <b>Cancel</b> button to cancel operation.</p>
+	  </div>
+
+	  <div id="dltuser" class="w3-container page w3-animate-left" style="display: none;">
+		<h2>How to Delete Existing User Account</h2>
+
+		<p>1. To delete existing user account details, click the <b>Delete</b> button corresponding details of the user account to delete.
+		</p>
+		<p>2. Once you click the <b>Delete</b> button, You will redirected to the Delete User Account Page (See Figure 3-142).</p>
+
+	
+			<div class="img-content">
+			  <img src="assets/images/deleteUserAccount.PNG" alt="" class="center">
+		  </div>	
+		  <p style="font-size: 12px; text-align: center;"><b>Figure 3-142 Delete User Account Page</b></p>	
+
+		  <p>3. Click <b>Yes</b> button to proceed or click <b>Cancel</b> button to do otherwise. A confirmation message will be displayed if the action is successful.</p>
+	  </div>
+
+	  <div id="searchuser" class="w3-container page w3-animate-left" style="display: none;">
+		<h2>Using Search Engine</h2>
+
+		<p>1. To select a specific user account using the Search Engine, click Search icon  (See Figure 3-143).
+		</p>
+
+	
+			<div class="img-content">
+			  <img src="assets/images/searchUserAccount.PNG" alt="" class="center">
+		  </div>	
+		  <p style="font-size: 12px; text-align: center;"><b>Figure 3-143 Search User Account using Search Engine</b></p>	
+
+		  <p>2. Type in the <b>Employee Number</b>, <b>Employee Name</b> or <b>User Name</b> on the Search textbox to display the specific User Account record.</p>
+	  </div>
+
+	  <div id="compensation" class="w3-container page w3-animate-left" style="display: none;">
+		<h2>Compensation</h2>
+
+
+		<p>1. Click the <strong>Compensation</strong>  on the dropdown list of the Libraries Tab to view the Compensation Page (See Figure 3-144).
+		</p>
+ 
+	
+			<div class="img-content">
+			  <img src="assets/images/compensationPage.PNG" alt="" class="center">
+		  </div>	
+		  <p style="font-size: 12px; text-align: center;"><b>Figure 3-144 Compensation page</b></p>	
+
+      </div>
+
+	  <div id="Personnelprofile" class="w3-container page w3-animate-left" style="display: none;">
+		<h2>How to View Personnel Profile</h2>
+
+
+		<p>1. Click the <b>View</b> button on the right side of the compensation page to view the Personnel Profile page (See Figure 3-145).
+		</p>
+ 
+	
+			<div class="img-content">
+			  <img src="assets/images/personnelProfile.PNG" alt="" class="center">
+		  </div>	
+		  <p style="font-size: 12px; text-align: center;"><b>Figure 3-145 Personnel Profile page</b></p>	
+
+      </div>
+
+	  <div id="income" class="w3-container page w3-animate-left" style="display: none;">
+		<h2>How to View Income</h2>
+
+
+		<p>1. Click the <b>Income</b> on the navigation tab to view the Income page (See Figure 3-146).
+		</p>
+ 
+	
+			<div class="img-content">
+			  <img src="assets/images/IncomePage.PNG" alt="" class="center">
+		  </div>	
+		  <p style="font-size: 12px; text-align: center;"><b>Figure 3-146 Income page</b></p>	
+
+      </div>
+
+	  <div id="summarydeduc" class="w3-container page w3-animate-left" style="display: none;">
+		<h2>How to View Summary Deduction</h2>
+
+
+		<p>1. Click the <b>Summary Deduction</b> on the navigation tab to view the Summary Deduction page (See Figure 3-147).
+		</p>
+ 
+	
+			<div class="img-content">
+			  <img src="assets/images/deductionSummarypage.PNG" alt="" class="center">
+		  </div>	
+		  <p style="font-size: 12px; text-align: center;"><b>Figure 3-147 Summary Deduction page</b></p>	
+
+      </div>
+
+	  <div id="premloans" class="w3-container page w3-animate-left" style="display: none;">
+		<h2>How to View Premiums/Loans</h2>
+
+
+		<p>1. Click the <b>Premiums/Loans</b> on the navigation tab to view the Premiums/Loans page (See Figure 3-148).
+		</p>
+ 
+	
+			<div class="img-content">
+			  <img src="assets/images/PremiumLoansPage.PNG" alt="" class="center">
+		  </div>	
+		  <p style="font-size: 12px; text-align: center;"><b>Figure 3-148 Premiums/Loans page</b></p>	
+
+      </div>
+
+	  <div id="remittance" class="w3-container page w3-animate-left" style="display: none;">
+		<h2>How to View Remittances</h2>
+
+
+		<p>1. Click the <b>Remittances</b> on the navigation tab to view the Remittances page (See Figure 3-149).
+		</p>
+ 
+	
+			<div class="img-content">
+			  <img src="assets/images/RemittancePage.PNG" alt="" class="center">
+		  </div>	
+		  <p style="font-size: 12px; text-align: center;"><b>Figure 3-149 Remittances page</b></p>	
+
+		  <p>2. Specify the <b>Remittance Type</b> from the drop-down list.</p>
+          <p>3. Select the <b>Start Year</b> and <b>End Year</b> from the drop-down lists.</p>
+		  <p>4. When done, click <b>Search</b> button to display remittances that matched parameters chosen.</p>
+
+		  <div class="img-content">
+			<img src="assets/images/RemittancesResult.PNG" alt="" class="center">
+		</div>	
+		<p style="font-size: 12px; text-align: center;"><b>Figure 3-150 Remittances results</b></p>	
+      </div>
+
+	  <div id="user" class="w3-container page w3-animate-left" style="display: none;">
+		<h2>User</h2>
+
+
+		<p>This part of the section contains details regarding the user who is logged-in. 
+			This includes information such as the name of the user currently logged-in, other user type(s) he/she can access, other system connected with HRMIS,
+			 other servers connected with HRMIS and the logout option.
+			  The User is located at the upper-right side of the screen (See Figure 3-151).
+		</p>
+ 
+	
+			<div class="img-content">
+			  <img src="assets/images/Userpage.PNG" alt="" class="center">
+		  </div>	
+		  <p style="font-size: 12px; text-align: center;"><b>Figure 3-151 User form</b></p>	
+
+      </div>
+
+	  <div id="switchuser" class="w3-container page w3-animate-left" style="display: none;">
+		<h2>How to Switch to Employee Module</h2>
+
+
+		<p>1. To switch from HR Module to Employee Module, click on the <b>Down</b> icon beside the name of the user.</p>
+        <p>2. Click the <b>Employee Module</b> link, the user will be directed to the default screen of the Employee Module.</p>
+	
+			<div class="img-content">
+			  <img src="assets/images/Userpage.PNG" alt="" class="center">
+		  </div>	
+		  <p style="font-size: 12px; text-align: center;"><b>Figure 3-152 User form</b></p>	
+
+      </div>
+
+	  <div id="logoutuser" class="w3-container page w3-animate-left" style="display: none;">
+		<h2>How to Logout</h2>
+
+
+	    <p>1. To logout from the system, click on the <b>Down</b> icon beside the name of the user.</p>
+        <p>2. Click the <b>Logout</b> link, the user will be directed to the default screen of the Employee Module.</p>
+	
+			<div class="img-content">
+			  <img src="assets/images/Userpage.PNG" alt="" class="center">
+		  </div>	
+		  <p style="font-size: 12px; text-align: center;"><b>Figure 3-153 User form</b></p>	
+
+      </div>
+
+	  <div id="appendix" class="w3-container page w3-animate-left" style="display: none;">
+		<h2>Appendix A: HRMIS Reports</h2>
+
+
+	    <p>A.1 Plantilla Positions</p>
+	
+			<div class="img-content">
+			  <img src="assets/appendix/A1.png" alt="" class="center">
+		  </div>	
+      </div>
+
+	  <div id="appendix1" class="w3-container page w3-animate-left" style="display: none;">
+		<h2>Appendix A: HRMIS Reports</h2>
+
+
+	    <p>A.1 Plantilla Positions</p>
+	
+			<div class="img-content">
+			  <img src="assets/appendix/A1.png" alt="" class="center">
+		  </div>	
+      </div>
+
+	  <div id="appendix2" class="w3-container page w3-animate-left" style="display: none;">
+		<h2>Appendix A: HRMIS Reports</h2>
+
+
+	    <p>A.2 Gender</p>
+	
+			<div class="img-content">
+			  <img src="assets/appendix/A2.png" alt="" class="center">
+		  </div>	
+      </div>
+
+	  <div id="appendix3" class="w3-container page w3-animate-left" style="display: none;">
+		<h2>Appendix A: HRMIS Reports</h2>
+
+
+	    <p>A.3 Educational Attainment</p>
+	
+			<div class="img-content">
+			  <img src="assets/appendix/A3.png" alt="" class="center">
+		  </div>	
+      </div>
+
+	  <div id="appendix4" class="w3-container page w3-animate-left" style="display: none;">
+		<h2>Appendix A: HRMIS Reports</h2>
+
+
+	    <p>A.4 Leave Monetization</p>
+	
+			<div class="img-content">
+			  <img src="assets/appendix/A4.png" alt="" class="center">
+		  </div>	
+      </div>
+
+	  <div id="appendix5" class="w3-container page w3-animate-left" style="display: none;">
+		<h2>Appendix A: HRMIS Reports</h2>
+
+
+	    <p>A.5 Daily Time Record</p>
+	
+			<div class="img-content">
+			  <img src="assets/appendix/A5.png" alt="" class="center">
+		  </div>	
+      </div>
+
+	  <div id="appendix6" class="w3-container page w3-animate-left" style="display: none;">
+		<h2>Appendix A: HRMIS Reports</h2>
+
+
+	    <p>A.6 Acceptance of Resignation</p>
+	
+			<div class="img-content">
+			  <img src="assets/appendix/A6.png" alt="" class="center">
+		  </div>	
+      </div>
+	  
+	  <div id="appendix7" class="w3-container page w3-animate-left" style="display: none;">
+		<h2>Appendix A: HRMIS Reports</h2>
+
+
+	    <p>A.7 Accumulated Leave Credits</p>
+	
+			<div class="img-content">
+			  <img src="assets/appendix/A7.jpg" alt="" class="center">
+		  </div>	
+      </div>
+
+	  <div id="appendix8" class="w3-container page w3-animate-left" style="display: none;">
+		<h2>Appendix A: HRMIS Reports</h2>
+
+
+	    <p>A.8 Accumulated Report by Office</p>
+	
+			<div class="img-content">
+			  <img src="assets/appendix/A8.png" alt="" class="center">
+		  </div>	
+      </div>
+
+	  <div id="appendix9" class="w3-container page w3-animate-left" style="display: none;">
+		<h2>Appendix A: HRMIS Reports</h2>
+
+
+	    <p>A.9 Application for Leave Forms</p>
+	
+			<div class="img-content">
+			  <img src="assets/appendix/A9.png" alt="" class="center">
+		  </div>	
+      </div>
+
+	  <div id="appendix10" class="w3-container page w3-animate-left" style="display: none;">
+		<h2>Appendix A: HRMIS Reports</h2>
+
+
+	    <p>A.10 Assumption of Duties and Responsibilities</p>
+	
+			<div class="img-content">
+			  <img src="assets/appendix/A10.png" alt="" class="center">
+		  </div>	
+      </div>
+
+	  <div id="appendix11" class="w3-container page w3-animate-left" style="display: none;">
+		<h2>Appendix A: HRMIS Reports</h2>
+
+
+	    <p>A.11 Certificate of Duties and Responsibilities</p>
+	
+			<div class="img-content">
+			  <img src="assets/appendix/A11.png" alt="" class="center">
+		  </div>	
+      </div>
+
+	  <div id="appendix12" class="w3-container page w3-animate-left" style="display: none;">
+		<h2>Appendix A: HRMIS Reports</h2>
+
+
+	    <p>A.12 Certificate of Employees Compensation</p>
+	
+			<div class="img-content">
+			  <img src="assets/appendix/A12.png" alt="" class="center">
+		  </div>	
+      </div>
+
+	  <div id="appendix13" class="w3-container page w3-animate-left" style="display: none;">
+		<h2>Appendix A: HRMIS Reports</h2>
+
+
+	    <p>A.13 Certificate of No Administrative Charge</p>
+	
+			<div class="img-content">
+			  <img src="assets/appendix/A13.png" alt="" class="center">
+		  </div>	
+      </div>
+
+	  <div id="appendix14" class="w3-container page w3-animate-left" style="display: none;">
+		<h2>Appendix A: HRMIS Reports</h2>
+
+
+	    <p>A.14 Certificate of No Administrative Charge (for Legal Purposes)</p>
+	
+			<div class="img-content">
+			  <img src="assets/appendix/A14.png" alt="" class="center">
+		  </div>	
+      </div>
+
+	  <div id="appendix15" class="w3-container page w3-animate-left" style="display: none;">
+		<h2>Appendix A: HRMIS Reports</h2>
+
+
+	    <p>A.15 Certification of Service Loyalty Award</p>
+	
+			<div class="img-content">
+			  <img src="assets/appendix/A15.png" alt="" class="center">
+		  </div>	
+      </div>
+
+	  <div id="appendix16" class="w3-container page w3-animate-left" style="display: none;">
+		<h2>Appendix A: HRMIS Reports</h2>
+
+
+	    <p>A.16 Comparative Analysis of Candidates Qualification</p>
+	
+			<div class="img-content">
+			  <img src="assets/appendix/A16a.png" alt="" class="center">
+		  </div>	
+
+		  <div class="img-content" style="margin-top: 20px;">
+			<img src="assets/appendix/A16b.png" alt="" class="center">
+		</div>	
+      </div>
+
+	  <div id="appendix17" class="w3-container page w3-animate-left" style="display: none;">
+		<h2>Appendix A: HRMIS Reports</h2>
+
+
+	    <p>A.17 Employees First Day of Service</p>
+	
+			<div class="img-content">
+			  <img src="assets/appendix/A17.png" alt="" class="center">
+		  </div>	
+      </div>
+
+	  <div id="appendix18" class="w3-container page w3-animate-left" style="display: none;">
+		<h2>Appendix A: HRMIS Reports</h2>
+
+
+	    <p>A.18 Employee Profile</p>
+	
+			<div class="img-content">
+			  <img src="assets/appendix/A18.png" alt="" class="center">
+		  </div>	
+      </div>
+
+	  <div id="appendix19" class="w3-container page w3-animate-left" style="display: none;">
+		<h2>Appendix A: HRMIS Reports</h2>
+
+
+	    <p>A.19 List of Educational Attainment</p>
+	
+			<div class="img-content">
+			  <img src="assets/appendix/A19.png" alt="" class="center">
+		  </div>	
+      </div>
+
+
+	  <div id="appendix20" class="w3-container page w3-animate-left" style="display: none;">
+		<h2>Appendix A: HRMIS Reports</h2>
+
+
+	    <p>A.20 List of Employees by Age</p>
+	
+			<div class="img-content">
+			  <img src="assets/appendix/A20.png" alt="" class="center">
+		  </div>	
+      </div>
+
+
+	  <div id="appendix21" class="w3-container page w3-animate-left" style="display: none;">
+		<h2>Appendix A: HRMIS Reports</h2>
+
+
+	    <p>A.21 List of Employees by Date Hired</p>
+	
+			<div class="img-content">
+			  <img src="assets/appendix/A20.png" alt="" class="center">
+		  </div>	
+      </div>
+
+	  <div id="appendix22" class="w3-container page w3-animate-left" style="display: none;">
+		<h2>Appendix A: HRMIS Reports</h2>
+
+
+	    <p>A.22 List of Employees by Date of Birth</p>
+	
+			<div class="img-content">
+			  <img src="assets/appendix/A22.png" alt="" class="center">
+		  </div>	
+      </div>
+
+	  <div id="appendix23" class="w3-container page w3-animate-left" style="display: none;">
+		<h2>Appendix A: HRMIS Reports</h2>
+
+
+	    <p>A.23 List of Employees by Educational Attainment</p>
+	
+			<div class="img-content">
+			  <img src="assets/appendix/A23.png" alt="" class="center">
+		  </div>	
+      </div>
+
+	  <div id="appendix24" class="w3-container page w3-animate-left" style="display: none;">
+		<h2>Appendix A: HRMIS Reports</h2>
+
+
+	    <p>A.24 List of Employees by Gender</p>
+	
+			<div class="img-content">
+			  <img src="assets/appendix/A24a.png" alt="" class="center">
+		  </div>	
+
+		  <div class="img-content" style="margin-top: 20px;">
+			<img src="assets/appendix/A24b.png" alt="" class="center">
+		</div>
+      </div>
+
+	  <div id="appendix25" class="w3-container page w3-animate-left" style="display: none;">
+		<h2>Appendix A: HRMIS Reports</h2>
+
+
+	    <p>A.25 List of Employees by Length of Service</p>
+	
+			<div class="img-content">
+			  <img src="assets/appendix/A25.png" alt="" class="center">
+		  </div>	
+      </div>
+
+	  <div id="appendix26" class="w3-container page w3-animate-left" style="display: none;">
+		<h2>Appendix A: HRMIS Reports</h2>
+
+
+	    <p>A.26 List of Employees by Salary Grade</p>
+	
+			<div class="img-content">
+			  <img src="assets/appendix/A26.png" alt="" class="center">
+		  </div>	
+      </div>
+
+	  <div id="appendix27" class="w3-container page w3-animate-left" style="display: none;">
+		<h2>Appendix A: HRMIS Reports</h2>
+
+
+	    <p>A.27 List of Employees by Salary Grade (Alphabetical)</p>
+	
+			<div class="img-content">
+			  <img src="assets/appendix/A27.png" alt="" class="center">
+		  </div>	
+      </div>
+
+
+	  <div id="appendix28" class="w3-container page w3-animate-left" style="display: none;">
+		<h2>Appendix A: HRMIS Reports</h2>
+
+
+	    <p>A.28 List of Employee's Date of Birth (Alphabetical)</p>
+	
+			<div class="img-content">
+			  <img src="assets/appendix/A28.png" alt="" class="center">
+		  </div>	
+      </div>
+
+	  <div id="appendix29" class="w3-container page w3-animate-left" style="display: none;">
+		<h2>Appendix A: HRMIS Reports</h2>
+
+
+	    <p>A.29 List of Employee's Training</p>
+	
+			<div class="img-content">
+			  <img src="assets/appendix/A29.png" alt="" class="center">
+		  </div>	
+      </div>
+
+	  <div id="appendix30" class="w3-container page w3-animate-left" style="display: none;">
+		<h2>Appendix A: HRMIS Reports</h2>
+
+
+	    <p>A.30 List of Retirees</p>
+	
+			<div class="img-content">
+			  <img src="assets/appendix/A30.png" alt="" class="center">
+		  </div>	
+      </div>
+
+	  <div id="appendix31" class="w3-container page w3-animate-left" style="display: none;">
+		<h2>Appendix A: HRMIS Reports</h2>
+
+
+	    <p>A.31 List of Training Programs</p>
+	
+			<div class="img-content">
+			  <img src="assets/appendix/A31.png" alt="" class="center">
+		  </div>	
+      </div>
+
+	  <div id="appendix32" class="w3-container page w3-animate-left" style="display: none;">
+		<h2>Appendix A: HRMIS Reports</h2>
+
+
+	    <p>A.32 List of Vacant Position</p>
+	
+			<div class="img-content">
+			  <img src="assets/appendix/A32.png" alt="" class="center">
+		  </div>	
+      </div>
+
+	  <div id="appendix33" class="w3-container page w3-animate-left" style="display: none;">
+		<h2>Appendix A: HRMIS Reports</h2>
+
+
+	    <p>A.33 List of Loyalty Reports</p>
+	
+			<div class="img-content">
+			  <img src="assets/appendix/A33.png" alt="" class="center">
+		  </div>	
+      </div>
+
+	  <div id="appendix34" class="w3-container page w3-animate-left" style="display: none;">
+		<h2>Appendix A: HRMIS Reports</h2>
+
+
+	    <p>A.34 Official Business Slip</p>
+	
+			<div class="img-content">
+			  <img src="assets/appendix/A34.png" alt="" class="center">
+		  </div>	
+      </div>
+
+	  <div id="appendix35" class="w3-container page w3-animate-left" style="display: none;">
+		<h2>Appendix A: HRMIS Reports</h2>
+
+
+	    <p>A.35 Panunumpa sa Katungkulan</p>
+	
+			<div class="img-content">
+			  <img src="assets/appendix/A35.png" alt="" class="center">
+		  </div>	
+      </div>
+
+	  <div id="appendix36" class="w3-container page w3-animate-left" style="display: none;">
+		<h2>Appendix A: HRMIS Reports</h2>
+
+
+	    <p>A.36 Personal Data Sheet</p>
+	
+			<div class="img-content">
+			  <img src="assets/appendix/A36.png" alt="" class="center">
+		  </div>	
+      </div>
+
+	  <div id="appendix37" class="w3-container page w3-animate-left" style="display: none;">
+		<h2>Appendix A: HRMIS Reports</h2>
+
+
+	    <p>A.37 Plantilla of Personnel</p>
+	
+			<div class="img-content">
+			  <img src="assets/appendix/A37.png" alt="" class="center">
+		  </div>	
+      </div>
+
+	  <div id="appendix38" class="w3-container page w3-animate-left" style="display: none;">
+		<h2>Appendix A: HRMIS Reports</h2>
+
+
+	    <p>A.38 Report on Tardiness</p>
+	
+			<div class="img-content">
+			  <img src="assets/appendix/A38.png" alt="" class="center">
+		  </div>	
+      </div>
+
+	  <div id="appendix39" class="w3-container page w3-animate-left" style="display: none;">
+		<h2>Appendix A: HRMIS Reports</h2>
+
+
+	    <p>A.39 Report on Tardiness, Undertime and Absences</p>
+	
+			<div class="img-content">
+			  <img src="assets/appendix/A39.png" alt="" class="center">
+		  </div>	
+      </div>
+
+	  <div id="appendix40" class="w3-container page w3-animate-left" style="display: none;">
+		<h2>Appendix A: HRMIS Reports</h2>
+
+
+	    <p>A.40 Service Record</p>
+	
+			<div class="img-content">
+			  <img src="assets/appendix/A40.png" alt="" class="center">
+		  </div>	
+      </div>
+
+	  <div id="appendix41" class="w3-container page w3-animate-left" style="display: none;">
+		<h2>Appendix A: HRMIS Reports</h2>
+
+
+	    <p>A.41 Trainings of Staff</p>
+	
+			<div class="img-content">
+			  <img src="assets/appendix/A41.png" alt="" class="center">
+		  </div>	
+      </div>
+<!--endDisplaycontent-->
+</div>
+
+
+<!--ToastMessage-->	  
+<div class="position-fixed bottom-0 end-0 p-3" style="z-index: 5">
+	<div role="alert" aria-live="assertive" aria-atomic="true" class="toast" data-bs-autohide="false">
+		<div class="toast-header">
+		  <img src="assets/logo.png" class="rounded me-2" alt="..." style="width: 20px; height: 20px;">
+		  <strong class="me-auto">DOST</strong>
+		  <small>Online Help</small>
+		  <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+		</div>
+		<div class="toast-body" id="text-body">
+		</div>
+	  </div>
+</div>
+
+
+<!--endmain-->
+</div>
+
+<!--JavaScript Functions-->
+	<script src="app.js"></script>
+	<script src="btn.js"></script>
+	<script src="sidebar.js"></script>
+</body>
+</html>

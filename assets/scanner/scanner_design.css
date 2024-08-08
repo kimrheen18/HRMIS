@@ -1,0 +1,119 @@
+html, body {
+	min-height: 100vh;
+}
+
+body {
+	/* background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.com/svgjs' width='1980' height='1080' preserveAspectRatio='none' viewBox='0 0 1980 1080'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1030%26quot%3b)' fill='none'%3e%3crect width='1980' height='1080' x='0' y='0' fill='%230e2a47'%3e%3c/rect%3e%3cpath d='M0%2c873.186C160.364%2c882.804%2c280.08%2c724.91%2c391.48%2c609.155C484.157%2c512.854%2c508.152%2c376.804%2c583.765%2c266.597C681.026%2c124.838%2c884.955%2c42.307%2c898.007%2c-129.114C910.9%2c-298.445%2c755.206%2c-429.735%2c646.734%2c-560.399C536.11%2c-693.656%2c434.426%2c-872.45%2c262.64%2c-894.468C90.009%2c-916.595%2c-41.93%2c-748.877%2c-196.275%2c-668.45C-317.136%2c-605.471%2c-435.787%2c-553.285%2c-545.99%2c-473.103C-687.165%2c-370.386%2c-883.302%2c-301.803%2c-931.016%2c-133.86C-978.723%2c34.057%2c-892.114%2c221.732%2c-781.846%2c357.057C-681.337%2c480.406%2c-495.212%2c476.282%2c-362.423%2c563.941C-227.148%2c653.241%2c-161.801%2c863.482%2c0%2c873.186' fill='%230b2239'%3e%3c/path%3e%3cpath d='M1980 1659.022C2095.274 1669.655 2220.546 1668.258 2315.433 1601.944 2409.322 1536.327 2425.783 1409.15 2481.075 1308.833 2541.9120000000003 1198.4569999999999 2647.761 1108.41 2656.745 982.699 2666.4629999999997 846.718 2631.35 694.9590000000001 2531.587 602.047 2433.237 510.451 2281.2110000000002 524.573 2147.759 508.66600000000005 2035.164 495.245 1926.017 495.69100000000003 1814.566 516.582 1691.892 539.576 1556.327 548.204 1467.745 636.129 1377.342 725.8620000000001 1341.3139999999999 860.571 1339.688 987.937 1338.164 1107.311 1396.4009999999998 1216.283 1459.039 1317.915 1515.674 1409.807 1591.8020000000001 1484.3980000000001 1682.109 1543.528 1773.05 1603.0729999999999 1871.758 1649.038 1980 1659.022' fill='%23113255'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1030'%3e%3crect width='1980' height='1080' fill='white'%3e%3c/rect%3e%3c/mask%3e%3c/defs%3e%3c/svg%3e"); */
+	background-color: #2A4B75;
+	width: 100%;
+	height: 100vh;
+}
+
+#card-container .rounded {
+	border-radius: 15px !important;
+}
+
+.scan-animation {
+	cursor: pointer;
+}
+
+.form-check input, .form-check label {
+	cursor: pointer;
+}
+
+form button, .status-container button {
+	background: #2A4B75 !important;
+	color: white !important;
+	text-align: center;
+}
+
+.options-container {
+	width: 80%;
+}
+
+.option-title {
+	color: #0B2239;
+	font-weight: 900;
+}
+
+/* Custom Radio Button Design */
+.radio-container {
+	font-size: 18px;
+}
+
+.radio-container label {
+	display: flex;
+	cursor: pointer;
+	font-weight: 500;
+	position: relative;
+	overflow: hidden;
+	margin-bottom: 0.375em;
+}
+
+.radio-container input {
+	 position: absolute;
+	 left: -9999px;
+}
+
+.radio-container label input:checked + span {
+	 background-color: #d6d6e5;
+}
+
+.radio-container label input:checked + span:before {
+	 box-shadow: inset 0 0 0 0.4375em #00005c;
+}
+
+.radio-container label span {
+	 display: flex;
+	 align-items: center;
+	 padding: 0.375em 0.75em 0.375em 0.375em;
+	 border-radius: 99em;
+	 transition: 0.25s ease;
+}
+
+.radio-container label span:hover {
+	 background-color: #d6d6e5;
+}
+
+.radio-container label span:before {
+	 display: flex;
+	 flex-shrink: 0;
+	 content: "";
+	 background-color: #fff;
+	 width: 1.5em;
+	 height: 1.5em;
+	 border-radius: 50%;
+	 margin-right: 0.375em;
+	 transition: 0.25s ease;
+	 box-shadow: inset 0 0 0 0.125em #00005c;
+}
+
+/* Digital Clock CSS */
+.clock {
+	display: flex;
+	width: 270px;
+	height: 50px;
+	align-items: center;
+	justify-content: space-between;
+	margin-top: 5px;
+}
+
+.clock > div {
+	background-color: white;
+	height: 100%;
+	width: 80px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 30px;
+	font-weight: 800;
+	border-radius: 5px;
+	font-family: "Arial";
+	color:  #2A4B75;
+}
+
+.clock > span {
+	color: white;
+	font-weight: bolder;
+	font-size: 30px;
+}

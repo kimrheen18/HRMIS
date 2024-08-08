@@ -1,0 +1,1691 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link rel="shortcut icon" type="image/png" href="assets/favicon.ico">
+	<link rel="stylesheet" href="style.css">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="w3.css">
+	
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	
+	<!--Title-->	
+	<title>HRMIS | Online Help</title>
+</head>
+<body onload="typeWriter()">
+
+
+ 
+
+	<!--Sidebar -->
+<div class=" w3-sidebar w3-bar-block w3-black w3-collapse w3-card w3-animate-left" style="width:230px; left:0; z-index: 5;" id="mySidebar">
+
+	
+	<button class="w3-bar-item w3-button w3-medium w3-hide-large w3-hover-red" onclick="sidebar_close()">Close &times;</button>
+
+	<div class="w3-bar-item " style="margin-top: 10px;">
+		<img src="assets/logo.png" alt="logo" width="20px" height="20px"> Online Help</div>
+
+	<input class="w3-input w3-border w3-padding" type="text" placeholder="Search..." id="myInput" onkeyup="myFunction()" style="margin-top: 5px; margin-bottom: 10px;">
+
+	<!--Loginbtn-->
+	<div class="w3-dropdown-click">
+	<button class="w3-bar-item w3-button tablink w3-cyan" onclick="openLink(event, 'login')">Login<span class="btn w3-right w3-tiny" onclick=" myDropFunc()"></span></button>	
+	<div id="Drop" class="w3-bar-block w3-hide  w3-card w3-hover-white ">
+		<button  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'Howtologin')">How to Login</button>
+   </div>
+   </div>
+	
+	<button class="w3-bar-item w3-button tablink" onclick="openLink(event, 'DefaultScreen')">Default Screen</button>
+	<button class="w3-bar-item w3-button tablink" onclick="openLink(event, 'HRmodule')">Payroll Module</button>
+	
+	
+	
+	<div class="w3-dropdown-click">
+		<button class="w3-bar-item w3-button tablink" onclick="openLink(event, 'Notification')">Notification <span class="btn w3-right w3-tiny" onclick="myDropFuncNot()"></span></button>
+		<div id="NotDrop" class="w3-bar-block w3-hide  w3-card w3-hover-white">
+			<a  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'notification1')" >Included in Payroll</a>
+			<a  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'notification2')" >Maturing Loan(s)</a>
+			<a  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'notification3')" >Increase in Longevity Factor</a>
+			
+		</div>
+		 </div>
+	
+	
+	
+		 <div class="w3-dropdown-click">
+	<button class="w3-bar-item w3-button tablink" onclick="openLink(event, 'Compensation')">Compensation <span class="btn w3-right w3-tiny" onclick="myDropFuncCom()"></span></button>
+	<div id="ComDrop" class="w3-bar-block w3-hide  w3-card w3-hover-white">		
+		
+		<div class="w3-dropdown-click">
+			<button class="w3-bar-item w3-button tablink" onclick="openLink(event, 'Compensation1')">How to Browse Employee Compensation Records<span class="btn w3-right w3-tiny" onclick="myDropFuncCom1()"></span></button>
+			<div id="ComDrop1" class="w3-bar-block w3-hide  w3-card w3-hover-white">
+				<a  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'Compensation2')" >Using Navigation Bar</a>
+				<a  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'Compensation3')" >Using Search Engine</a>
+			</div>
+		</div>
+		<a  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'Compensation4')" >How to Manage Personnel Profile</a>
+		<a  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'Compensation5')" >How to Manage Income</a>
+		<a  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'Compensation6')" >How to View Deduction Summary</a>
+		<a  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'Compensation7')" >How to Manage Premiums and Loans</a>
+		<a  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'Compensation8')" >How to View Remittances</a>
+		<a  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'Compensation9')" >How to Manage Tax Details</a>
+		<a  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'Compensation10')" >How to Manage DTR</a>
+		<a  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'Compensation11')" >How to Manage Adjustments</a>
+
+	
+	
+	</div>
+     </div>
+
+
+
+	<div class="w3-dropdown-click">
+	<button class="w3-bar-item w3-button tablink" onclick="openLink(event, 'update')">Update <span class="btn w3-right w3-tiny" onclick="myDropFuncAtt()"></span></button>
+	<div id="AttDrop" class="w3-bar-block w3-hide  w3-card w3-hover-white">
+		<div class="w3-dropdown-click">
+			<button class="w3-bar-item w3-button tablink" onclick="openLink(event, 'update1')">Process Payroll <span class="btn w3-right w3-tiny" onclick="myDropFuncPro()"></span></button>
+			<div id="proDrop" class="w3-bar-block w3-hide  w3-card w3-hover-white">
+				<a  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'update2')" >How to Manage Undertime/Absences</a>
+				<a  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'update3')" >Job Order Employees</a>
+				<a  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'update4')" >Contractual Employees</a>
+
+	
+			</div>
+		</div>
+		<a  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'update5')" >How to View Process History</a>
+		<a  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'update6')" >How to Process Payroll</a>
+
+	
+	</div>
+     </div>
+
+
+	 <div class="w3-dropdown-click">
+		<button class="w3-bar-item w3-button tablink" onclick="openLink(event, 'Reports')">Reports <span class="btn w3-right w3-tiny" onclick="myDropFuncRep()"></span></button>
+		<div id="RepDrop" class="w3-bar-block w3-hide  w3-card w3-hover-white">
+			<a  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'report1')" >Monthly Reports</a>
+			<a  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'report2')" >Employee Remittances</a>
+			<a  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'report3')" >Employee Loan Balance</a>
+		</div>
+		 </div>
+	
+	
+	
+	 
+	 <div class="w3-dropdown-click">
+	<button class="w3-bar-item w3-button tablink" onclick="openLink(event, 'libraries')">Libraries<span class="btn w3-right w3-tiny" onclick="myDropFuncTask()"></span></button>
+	<div id="taskDrop" class="w3-bar-block w3-hide  w3-card w3-hover-white">	
+		
+		<div class="w3-dropdown-click">
+			<button class="w3-bar-item w3-button tablink" onclick="openLink(event, 'libraries1')">Deduction<span class="btn w3-right w3-tiny" onclick="myDropFuncTask1()"></span></button>
+			<div id="LibDrop1" class="w3-bar-block w3-hide  w3-card w3-hover-white">	
+				<a  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'Deduction1')" >How to Manage Deduction</a>
+				<a  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'Deduction2')" >How to Add New Deduction</a>
+				<a  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'Deduction3')" >How to Edit Existing Deduction</a>
+				<a  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'Deduction4')" >How to Delete Existing Deduction</a>
+				<a  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'Deduction5')" >How to Hide Existing Deduction</a>
+				<a  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'Deduction6')" >How to Manage Agency</a>
+				<a  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'Deduction7')" >How to Add New Agency</a>
+				<a  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'Deduction8')" >How to Edit Existing Agency</a>
+				<a  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'Deduction9')" >How to Delete Existing Agency</a>
+				<a  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'Deduction10')" >How to Hide Existing Agency</a>
+
+		   </div>
+		</div>
+		<div class="w3-dropdown-click">
+			<button class="w3-bar-item w3-button tablink" onclick="openLink(event, 'libraries2')">Income<span class="btn w3-right w3-tiny" onclick="myDropFuncTask2()"></span></button>
+			<div id="LibDrop2" class="w3-bar-block w3-hide  w3-card w3-hover-white">	
+				<a  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'Income1')" >How to Add New Income</a>
+				<a  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'Income2')" >How to Edit Existing Income</a>
+				<a  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'Income3')" >How to Delete Existing Income</a>
+				<a  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'Income4')" >How to Hide Existing Income</a>
+
+		   </div>
+		</div>
+
+		<div class="w3-dropdown-click">
+			<button class="w3-bar-item w3-button tablink" onclick="openLink(event, 'libraries3')">Payroll Process<span class="btn w3-right w3-tiny" onclick="myDropFuncTask3()"></span></button>
+			<div id="LibDrop3" class="w3-bar-block w3-hide  w3-card w3-hover-white">	
+				<a  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'Payroll1')" >Payroll Process</a>
+			</div>
+		</div>
+
+		<div class="w3-dropdown-click">
+			<button class="w3-bar-item w3-button tablink" onclick="openLink(event, 'libraries4')">Project Code<span class="btn w3-right w3-tiny" onclick="myDropFuncTask4()"></span></button>
+			<div id="LibDrop4" class="w3-bar-block w3-hide  w3-card w3-hover-white">	
+				<a  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'Project1')" >How to Add New Project Code</a>
+				<a  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'Project2')" >How to Edit Existing Project Code</a>
+				<a  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'Project3')" >How to Delete Existing Project Codey</a>
+
+		   </div>
+		</div>
+
+		<div class="w3-dropdown-click">
+			<button class="w3-bar-item w3-button tablink" onclick="openLink(event, 'libraries5')">Payroll Group<span class="btn w3-right w3-tiny" onclick="myDropFuncTask5()"></span></button>
+			<div id="LibDrop5" class="w3-bar-block w3-hide  w3-card w3-hover-white">	
+				<a  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'Group1')" >How to Add New Payroll Group</a>
+				<a  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'Group2')" >How to Edit Existing Payroll Group</a>
+				<a  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'Group3')" >How to Delete Existing Payroll Group</a>
+
+		   </div>
+		</div>
+
+		<div class="w3-dropdown-click">
+			<button class="w3-bar-item w3-button tablink" onclick="openLink(event, 'libraries6')">Signatory<span class="btn w3-right w3-tiny" onclick="myDropFuncTask6()"></span></button>
+			<div id="LibDrop6" class="w3-bar-block w3-hide  w3-card w3-hover-white">	
+				<a  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'Signatory1')" >How to Add New Signatory</a>
+				<a  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'Signatory2')" >How to Edit Existing Signatory</a>
+				<a  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'Signatory3')" >How to Delete Existing Signatory</a>
+
+		   </div>
+		</div>
+
+
+
+
+   </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="w3-dropdown-click">
+	<button class="w3-bar-item w3-button tablink" onclick="openLink(event, 'user')">User<span class="btn w3-right w3-tiny" onclick="myDropFuncUser()"></span></button>
+	<div id="userDrop" class="w3-bar-block w3-hide  w3-card w3-hover-white">
+		<a  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'user1')" >How to Switch to Employee Module</a>
+		<a class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'user2')" >How to Switch to ERMS</a>
+		<a  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'user3')">How to Switch to PMS</a>
+		<a  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'user4')">How to Logout</a>
+   </div>
+</div>
+
+<div class="w3-dropdown-click">
+	<button class="w3-bar-item w3-button tablink" onclick="openLink(event, 'Appendix')">Appendix A: HRMIS Reports<span class="btn w3-right w3-tiny" onclick="myDropFuncDix()"></span></button>
+	<div id="DixDrop" class="w3-bar-block w3-hide  w3-card w3-hover-white">
+		<a  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'Appendix1')" >Appendix A.1 Daily Time Record</a>
+		<a  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'Appendix2')" >Appendix A.2 Employee Payslip</a>
+		<a  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'Appendix3')" >Appendix A.3 Payroll Register</a>
+		<a  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'Appendix4')" >Appendix A.4 Funding Requirements</a>
+		<a  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'Appendix5')" >Appendix A.5 MC Benefit Register</a>
+		<a  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'Appendix6')" >Appendix A.6 Deduction Register</a>
+		<a  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'Appendix7')" >Appendix A.7 Lates and Absences Deductions</a>
+		<a  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'Appendix8')" >Appendix A.8 Overtime Payroll Register</a>
+		<a  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'Appendix9')" >Appendix A.9 Overtime Funding Requirements</a>
+		<a  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'Appendix10')" >Appendix A.10 Employee Remittances</a>
+		<a  class="w3-bar-item w3-button tablink w3-small" onclick="openLink(event, 'Appendix11')" >Appendix A.11 Employee Loan Balance</a>
+
+	
+	</div>
+	 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+<!--SidebarEndtag-->
+
+ 
+<!--Header-->
+<div id="main">
+
+<!--overlayEffect-->	
+<div class="w3-overlay" onclick="sidebar_close()" style="cursor:pointer" id="myOverlay"></div>
+
+
+<!--navbar-->
+  <nav class="navbar sticky-top w3-main" style="background: rgb(58, 134, 206); margin-left: 230px;">
+	<div class="container-fluid">
+		
+		<a class="navbar-brand" href="#"><button id="openNav" class="w3-button w3-hover-blue-gray w3-xlarge w3-hide-large" onclick="sidebar_open()" id="openNav">&#9776;</button> <img src="assets/logo.png" alt="logo" width="30px" height="30px"> 
+		</a>
+			
+	</div>
+  </nav>
+
+
+
+	<!--displayContent-->
+<div class="w3-main " style="margin-left:250px">
+	
+	<!--loginPage-->
+	<div class="loginPage">
+	<div id="login" class="w3-container page w3-animate-left">
+	  <h2>Login</h2>
+	  <p>To login to the system, the user is required to enter a valid username and password on 
+		  the Login Form at the center of the Main Page (See Figure 1-1).</p>
+
+		  <div class="img-content">
+			<img src="assets/images/LoginPage.PNG" alt="" class="center">
+		</div>	
+		<p style="font-size: 12px; text-align: center;"><b>Figure 1-1 DOST-CO HRMIS Main Page</b></p>		
+	</div>
+</div>
+
+<!--HowtoLogin-->
+	<div id="Howtologin" class="w3-container page w3-animate-left" style="display:none">
+		<h2>How to Login</h2>
+		<p>1. Enter Username and Password on the entry boxes labeled respectively. 
+			Then click Login button  (See Figure 1-2).
+		</p>
+
+		<div class="img-content">
+			<img src="assets/images/loginForm.PNG" alt="" class="center" style="width: 30%;">
+		</div>	
+		<p style="font-size: 12px; text-align: center;"><b>Figure 1-2 Login Form</b></p>
+		<p>2. If login is successful, you will be directed to the Default Screen</a>.</p>
+	  
+	</div>
+
+
+<!--DefaultScreen-->
+	<div id="DefaultScreen" class="w3-container page w3-animate-left" style="display:none">
+		
+		<div class="defaultScreen">
+	  <h2>Default Screen</h2>
+	  <p>Once logged in to the system you will be automatically directed to the Notification Section (See Figure 2).</p>
+	  
+	  <div class="img-content">
+		<img src="assets/images/DefaultScreen.PNG" alt="" class="center">
+	</div>	
+	<p style="font-size: 12px; text-align: center;"><b>Figure 2 Default Page</b></p>
+	
+	
+	</div>
+
+
+<!--DefaultScreenComponents-->
+<p>These are the components of the Default Screen and a brief description of what they are:</p>
+<div class="accordion" id="accordionExample" >
+	<div class="accordion-item ">
+	  <h2 class="accordion-header" id="headingOne">
+		<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+			<strong>User</strong>
+		</button>
+	  </h2>
+	  <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+		<div class="accordion-body">
+			displays the username of the logged-in user, 
+			provides links to Switch to Employee Module, Switch to ERMS, Switch to PMS, 
+			Connect to Other Servers and Logout sub-section
+		</div>
+	  </div>
+	</div>
+	<div class="accordion-item">
+	  <h2 class="accordion-header" id="headingTwo">
+		<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+			<strong>Notification Section</strong>
+		</button>
+	  </h2>
+	  <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+		<div class="accordion-body">
+			Provides links to Included in Payroll, Maturing Loan(s), Increase in Longevity Factor and Leave Commutation Request sub-sections.
+		</div>
+	  </div>
+	</div>
+	<div class="accordion-item">
+	  <h2 class="accordion-header" id="headingThree">
+		<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+			<strong>Compensation Section</strong>
+		</button>
+	  </h2>
+	  <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+		<div class="accordion-body">
+			Provides links to Personnel Profile, Income, Deduction Summary, Premiums/Loans, Remittances, Tax Details, DTR and Adjustments sub-sections
+Update Section-provides links to Process Payroll and Update OR Remittances sub-sections.
+		</div>
+	  </div>
+	</div>
+	<div class="accordion-item">
+		<h2 class="accordion-header" id="headingSix">
+		  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+			  <strong>Update Section</strong>
+		  </button>
+		</h2>
+		<div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#accordionExample">
+		  <div class="accordion-body">
+			  Provides links to Process Payroll, Process History, OR Remittances, to Process Update sub-sections.
+		  </div>
+		</div>
+	  </div>
+	  
+	<div class="accordion-item">
+		<h2 class="accordion-header" id="headingFour">
+		  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+			  <strong>Reports Section</strong>
+		  </button>
+		</h2>
+		<div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+		  <div class="accordion-body">
+			Provides links to Monthly Reports and Employee Remittances sub-sections.
+		  </div>
+		</div>
+	  </div>
+
+	  <div class="accordion-item">
+		<h2 class="accordion-header" id="headingFive">
+		  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+			  <strong>Libraries Section</strong>
+		  </button>
+		</h2>
+		<div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
+		  <div class="accordion-body">
+			Provides links to Deduction, Income, Payroll Process, Project Code, Payroll Group and Signatory sub-sections.
+		  </div>
+		</div>
+	  </div>
+
+	  
+<!--endTag-->	
+	</div>
+</div>
+<!--ComponentsEndtag-->
+
+	<div id="HRmodule" class="w3-container page w3-animate-left" style="display:none">
+	  <h2>Payroll Module</h2>
+	  <p>The Payroll Module is one of DOST-CO HRMIS component that allows Payroll Officer to manage overall information regarding the payroll and other financial information in relation to an employee’s employment with the agency.</p>
+        <br>
+		  <p>The Finance Module allows employees to:</p>
+		 
+			<div class="accordion" id="accordionExample">
+			<div class="accordion-item">
+			  
+				<h2 class="accordion-header" id="headingEight">
+				<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEight" aria-expanded="true" aria-controls="collapseEight">
+					<strong>Notification Section</strong> 
+				</button>
+			  </h2>
+			  <div id="collapseEight" class="accordion-collapse collapse" aria-labelledby="headingEight" data-bs-parent="#accordionExample">
+				<div class="accordion-body">	
+					  <ul class="list-group w3-animate-right">
+						<li class="list-group-item">View notifications on employees Included in Payroll, employee’s Maturing Loan(s), employee’s Increase in Longevity Factor and employee’s.</li>
+					  </ul>
+				</div>
+			  </div>
+			</div>
+
+		<div class="accordion-item">
+			  <h2 class="accordion-header" id="headingNine">
+				<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
+					<strong>Compensation Section</strong>
+				</button>
+			  </h2>
+			  <div id="collapseNine" class="accordion-collapse collapse" aria-labelledby="headingNine" data-bs-parent="#accordionExample">
+				<div class="accordion-body">
+					  <ul class="list-group w3-animate-right">
+						<li class="list-group-item">Manage Personnel Profile</li>
+						<li class="list-group-item">Manage Income</li>
+						<li class="list-group-item">Manage Deduction Summary</li>
+						<li class="list-group-item">Manage Premiums/Loans</li>
+						<li class="list-group-item">Manage Remittances</li>
+						<li class="list-group-item">Manage Tax Details</li>
+						<li class="list-group-item">Manage DTR</li>
+						<li class="list-group-item">Manage Adjustments</li>
+					  </ul>
+				</div>
+			  </div>
+			</div>
+
+
+			<div class="accordion-item">
+			  
+				<h2 class="accordion-header" id="headingTen">
+				<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTen" aria-expanded="false" aria-controls="collapseTen">
+					<strong>Attendance Section</strong> 
+				</button>
+			  </h2>
+			  <div id="collapseTen" class="accordion-collapse collapse" aria-labelledby="headingTen" data-bs-parent="#accordionExample">
+				<div class="accordion-body">	
+					  <ul class="list-group w3-animate-right">
+						<li class="list-group-item">View Conversion Tables</li>
+						<li class="list-group-item">View Attendance Summary</li>
+						<li class="list-group-item">Manage Leave Balance</li>
+						<li class="list-group-item">View Filed Requests of Employees</li>
+						<li class="list-group-item">Manage Daily Time Records</li>
+						<li class="list-group-item">Update Override</li>
+					  </ul>
+				</div>
+			  </div>
+			</div>
+
+			<div class="accordion-item">
+			  
+				<h2 class="accordion-header" id="headingEleven">
+				<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEleven" aria-expanded="false" aria-controls="collapseEleven">
+					<strong>Update Section</strong> 
+				</button>
+			  </h2>
+			  <div id="collapseEleven" class="accordion-collapse collapse" aria-labelledby="headingEleven" data-bs-parent="#accordionExample">
+				<div class="accordion-body">	
+					  <ul class="list-group w3-animate-right">
+						<li class="list-group-item">Process Payroll</li>
+						<li class="list-group-item">Process History</li>
+						<li class="list-group-item">Update OR Remittances</li>
+					  </ul>
+				</div>
+			  </div>
+			</div>
+
+			<div class="accordion-item">
+			  
+				<h2 class="accordion-header" id="headingTwelve">
+				<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwelve" aria-expanded="false" aria-controls="collapseTwelve">
+					<strong>Reports Section</strong> 
+				</button>
+			  </h2>
+			  <div id="collapseTwelve" class="accordion-collapse collapse" aria-labelledby="headingEleven" data-bs-parent="#accordionExample">
+				<div class="accordion-body">	
+					  <ul class="list-group w3-animate-right">
+						<li class="list-group-item">Monthly Reports</li>
+						<li class="list-group-item">Employee Remittances</li>
+						<li class="list-group-item">Employee Loan balance</li>
+					  </ul>
+				</div>
+			  </div>
+			</div>
+
+
+			<div class="accordion-item">
+			  
+				<h2 class="accordion-header" id="headingThirtheen">
+				<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThirtheen" aria-expanded="false" aria-controls="collapseThirtheen">
+					<strong>Libraries Section</strong> 
+				</button>
+			  </h2>
+			  <div id="collapseThirtheen" class="accordion-collapse collapse" aria-labelledby="headingEleven" data-bs-parent="#accordionExample">
+				<div class="accordion-body">	
+					  <ul class="list-group w3-animate-right">
+						<li class="list-group-item">Manage Deductions</li>
+						<li class="list-group-item">Manage Income</li>
+						<li class="list-group-item">Manage Payroll Process</li>
+						<li class="list-group-item">Manage Project Code</li>
+						<li class="list-group-item">Manage Payroll Group</li>
+						<li class="list-group-item">Manage Signatory</li>
+					
+					  </ul>
+				</div>
+			  </div>
+			</div>
+		
+		
+		</div>	
+		  </div>
+		<!--HREndTag-->  
+
+
+	<div id="Notification" class="w3-container page w3-animate-left" style="display:none">
+		<h2>Notification</h2>
+		<p>This part of the section shows the details of payroll-related notifications that need to be addressed by payroll officer. This includes Included in Payroll, employee’s Maturing Loan(s), employee’s Increase in Longevity Factor and employee’s Leave Commutation Request.</p>
+		  <br>
+			<p>To access the Notification section, click the <b>Notification</b> tab (See Figure 3-1).
+			</p>
+		  
+			<div class="img-content">
+				<img src="assets/images/DefaultScreen - Copy.PNG" alt="" class="center">
+			</div>	
+			<p style="font-size: 12px; text-align: center;"><b>Figure 3-1 Notification page</b></p>	
+					
+			<!--Alert-->
+<div class="alert alert-warning alert-dismissible fade show" role="alert" style="font-size: 10px;">
+	<strong>Note:</strong> By default, notification on employees Included in Payroll is shown on the Notification page. To view notifications on Maturing Loan(s), Increase in Longevity Factor and Leave Commutation Request, refer to Sections 3.1.2 to 3.1.4.
+	<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  </div>
+
+
+	  </div>
+	  <div id="notification1" class="w3-container page w3-animate-left" style="display:none">
+		<h2>Included in Payroll</h2>
+		<p>1. Click the Included in Payroll link on the left side of the screen to view the Included in Payroll page (See Figure 3-2).
+		</p>
+	  
+		<div class="img-content">
+			<img src="assets/images/include in payroll.png" alt="" class="center">
+		</div>	
+		<p style="font-size: 12px; text-align: center;"><b>Figure 3-2 Included in Payroll page</b></p>	
+		<div class="alert alert-warning alert-dismissible fade show" role="alert" style="font-size: 10px;">
+		<strong>Note:</strong> To view the Personnel Profile details of an employee included in Payroll, click the link before the corresponding employee Name in Figure 3-2.
+		<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+	  </div>
+	  <p>2. To view particular employees included in payroll under the same employee type, specify the employee type from the drop-down list in Figure 3-2.</p>
+		<p>3. When done, click Go button  to display the employees that matched the parameter chosen.</p>
+
+	  </div>
+   
+	  <div id="notification2" class="w3-container page w3-animate-left" style="display:none">
+		<h2>Maturing Loan(s)</h2>
+		<p>1. Click the Maturing Loan(s) link on the left side of the screen to view the Maturing Loan(s) page (See Figure 3-3).
+		</p>
+		<div class="img-content">
+			<img src="assets/images/maturing loan.png" alt="" class="center">
+		</div>	
+		<p style="font-size: 12px; text-align: center;"><b>Figure 3-3 Maturing Loan(s) page</b></p>	
+		<p>2. To update deduction details, click the Update icon  corresponding to the employee with a maturing loan to update in Figure 3-3 to display the deduction update window on the screen (See Figure 3-4).</p>
+	
+		<p>3. Information that can be updated includes the Loan details such as <b>Start Date</b>, <b>End Date</b> and <b>Amount Granted</b>, <b>Monthly deduction</b> amount, <b>Period 1</b> deduction amount, <b>Period 2</b> deduction amount and <b>deduction Status</b>.</p>
+	<div class="img-content">
+		<img src="assets/images/maturing loan1.png" alt="" class="center" style="width: 30%;">
+		</div>	
+		<p style="font-size: 12px; text-align: center;"><b>Figure 3-4 Maturing Loan(s) page</b></p>	
+		<p>4. When done, click <b>Save</b> button  to save entry.</p>
+		<p>5. Click Cancel button  to cancel the operation.</p>
+	</div>
+   
+
+	  <div id="notification3" class="w3-container page w3-animate-left" style="display:none">
+		<h2>Increase in Longevity Factor</h2>
+		<p>1. Click the Increase in Longevity Factor link on the left side of the screen to view the Increase in Longevity Factor page (See Figure 3-5).</p>
+		<div class="alert alert-warning alert-dismissible fade show" role="alert" style="font-size: 10px;">
+			<strong>Note:</strong> The New Longevity Factor depends on the employee’s First Day of Service in the Agency.
+			<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+		  </div>
+		  <div class="img-content">
+			<img src="assets/images/longevity.png" alt="" class="center">
+		</div>	
+		<p style="font-size: 12px; text-align: center;"><b>Figure 3-5 Increase in Longevity Factor page</b></p>	
+		<p>2. To change the longevity factor of a particular employee, click the Update Factor link opposite the corresponding name of employee to update in Figure 3-5.</p>
+		<p>3. A message prompt will appear confirming changing of the selected longevity factor. Click <b>Ok</b> button  to proceed or click <b>Cancel</b> button  to do otherwise.</p>
+		<div class="alert alert-warning alert-dismissible fade show" role="alert" style="font-size: 10px;">
+			<strong>Note:</strong>Once Longevity Factor is updated there will be changes in the Longevity Factor and Longevity Pay.
+			<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+		  </div>
+	</div>
+
+
+	<div id="Compensation" class="w3-container page w3-animate-left" style="display:none">
+	  <h2>Compensation</h2>
+	  <p>This part of the section allows user to view and update compensation details of an employee such as Personnel Profile, Income, Deduction Summary, Premium/Loans, Remittances and Tax Details.</p> 
+	  <p>1. To access the Compensation section, click the Compensation tab (See Figure 3-8).</p> 
+
+
+		   <div class="img-content">
+			<img src="assets/images/Compensation.jpg" alt="" class="center">
+		</div>	
+		<p style="font-size: 12px; text-align: center;"><b>Figure 3-8 Compensation page</b></p>
+	</div>
+	
+	
+	<div id="Compensation1" class="w3-container page w3-animate-left" style="display:none">
+		<h2>How to Browse Employee Compensation Records</h2>
+		<p>1. To start viewing employee compensation records, select the first letter of the surname of the desired employee on the alphabet navigation provided on Figure 3-8.</p> 
+		<div class="alert alert-warning alert-dismissible fade show" role="alert" style="font-size: 10px;">
+			<strong>Note:</strong> A specific letter in the Alphabet navigation corresponds to the first letter of an employee’s surname. A link on the alphabet navigation will only be available when there is an existing record.
+			<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+		  </div>
+  		<p>2. If there are multiple entries for the specific letter, click on the page numbers to move to the next entry.</p> 
+		
+	  </div>
+
+	  <div id="Compensation2" class="w3-container page w3-animate-left" style="display:none">
+		<h2>Using Navigation Bar</h2>
+		<p>1. To start viewing employee compensation records, select the first letter of the surname of the desired employee on the alphabet navigation provided on Figure 3-8.</p> 
+		<div class="alert alert-warning alert-dismissible fade show" role="alert" style="font-size: 10px;">
+			<strong>Note:</strong> A specific letter in the Alphabet navigation corresponds to the first letter of an employee’s surname. A link on the alphabet navigation will only be available when there is an existing record.
+			<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+		  </div>
+  		<p>2. If there are multiple entries for the specific letter, click on the page numbers to move to the next entry.</p> 
+		
+	  </div>
+	  
+	  <div id="Compensation3" class="w3-container page w3-animate-left" style="display:none">
+		<h2>Using Search Engine</h2>
+		<p>1. To select a specific employee compensation record using the search engine, type in the employee’s number or name in the Search textbox (Figure 3-8).</p> 
+		<div class="alert alert-warning alert-dismissible fade show" role="alert" style="font-size: 10px;">
+			<strong>Note:</strong>  To select employees according to Payroll Group, click the Search Box then press the Space Bar. The entries on the navigation bar will depend on the Payroll Group selected.
+			<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+		  </div>
+  		<p>2. When done, click Search button  to display the specific employee compensation record.</p> 
+		<p>3. If there are multiple entries for the specific keyword, click on the page numbers to move to the next entry.</p> 
+
+	  </div>
+
+	  <div id="Compensation4" class="w3-container page w3-animate-left" style="display:none">
+		<h2>How to Manage Personnel Profile</h2>
+		<p>1.Click the <b>Personnel Profile</b> link on the left side of the screen to view the Increase in Personnel Profile page (See Figure 3-9).</p> 
+	
+		<div class="img-content">
+			<img src="assets/images/Compensation1.png" alt="" class="center">
+		</div>	
+		<p style="font-size: 12px; text-align: center;"><b>Figure 3-9 Personnel Profile page</b></p>
+	
+
+  		<p>2.To edit personnel profile details, click the <b>Edit</b> button  in Figure 3-9.</p> 
+		<p>3. Information that can be updated includes the <b></b>, <b>Payroll Group</b>, <b></b>, <b>No. of Dependents</b> and <b>Health Insurance Exception</b> (See Figure 3-10 to 3-12).</p> 
+
+		<div class="img-content">
+			<img src="assets/images/Compensation3.png" alt="" class="center">
+		</div>	
+		<p style="font-size: 12px; text-align: center;"><b>Figure 3-10 Regular Appointment Status</b></p>
+
+		<div class="img-content">
+			<img src="assets/images/Compensation2.png" alt="" class="center">
+		</div>	
+		<p style="font-size: 12px; text-align: center;"><b>Figure 3-11 Regular Appointment Status</b></p>
+
+		<div class="alert alert-warning alert-dismissible fade show" role="alert" style="font-size: 10px;">
+			<strong>Note:</strong>  Personnel Details that can be updated depends on the Appointment Status of the employee.
+			<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+		  </div>
+  		<p>When done, click <b>Save</b> button  to save entry.</p> 
+
+
+</div>
+
+		
+	 
+	  <div id="Compensation5" class="w3-container page w3-animate-left" style="display:none">
+		<h2>How to Manage Income</h2>
+		<p>1. Click the <b>View</b> from the Compensation left side of the <b>LIST OF EMPLOYEES</b> and click the <b>Income</b> to view the Increase in Income page.</p>
+			
+		<div class="alert alert-warning alert-dismissible fade show" role="alert" style="font-size: 10px;">
+			<strong>Note:</strong> The list of income displayed is from the Income Libraries.
+			<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+		  </div>
+
+			<!--imgRequestPage-->
+			<div class="w3-container city w3-animate-opacity">
+			<div class="img-content">
+				<img src="assets/images/update.png" alt="" class="center">
+				<img src="assets/images/view income.png" alt="" class="center">
+			</div>	
+			</div>
+			<p style="font-size: 12px; text-align: center;"><b>Income Page</b></p>
+			<div class="alert alert-warning alert-dismissible fade show" role="alert" style="font-size: 10px;">
+				<strong>Note:</strong> When on a specific record, there would be numbered link(s) below the screen. Clicking on a number would lead to the next or previous record on a group or letter selected from the alphabet navigation.
+				<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+			  </div>
+			<p>2. To update income details, click the <b>Edit</b> button to update <b> Income</b> on the screen.</p>
+			
+			<!--Print Preview-->
+			<div class="w3-container city w3-animate-right">
+			<div class="img-content">
+				
+				<img src="assets/images/updatee.png" alt="" class="center" style="width: 80%;">
+			
+            </div>
+		</div>
+		<p style="font-size: 12px; text-align: center;"><b>Income Page</b></p>
+			<p>3. For Benefit Income types, information that can be updated includes the income <b>Amount</b>, <b>Period 1</b> income amount, <b>Period 2</b> income amount and income <b>Status</b>. </p>
+			<div class="w3-container city w3-animate-right">
+				<div class="img-content">
+					<img src="assets/images/edit.png" alt="" class="center" style="width: 80%;">
+				
+				</div>
+			</div>
+			<p style="font-size: 12px; text-align: center;"><b>Benefit Income Update window</b></p>	
+			<p>4. For Bonus Income type, information that can be updated includes the income <b>Amount</b>, <b>Tax</b>, <b>Period 1</b> income amount, <b>Period 2</b> income amount and income <b>Status</b>.</p>
+			<div class="w3-container city w3-animate-right">
+				<div class="img-content">
+					<img src="assets/images/editt.png" alt="" class="center" style="width: 80%;">
+				
+				</div>	
+				</div>
+			<p style="font-size: 12px; text-align: center;"><b>Bonus Income Update window</b></p>
+		<p>5. For Additional Income types, information that can be updated includes the income <b>Amount</b>, <b>Period 1</b> income amount, <b>Period 2</b> income amount and income <b>Status</b>.</p>
+		<div class="w3-container city w3-animate-right">
+			<div class="img-content">
+			<img src="assets/images/edittt.png" alt="" class="center" style="width: 80%;">
+			
+			</div>
+		</div>
+		<p style="font-size: 12px; text-align: center;"><b>Additional Income Update window</b></p>	
+		<p>6. When done, click <b>Save</b> button to save entry. To update income details for all employees, click <b>Update all employee</b> button  . Click <b>Cancel</b> button  to cancel the operation.</p>	
+	
+	  </div>
+	  <div id="Compensation6" class="w3-container page w3-animate-left" style="display:none">
+		<h2>How to View Deduction Summary</h2>
+	 <p>1. Click the <b>View</b> from the Compensation left side of the <b>LIST OF EMPLOYEES</b> and click the <b>Deduction Summary</b> to view the Deduction Summary page (See Figure 3-17).</p> 
+		<div class="img-content">
+			<img src="assets/images/deductionn.png" alt="" class="center">
+		</div>	
+		<p style="font-size: 12px; text-align: center;"><b>Figure 3-17 Deduction Summary page</b></p>	
+		
+		
+		<div class="alert alert-warning alert-dismissible fade show" role="alert" style="font-size: 10px;">
+			<strong>Note:</strong>When on a specific record, there would be numbered link(s) below the screen. Clicking on a number would lead to the next or previous record on a group or letter selected from the alphabet navigation.
+		<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+	  </div>
+	  </div>
+
+
+
+
+
+	  <div id="Compensation7" class="w3-container page w3-animate-left" style="display:none">
+		<h2>How to Manage Premiums and Loans</h2>
+			<p>1. Click the <b>View</b> from the Compensation left side of the <b>LIST OF EMPLOYEES</b> and click the <b>Premiums/Loans</b> to view the Premiums/Loans.</p>
+
+			<!--imgLeavePage-->
+			<div class="w3-container city w3-animate-opacity">
+			<div class="img-content">
+				<img src="assets/images/incomee.png" alt="" class="center">
+				<img src="assets/images/loan.png" alt="" class="center">
+			</div>
+		</div>
+		<p style="font-size: 12px; text-align: center;"><b>Premiums/Loans page</b></p>
+			
+			<p>2. To update premiums/loans details, click the <b>Edit</b> button to update <b> premiums/loans</b> on the screen.</p>
+			<!--imgLeaveDetails-->
+			<div class="w3-container city w3-animate-right">
+			<div class="img-content">
+				<img src="assets/images/loan1.png" alt="" class="center" style="width: 80%;">
+			</div>
+		</div>
+		<p style="font-size: 12px; text-align: center;"><b>Premiums/loans Page</b></p>
+			
+		<p>3. For Regular Deduction Type, information that can be updated includes the <b>Monthly</b> deduction amount, <b>Period 1</b> deduction amount, <b>Period 2</b> deduction amount and deduction <b>Status</b>.</p>
+		<div class="w3-container city w3-animate-right">
+			<div class="img-content">
+				<img src="assets/images/updateloan1.png" alt="" class="center" style="width: 80%;">	
+			</div>
+		</div>
+		<p style="font-size: 12px; text-align: center;"><b>Regular deduction list Update window</b></p>
+		
+		<p>4. For Loan Deduction Type, information that can be updated includes the Loan details such as <b>Monthly</b> deduction amount, <b>Period 1</b> deduction amount, <b>Period 2</b> deduction amount and <b>Start Year</b>, <b>Start Month</b>, <b>End Year</b>, <b>End Month</b>, and deduction <b>Status</b>.</p>
+		<div class="w3-container city w3-animate-right">
+			<div class="img-content">
+				<img src="assets/images/updateloan3.png" alt="" class="center" style="width: 80%;">	
+			</div>
+		</div>
+		<p style="font-size: 12px; text-align: center;"><b>Loan list Update window</b></p>
+		<p>5. For Contribution and Others Deduction Type, information that can be updated includes the <b>Monthly</b> deduction amount, <b>Period 1</b> deduction amount, <b>Period 2</b> deduction amount and deduction <b>Status</b>.</p>
+		<div class="w3-container city w3-animate-right">
+			<div class="img-content">
+				<img src="assets/images/updateloan2.png" alt="" class="center" style="width: 80%;">	
+			</div>
+		</div>
+		<p style="font-size: 12px; text-align: center;"><b>Contribution and Others Deductions Update window</b></p>
+		<p>6. When done, click <b>Save</b> button to save entry. To update income details for all employees, click <b>Update all employee</b> button  . Click <b>Cancel</b> button  to cancel the operation.</p>
+
+	  </div>
+
+
+	  <div id="Compensation8" class="w3-container page w3-animate-left" style="display:none">
+		<h2>How to View Remittances</h2>
+		<p>1. Click the <b>View</b> from the Compensation left side of the <b>LIST OF EMPLOYEES</b> and click the <b>Remittances</b> to view the Remittances page (See Figure 3-22).</p> 
+		<div class="img-content">
+			<img src="assets/images/remittance.png" alt="" class="center">
+		</div>	
+		<p style="font-size: 12px; text-align: center;"><b>Figure Figure 3-22 Remittances page</b></p>	
+		
+		
+		
+		
+		<div class="alert alert-warning alert-dismissible fade show" role="alert" style="font-size: 10px;">
+			<strong>Note:</strong> When on a specific record, there would be numbered link(s) below the screen. Clicking on a number would lead to the next or previous record on a group or letter selected from the alphabet navigation.
+			<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+		  </div>
+  		<p>2. To search for a particular remittance, specify the <b>Remittance type</b>, <b>Start Year</b> and <b>End Year</b> from the drop-down lists in Figure 3-22.</p> 
+		<p>3. When done, click <b>Search</b> button  to display the remittances that matched the parameters chosen (See Figure 3-23).</p> 
+
+	  </div>
+	  <div id="Compensation9" class="w3-container page w3-animate-left" style="display:none">
+		<h2>How to Manage Tax Details</h2>
+		<p>1. Click the <b>View</b> from the Compensation left side of the <b>LIST OF EMPLOYEES</b> and click the <b>Tax Details</b> to view the Tax Details page.</p> 
+		<div class="img-content">
+			<img src="assets/images/tax.png" alt="" class="center">
+			<img src="assets/images/tax1.png" alt="" class="center">
+		</div>	
+		<p style="font-size: 12px; text-align: center;"><b>Figure 3-24 Tax Details page</b></p>	
+		
+		
+		<div class="alert alert-warning alert-dismissible fade show" role="alert" style="font-size: 10px;">
+			<strong>Note:</strong>When on a specific record, there would be numbered link(s) below the screen. Clicking on a number would lead to the next or previous record on a group or letter selected from the alphabet navigation.
+			<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+		  </div>
+  		<p>2. To edit tax details, click the <b>Edit</b> button  in Figure 3-24.</p> 
+		<p>3. Information that can be updated includes the Other Dependent for the Head of the Family details such as <b>Name of Dependent</b>, <b>Relationship</b> and <b>Date of Birth</b>, Previous Employer Information details such as <b>TIN Number</b>, <b>Employer’s Name</b>, <b>Registered Address</b> and <b>Zip Code</b>, and Summary from Previous Employer details such as <b>Taxable Compensation</b> and <b>Amount of Taxes withheld</b>.</p> 
+		<p>4. When done, click <b>Submit</b> button  to save entry.</p> 
+
+	  </div>
+	  <div id="Compensation10" class="w3-container page w3-animate-left" style="display:none">
+		<h2>How to Manage DTR</h2>
+		<p>1. Click the <b>View</b> from the Compensation left side of the <b>LIST OF EMPLOYEES</b> and click the <b>DTR</b> to view the DTR page (See Figure 3-22).</p> 
+		<div class="img-content">
+			<img src="assets/images/dtr.png" alt="" class="center">
+			<img src="assets/images/dtr1.png" alt="" class="center">
+		</div>	
+		<p style="font-size: 12px; text-align: center;"><b>Figure 3-25 DTR page</b></p>	
+	  </div>
+
+	  <div id="Compensation11" class="w3-container page w3-animate-left" style="display:none">
+		<h2>How to Manage Adjustments</h2>
+		<p>1. Click the <b>View</b> from the Compensation left side of the <b>LIST OF EMPLOYEES</b> and click the <b>Adjustments</b> to view the Adjustments page (See Figure 3-28).</p> 
+		<div class="img-content">
+			<img src="assets/images/adjustment.png" alt="" class="center">
+		
+		</div>	
+		<p style="font-size: 12px; text-align: center;"><b>Figure 3-28 Adjustments page</b></p>	
+		<p>2. For Income, specify the Income from the drop-down list in Figure 3-28.</p> 
+		<p>3. For Deduction, specify the Deduction from the drop-down list.</p> 
+		<p>4. Type in the <b>Amount</b> on the entry box provided.</p> 
+		<p>5. Specify the <b>Adjustment Date</b> and <b>Adjustment Type</b> from the drop-down lists.</p> 
+		<p>6. When done, click <b>Add</b> button  .</p>
+	
+	</div>
+
+
+
+	<div id="update" class="w3-container page w3-animate-left" style="display:none">
+		<h2>Update</h2>
+		<p>This part of the section allows user to Process Payroll and Update OR Remittances.</p>
+		  <br>
+			<p>To access the Update section, click the <b>Update</b> tab (See Figure 3-30).</p>
+		  
+			<div class="img-content">
+				<img src="assets/images/payroll.png" alt="" class="center">
+			</div>	
+			<p style="font-size: 12px; text-align: center;"><b>Figure 3-30 Update page</b></p>	
+			<div class="alert alert-warning alert-dismissible fade show" role="alert" style="font-size: 10px;">
+				<strong>Note:</strong> By default, Process Payroll sub-section is shown on the Update page. To view Update OR Remittances sub-section, refer to Section 3.3.2.
+				<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+			  </div>
+	  </div>
+
+	  <div id="update1" class="w3-container page w3-animate-left" style="display:none">
+		<h2>Process Payroll</h2>
+		<p>1. Click the Process Payroll link on the left side of the screen to view the Process Payroll page (See Figure 3-31).</p>
+			<p>To view conversion tables, click the <strong>Conversion Tables </strong>link (Conversion Table II-IV) corresponding to the conversion table to view (See Figure 3-4).</p>
+		  
+			<div class="img-content">
+				<img src="assets/images/payrollupdate.png" alt="" class="center">
+			</div>	
+			<p style="font-size: 12px; text-align: center;"><b>Figure Figure 3-31 Process Payroll page</b></p>	
+			<p>2. Specify the type of <b>Employee</b>, payroll <b>Month</b> and <b>Year</b> and <b>Period</b> from the drop-down lists in Figure 3-31.</p>
+			<div class="alert alert-warning alert-dismissible fade show" role="alert" style="font-size: 10px;">
+				<strong>Note:</strong> The benefits/salary of employees should be computed first before proceeding to the processing of payroll. To compute employee benefits/salary, refer to Section 3.1.1.1.
+				<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+			  </div>
+			  <div class="alert alert-warning alert-dismissible fade show" role="alert" style="font-size: 10px;">
+				<strong>Note:</strong> Once a Type of Employee is selected, it will be processed with other employee types assigned to be processed with it through the Payroll Process in the Libraries section.
+				<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+			  </div>
+	  </div>
+
+	  <div id="update2" class="w3-container page w3-animate-left" style="display:none">
+		<h2>Permanent Employees</h2>
+	 <p>1. Click the <b>Undertime/Absences</b> button to view the Undertime/Absences window on the screen (See Figures 3-32).
+	</p> 	
+		<div class="img-content">
+			<img src="assets/images/permanent.png" alt="" class="center">
+		</div>	
+		<p style="font-size: 12px; text-align: center;"><b>Figure 3-32 Undertime/Absences for Permanent Employees window</b></p>	
+		<p>2. For Undertime/Absences of Permanent Employees, specify the<b> Use Data from Month</b> and <b>Year</b> from the drop-down lists in Figure 3-32.
+		</p> 
+		<p>3. Click <b>Compute</b> button  to compute the benefits/salary of permanent employees.
+		</p> 
+		<div class="img-content">
+			<img src="assets/images/permanent1.png" alt="" class="center">
+		</div>	
+		<p style="font-size: 12px; text-align: center;"><b>Figure 3-32 Undertime/Absences for Permanent Employees window</b></p>	
+		<div class="alert alert-warning alert-dismissible fade show" role="alert" style="font-size: 10px;">
+			<strong>Note:</strong> A permanent employee is qualified to a Hazard Pay (which is computed as Salary times the Hazard Pay Factor of employee) provided that he/she has been
+			 present for at least 1 day, a Laundry Allowance of 22.727 multiplied to the number of days of actual service rendered and a Subsistence
+			  Allowance of 150.00 for every day present or 75.00 for services less than 4 hours.
+		<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+	  </div>
+	  <p>4. To manually edit undertime/absences, click the corresponding row of the employee to edit in Figure 3-32. Information that can be updated includes the <b>Days Absent</b>, <b>Hours Late</b> and <b>Minutes Late</b>.
+	  </p>
+	  <div class="alert alert-warning alert-dismissible fade show" role="alert" style="font-size: 10px;">
+		<strong>Note:</strong>  After manual editing, Hazard Pay, Laundry Pay, Subsistence Allowance and Salary of permanent employees is computed.
+	<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  </div>
+  <p>5. When done, click <b>Compute</b> button  to save entry.
+</p>
+<p>6. Click <b>Back</b> icon  to close the window.
+</p>
+
+</div>
+
+<div id="update3" class="w3-container page w3-animate-left" style="display:none">
+	<h2>Job Order Employees</h2>
+ <p>1. Click the <b>Undertime/Absences</b> button to view the Undertime/Absences window on the screen (See Figures 3-32).
+</p> 	
+	<div class="img-content">
+		<img src="assets/images/job.png" alt="" class="center">
+	</div>	
+	<p style="font-size: 12px; text-align: center;"><b>Figure 3-33 UndertimeAbsences for Job Order Employees window</b></p>	
+	<p>2.For Undertime/Absences of Job Order Employees, specify the <b>Use Attendance from</b> <b>Month</b> and <b>Year</b> from the drop-down lists in Figure 3-33.
+	</p> 
+	<p>3.Click <b>Compute</b> button  to compute the period salary and tax of job order employees.
+	</p> 
+	<div class="img-content">
+		<img src="assets/images/permanent1.png" alt="" class="center">
+	</div>	
+	<p style="font-size: 12px; text-align: center;"><b>Figure 3-32 Undertime/Absences for Permanent Employees window</b></p>	
+  <p>4. To manually edit undertime/absences, click the corresponding row of the employee to edit in Figure 3-33. 
+	  Information that can be updated includes the <b>Days Present</b>, <b>Days Absent</b>, <b>Hours Late</b> and <b>Minutes Late</b>.
+  </p>
+  <div class="alert alert-warning alert-dismissible fade show" role="alert" style="font-size: 10px;">
+	<strong>Note:</strong> After manual editing, period salary and tax of job order employees is computed.
+<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+<p>5. When done, click <b>Compute</b> button  to save entry.
+</p>
+<p>6. Click <b>Back</b> icon  to close the window.
+</p>
+
+</div>
+
+<div id="update4" class="w3-container page w3-animate-left" style="display:none">
+	<h2>Contractual Employees</h2>
+ <p>1. Click the <b>Undertime/Absences</b> button to view the Undertime/Absences window on the screen (See Figures 3-32).
+</p> 	
+	<div class="img-content">
+		<img src="assets/images/job.png" alt="" class="center">
+	</div>	
+	<p style="font-size: 12px; text-align: center;"><b>Figure 3-34 UndertimeAbsences for Contractual Employees window</b></p>	
+	<p>2.For Undertime/Absences of Contractual Employees, specify the <b>Use Attendance from</b> <b>Month</b> and <b>Year</b> from the drop-down lists in Figure 3-33.
+	</p> 
+	<p>3. Click <b>Compute</b> button  to compute the days present and period salary of contractual employees.
+	</p> 
+	<div class="img-content">
+		<img src="assets/images/permanent1.png" alt="" class="center">
+	</div>	
+	<p style="font-size: 12px; text-align: center;"><b>Figure 3-32 Undertime/Absences for Permanent Employees window</b></p>	
+  <p>4. To manually edit undertime/absences, click the corresponding row of the employee to edit in Figure 3-34. 
+	  Information that can be updated includes the <b>Days Present</b>, <b>Days Absent</b>, <b>Hours Late</b> and <b>Minutes Late</b>.
+  </p>
+  <div class="alert alert-warning alert-dismissible fade show" role="alert" style="font-size: 10px;">
+	<strong>Note:</strong> After manual editing, days present and period salary of contractual employees is computed.
+<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+<p>5. When done, click <b>Compute</b> button  to save entry.
+</p>
+<p>6. Click <b>Back</b> icon  to close the window.
+</p>
+
+</div>
+
+<div id="update5" class="w3-container page w3-animate-left" style="display:none">
+	<h2>How to View Process History</h2>
+	<p>1. Click the <b>Process History</b> from the left navigation bar to view the Process History window (See Figure 3-35).</p> 
+	<div class="img-content">
+		<img src="assets/images/history.png" alt="" class="center">
+	
+	</div>	
+	<p style="font-size: 12px; text-align: center;"><b>Figure 3-35 Process History window</b></p>	
+	<div class="alert alert-warning alert-dismissible fade show" role="alert" style="font-size: 10px;">
+		<strong>Note:</strong>The Cashier Assistant can only view the Process History of records he/she processed. A Cashier Assistant is assigned through the HR Module.
+		<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+	  </div>
+	
+	<p>2. Specify the Month and Year from the drop-down lists in Figure 3-35.</p> 
+	<p>3. When done, click <b>Search</b> button to view processing history records that matched the parameters chosen.</p> 
+	
+</div>
+<div id="update6" class="w3-container page w3-animate-left" style="display:none">
+	<h2>How to Process Payroll</h2>
+	<p>1. Place a tick mark on the corresponding checkboxes that will be included in the processing of payroll.</p> 
+	
+	<p>5. When done, click the <b>Process</b> button  to start processing of payroll. A confirmation message will be displayed if the action was successful.</p> 
+
+</div>
+
+
+
+
+	  <div id="Reports" class="w3-container page w3-animate-left" style="display:none">
+		<h2>Reports</h2>
+		<p>This part of the section allows user to view and print Monthly Reports, Employee Remittances and Employee Loan Balance Reports.</p>
+	
+			<p>1. To access the Reports section, click the Reports tab (See Figure 3-37).</p>
+		  
+			<div class="img-content">
+				<img src="assets/images/Reports.PNG" alt="" class="center">
+			</div>	
+			<p style="font-size: 12px; text-align: center;"><b>Figure 3-5 Reports page</b></p>	
+			<div class="alert alert-warning alert-dismissible fade show" role="alert" style="font-size: 10px;">
+				<strong>Note:</strong> By default, Monthly Reports sub-section is shown on the Reports page. To view Employee Remittances and Employee Loan Balance sub-sections, refer to Section 3.4.2 and 3.4.3.
+				<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+			  </div>
+				
+	  </div>
+
+	  <div id="report1" class="w3-container page w3-animate-left" style="display:none">
+		<h1>NONE PAGE</h1>
+		
+	  </div>
+
+	  
+	  <div id="report2" class="w3-container page w3-animate-left" style="display:none">
+		<h2>How to Save Reports</h2>
+		<p>1. Click the <b>Reports</b> from the left navigation bar and click <b>Employee Remittances</b> to view the Employee Remittances window (See Figure 3-41). </p>
+
+		  
+			<div class="img-content">
+				<img src="assets/images/Report1.PNG" alt="" class="center">
+			</div>	
+			<p style="font-size: 12px; text-align: center;"><b>Figure 3-41 Employee Remittances page</b></p>	
+			<p>2. Specify the type of <b>Remittances</b> from the drop-down list.</p>
+			<p>3. If <b>All Employees</b> is chosen, specify the type of <b>Appointment Status</b>, <b>Month</b>, <b>Year</b> and <b>Generate type</b> from the drop-down lists. Otherwise, if <b>Per Employee</b> is chosen, select the employee <b>Name</b> and specify the <b>From Year</b>, <b>To Year</b> and <b>Generate type</b> from the drop-down lists.</p>
+			<p>4. When done, click <b>Print/Preview</b> button  to view the employee remittances report. The selected report will appear on a new window.</p>
+
+			
+	  </div>
+
+
+	  <div id="report3" class="w3-container page w3-animate-left" style="display:none">
+		<h2>Employee Loan Balances</h2>
+		<p>1. Click the <b>Reports</b> from the left navigation bar and click <b>Employee Loan Balance</b> to view the Employee Loan Balance window (See Figure 3-42). </p>
+		  
+			<div class="img-content">
+				<img src="assets/images/Report2.PNG" alt="" class="center">
+			</div>	
+			<p style="font-size: 12px; text-align: center;"><b>Figure 3-42 Employee Remittances page</b></p>	
+			<p>2. Specify the Employee Loans from the drop-down lists.</p>
+			<p>3. When done, click <b>Search</b> button to view Employee Loan records</p>
+
+
+	  </div>
+  
+	<div id="libraries" class="w3-container page w3-animate-left" style="display:none">
+	  <h2>Libraries</h2>
+	  <br>
+	  <p>This part of the section contains details regarding predefined values assigned by the payroll officer. This includes information about the Deduction, Income, Payroll Process, Project Code, Payroll Group and Signatory sub-sections.</p>
+	  <p>1. To access the Libraries section, click the Libraries tab (See Figure 3-43).</p>
+
+		  
+			<div class="img-content">
+				<img src="assets/images/libraries.png" alt="" class="center">
+			</div>	
+			<p style="font-size: 12px; text-align: center;"><b>Figure 3-43 Libraries page</b></p>	
+			<div class="alert alert-warning alert-dismissible fade show" role="alert" style="font-size: 10px;">
+				<strong>Note:</strong> By default, Deduction sub-section is shown on the Libraries page. To view Income,Payroll Process,Project Code and Payroll Group sub-sections, refer to Section 3.5.2 to 3.5.5.
+				<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+			  </div>
+	</div>
+ 
+
+	<div id="libraries1" class="w3-container page w3-animate-left" style="display:none">
+		<h2>Deduction</h2>
+		<p>1. Click the <b>Libraries</b> from the left navigation bar and click <b>Deduction</b> to view the Deduction window (See Figure 3-42). </p>
+		
+			
+			  <div class="img-content">
+				  <img src="assets/images/deduction1.png" alt="" class="center">
+			  </div>	
+			  <p style="font-size: 12px; text-align: center;"><b>Figure 3-44 Deduction page</b></p>	
+			  
+	  </div>
+
+	  <div id="Deduction1" class="w3-container page w3-animate-left" style="display:none">
+		<h2>How to Manage Deduction</h2>
+		<p>1. Click the <b>Deductions</b> link to manage Deductions (See Figure 3-45).</p>
+		
+			
+			  <div class="img-content">
+				  <img src="assets/images/deduction1.png" alt="" class="center">
+			  </div>	
+			  <p style="font-size: 12px; text-align: center;"><b>Figure 3-45 Manage Deductions</b></p>	
+			  <div class="alert alert-warning alert-dismissible fade show" role="alert" style="font-size: 10px;">
+				<strong>Note:</strong> To show previously hidden deductions, click the Show hidden deduction link shown in Figure 3-45.
+				<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+			  </div>
+
+	  </div>
+
+	  <div id="Deduction2" class="w3-container page w3-animate-left" style="display:none">
+		<h2>How to Manage Deduction</h2>
+		<br>
+		<p>1. To add a new deduction, fill-up the entry boxes that constitute the parameters for a deduction in Figure 3-45.</p>
+		<p>2. Specify the lending <b>Agency</b> from the drop-down list.</p>
+		<p>3. Type in the <b>Deduction Code</b>, <b>Deduction Description</b> and <b>Account Code</b> on the entry boxes provided.</p>
+		<p>4. Specify the <b>Type</b> from the drop-down list.</p>
+		<p>5. When done, click <b>Add</b> button  to add the new deduction to the database.</p>
+		<p>6. Click <b>Cancel</b> button  to cancel the operation.</p>	
+	  </div>
+
+	  <div id="Deduction3" class="w3-container page w3-animate-left" style="display:none">
+		<h2>How to Edit Existing Deduction</h2>
+		<br>
+		<p>1. To edit an existing deduction, click the <b>Edit</b> link corresponding to the deduction to edit in Figure 3-45.</p>
+		<p>2. Information that can be updated includes the <b>Agency</b>, <b>Deduction Code</b>, <b>Deduction Description</b>, and <b>Account Code</b>.</p>
+		<p>3. When done, click <b>Submit</b> button  to save entry.</p>
+		<p>4. Click <b>Cancel</b> button to cancel the operation.</p>
+	
+	  </div>
+
+
+	  <div id="Deduction4" class="w3-container page w3-animate-left" style="display:none">
+		<h2>How to Delete Existing Deduction</h2>
+		<br>
+		<p>1. To delete existing deduction, click the <b>Delete</b> link corresponding to the deduction to delete.</p>
+		<p>2. A message prompt will appear confirming deletion of deduction. Click <b>Ok</b> button  to proceed or <b>Cancel</b> button  to cancel operation.</p>
+		<p>3. When done, click <b>Submit</b> button  to save entry.</p>
+		<p>4. Click <b>Cancel</b> button to cancel the operation.</p>
+		<div class="alert alert-warning alert-dismissible fade show" role="alert" style="font-size: 10px;">
+			<strong>Note:</strong>  Only user declared deduction can be deleted.
+			<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+		  </div>
+	  </div>
+
+	  <div id="Deduction5" class="w3-container page w3-animate-left" style="display:none">
+		<h2>How to Hide Existing Deduction</h2>
+		<br>
+		<p>1. To hide an existing deduction, click the <b>Edit</b> link opposite the corresponding deduction to hide in Figure 3-45.</p>
+		<p>2. Place a tick mark on the <b>Hide</b> checkbox.</p>
+		<p>3. When done, click <b>Submit</b> button  to save entry.</p>
+		<p>4. Click <b>Cancel</b> button to cancel the operation.</p>
+	  </div>
+
+	  <div id="Deduction6" class="w3-container page w3-animate-left" style="display:none">
+		<h2>How to Manage Agency</h2>
+		<br>
+		<p>1. Click the Agency link to manage Agency (See Figure 3-46).</p>
+		<div class="img-content">
+			<img src="assets/images/deduction2.png" alt="" class="center">
+		</div>	
+		<p style="font-size: 12px; text-align: center;"><b>Figure 3-46 Manage Agency</b></p>	
+	  </div>
+
+
+	  <div id="Deduction7" class="w3-container page w3-animate-left" style="display:none">
+		<h2>How to Add New Agency</h2>
+		<br>
+		<p>1. To add a new agency, fill-up the entry boxes that constitute the parameters for an agency in Figure 3-46.</p>
+		<p>2. Type in the <b>Agency Code</b>, <b>Agency Description</b> and <b>Account Code</b> on the entry boxes provided.</p>
+		<p>3. When done, click <b>Add</b> button  to add the new agency to the database.</p>
+		<p>4. Click <b>Cancel</b> button to cancel the operation.</p>
+	  </div>
+
+	  <div id="Deduction8" class="w3-container page w3-animate-left" style="display:none">
+		<h2>How to Edit Existing Agency</h2>
+		<br>
+		<p>1. To edit an existing agency, click the <b>Edit</b> link corresponding to the agency to edit in Figure 3-46.</p>
+		<p>2. Information that can be updated includes <b>Agency Code</b>, <b>Agency Description</b> and <b>Account Code</b>.</p>
+		<p>3. When done, click <b>Submit</b> button  to save entry.</p>
+		<p>4. Click <b>Cancel</b> button to cancel the operation.</p>
+	  </div>
+
+
+	  <div id="Deduction9" class="w3-container page w3-animate-left" style="display:none">
+		<h2>How to Delete Existing Agency</h2>
+		<br>
+		<p>1. To delete existing agency, click the <b>Delete</b> link opposite the corresponding agency to delete.</p>
+		<p>2. A message prompt will appear confirming deletion of agency. Click <b>Ok</b> button  to proceed or Click <b>Cancel</b> button  to cancel operation.
+		</p>
+		<div class="alert alert-warning alert-dismissible fade show" role="alert" style="font-size: 10px;">
+			<strong>Note:</strong> Only user declared agency can be deleted.
+			<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+		  </div>
+	
+	  </div>
+
+	  <div id="Deduction10" class="w3-container page w3-animate-left" style="display:none">
+		<h2>How to Hide Existing Agency</h2>
+		<br>
+		<p>1. Refer to section 3.5.1.1.4 of this manual on How to Hide Existing Deduction.</p>
+	  </div>
+
+	  <div id="libraries2" class="w3-container page w3-animate-left" style="display:none">
+		<h2>Deduction</h2>
+		<p>1. Click the <b>Libraries</b> from the left navigation bar and click <b>Income</b> to view the Income window (See Figure 3-47). </p>
+		
+			
+			  <div class="img-content">
+				  <img src="assets/images/income1.png" alt="" class="center">
+			  </div>	
+			  <p style="font-size: 12px; text-align: center;"><b>Figure 3-47 Income page</b></p>
+			  
+			  
+			  <div class="alert alert-warning alert-dismissible fade show" role="alert" style="font-size: 10px;">
+				<strong>Note:</strong> To show previously hidden income, click the Show hidden income link shown in Figure 3-47.
+				<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+			  </div>
+	  </div>
+
+	  <div id="Income1" class="w3-container page w3-animate-left" style="display:none">
+		<h2>How to Add New Income</h2>
+		<br>
+		<p>1. To add a new income, fill-up the entry boxes that constitute the parameters for an income in Figure 3-47. </p>
+		<p>2. Type in the <b>Income Code</b>, <b>Income Description</b> and <b>Income Type</b> on the entry boxes provided. </p>
+		<p>3. When done, click <b>Add</b> button  to add the new income to the database.</p>
+		<p>4. Click <b>Cancel</b> button  to cancel the operation. </p>
+	  </div>
+
+	  <div id="Income2" class="w3-container page w3-animate-left" style="display:none">
+		<h2>How to Edit Existing Income</h2>
+		<br>
+		<p>1. To edit an existing income, click the <b>Edit</b> link corresponding to the income to edit in Figure 3-47. </p>
+		<p>2. Information that can be updated includes the <b>Income Description</b> and <b>Income Type	</b>. </p>
+		<p>3. When done, click <b>Submit</b> button  to save entry.</p>
+		<p>4. Click <b>Cancel</b> button  to cancel the operation. </p>
+
+	  </div>
+
+	  <div id="Income3" class="w3-container page w3-animate-left" style="display:none">
+		<h2>How to Delete Existing Income</h2>
+		<br>
+		<p>1. To delete existing income, click the <b>Delete</b> link corresponding to the income to delete.</p>
+		<p>2. A message prompt will appear confirming deletion of income . Click <b>Ok</b> button  to proceed or <b>Cancel</b> button  to cancel operation. </p>
+		<div class="alert alert-warning alert-dismissible fade show" role="alert" style="font-size: 10px;">
+			<strong>Note:</strong>Only user declared income can be deleted.
+			<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+		  </div>
+	  </div>
+
+	  <div id="Income4" class="w3-container page w3-animate-left" style="display:none">
+		<h2>How to Hide Existing Income</h2>
+		<br>
+		<p>1. Refer to section 3.5.1.1.4 of this manual on How to Hide Existing Deduction.</p>
+	  </div>
+
+	  <div id="libraries3" class="w3-container page w3-animate-left" style="display:none">
+		<h1>NONE PAGE </h1>
+	  </div>
+	  
+	  <div id="Payroll1" class="w3-container page w3-animate-left" style="display:none">
+		<h2>NONE PAGE</h2>
+	  </div>
+
+
+
+	  <div id="libraries4" class="w3-container page w3-animate-left" style="display:none">
+		<h2>Project Code</h2>
+		<br>
+		<p>1. Click the <b>Libraries</b> from the left navigation bar and click <b>Project Code</b> to view the Project Code window (See Figure 3-47). </p>
+		<div class="img-content">
+			<img src="assets/images/project.png" alt="" class="center">
+		</div>	
+		<p style="font-size: 12px; text-align: center;"><b>Figure 3-49 Project Code page</b></p>
+
+
+	  </div>
+
+	  <div id="Project1" class="w3-container page w3-animate-left" style="display:none">
+		<h2>How to Add New Project Code</h2>
+		<br>
+		<p>1. To add new Project Code details, fill-up the entry boxes that constitute the parameters for adding new Project Code details in Figure 3-50.</p>
+		<div class="img-content">
+			<img src="assets/images/project1.png" alt="" class="center">
+		</div>	
+		<p style="font-size: 12px; text-align: center;"><b>Figure 3-50 Add New Project Code form</b></p>
+		<p>2. Type in the <b>Project Code</b>, <b>Project Description</b> and <b>Project Order</b> on the entry boxes provided.</p>
+		<p>3. When done, click <b>Add</b> button  to add Project Code or the <b>Clear</b> button  to reset parameters.</p>
+
+	  </div>
+
+	  <div id="Project2" class="w3-container page w3-animate-left" style="display:none">
+		<h2>How to Edit Existing Project Code</h2>
+		<br>
+		<p>1.To edit existing Project Code details, click the <b>Edit</b> link corresponding to the details of the Project Code to edit.</p>
+		<p>2. Information that can be updated includes <b>Project Code</b>, <b>Project Description</b> and <b>Project Order</b> (See Figure 3-51).</p>
+	
+		<div class="img-content">
+			<img src="assets/images/project1.png" alt="" class="center">
+		</div>	
+		<p style="font-size: 12px; text-align: center;"><b>Figure 3-50 Add New Project Code form</b></p>
+		<p>3. When done, click <b>Submit</b> button  to update information or the <b>Cancel</b> button  to reset parameters.</p>
+	  </div>
+
+	  <div id="Project3" class="w3-container page w3-animate-left" style="display:none">
+		<h2>How to Delete Existing Project Code</h2>
+		<br>
+		<p>1. To delete existing Project Code details, click the <b>Delete</b> link corresponding to the details of the Project Code to delete.</p>
+		<p>2. A message prompt will appear confirming Project Code information deletion. Click <b>Ok</b> button  to proceed or click <b>Cancel</b> button  to do otherwise. A confirmation message will be displayed if the action is successful.</p>
+	
+	  </div>
+
+
+	  <div id="libraries5" class="w3-container page w3-animate-left" style="display:none">
+		<h2>Payroll Group</h2>
+		<br>
+		<p>1. Click the <b>Libraries</b> from the left navigation bar and click <b>Payroll Group</b> to view the Payroll Group window (See Figure 3-47). </p>
+		<div class="img-content">
+			<img src="assets/images/group.png" alt="" class="center">
+		</div>	
+		<p style="font-size: 12px; text-align: center;"><b>Figure 3-52 Payroll Group page</b></p>
+
+
+	  </div>
+
+	  <div id="Group1" class="w3-container page w3-animate-left" style="display:none">
+		<h2>How to Add New Payroll Group Details</h2>
+		<br>
+		<p>1. To add new Payroll Group details, fill-up the entry boxes that constitute the parameters for adding new Payroll Group details in Figure 3-53.
+		</p>
+		<div class="img-content">
+			<img src="assets/images/group1.png" alt="" class="center">
+		</div>	
+		<p style="font-size: 12px; text-align: center;"><b>Figure 3-52 Payroll Group page</b></p>
+		<p>2. Specify the <b>Project</b>  from the drop-down lists.</p>
+		<p>3. Type in the <b>Payroll Group Order</b>, <b>Payroll Group Code</b> and <b>Payroll Group Name</b> on the entry boxes provided.</p>
+		<p>4. When done, click <b>Add</b> button  to add new Payroll Group Details or the <b>Cancel</b> button  to cancel operation.</p>
+
+
+	  </div>
+
+
+	  <div id="Group2" class="w3-container page w3-animate-left" style="display:none">
+		<h2>How to Edit Existing Payroll Group Details</h2>
+		<br>
+		<p>1. To edit existing Payroll Group details, click the <b>Edit</b> link corresponding to the details of the Payroll Group to edit.</p>
+		<p>2. Information that can be updated includes <b>Project Name</b>, <b>Payroll Group Order</b>, <b>Payroll Group Code</b> and <b>Payroll Group Name</b> (See Figure 3-54).</p>
+	
+		<div class="img-content">
+			<img src="assets/images/group2.png" alt="" class="center">
+		</div>	
+		<p style="font-size: 12px; text-align: center;"><b>Figure 3-54 Edit Payroll Group Details form</b></p>
+		<p>3. When done, click <b>Submit</b> button  to update information or <b>Cancel</b> button  to cancel operation.</p>
+
+
+	  </div>
+
+	  <div id="Group3" class="w3-container page w3-animate-left" style="display:none">
+		<h2>How to Delete Existing Payroll Group Details</h2>
+		<br>
+		<p>1. To delete existing Payroll Group details, click the <b>Delete</b> link corresponding to the details of the Payroll Group to delete.</p>
+		<p>2. A message prompt will appear confirming Payroll Group information deletion. Click <b>Ok</b> button  to proceed or click <b>Cancel</b> button  to do otherwise. A confirmation message will be displayed if the action is successful.(See Figure 3-54).</p>
+
+	  </div>
+
+
+	  <div id="libraries6" class="w3-container page w3-animate-left" style="display:none">
+		<h2>Signatory</h2>
+		<br>
+		<p>1. Click the <b>Libraries</b> from the left navigation bar and click <b>Signatory</b> to view the Signatory window (See Figure 3-55). </p>
+		<div class="img-content">
+			<img src="assets/images/signatory.png" alt="" class="center">
+		</div>	
+		<p style="font-size: 12px; text-align: center;"><b>Figure 3-55 Signatory page</b></p>
+
+	  </div>
+
+<div id="Signatory1" class="w3-container page w3-animate-left" style="display:none">
+		<h2>How to Add New Signatory</h2>
+		<br>
+		<p>1. To add new Signatory, fill-up the entry boxes that constitute the parameters for adding new Signatory in Figure 3-56.</p>
+		<div class="img-content">
+			<img src="assets/images/signatory1.png" alt="" class="center">
+		</div>	
+		<p style="font-size: 12px; text-align: center;"><b>Figure 3-56 Add New Signatory section box</b></p>
+		<p>2. Type in the name of <b>Signatory Name</b> and <b>Position</b> on the entry boxes provided.</p>
+		<p>3. When done, click <b>Add</b> button  to save entry or <b>Clear</b> button  to reset parameters.</p>
+
+	  </div>
+
+	  <div id="Signatory2" class="w3-container page w3-animate-left" style="display:none">
+		<h2>How to Edit Existing Signatory</h2>
+		<br>
+		<p>1. Information that can be updated includes name of <b>Signatory</b> and <b>Position</b> (See Figure 3-57).</p>
+		<div class="img-content">
+			<img src="assets/images/signatory2.png" alt="" class="center">
+		</div>	
+		<p style="font-size: 12px; text-align: center;"><b>Figure 3-57 Edit Signatory section box</b></p>
+		<p>2. When done, click <b>Save</b> button  to update information or Clear button  to reset parameters.</p>
+
+	  </div>
+
+	  <div id="Signatory3" class="w3-container page w3-animate-left" style="display:none">
+		<h2>How to Delete Existing Signatory</h2>
+		<br>
+		<p>1. Click <b>Delete</b> red button to delete the Signatory.</p>
+	  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!--User-->
+	  <div id="user" class="w3-container page w3-animate-left" style="display:none">
+		<h2>User</h2>
+		<p>This part of the section contains details regarding the user who is logged-in. This includes information such as the 
+			name of the user currently logged-in, other user type(s) he/she can access, other system connected with HRMIS, other servers
+			 connected with HRMIS and the logout option. The User is located at the upper-right side of the screen (See Figure 3-58).</p>
+  
+			
+			
+		<div class="img-content">
+			<img src="assets/images/user.png" alt="" class="center" style="width: 20%;">
+		</div>		
+			  <p style="font-size: 12px; text-align: center;"><b>Figure 3-58 User Form</b></p>	
+	  </div>
+
+    	 <div id="user1" class="w3-container page w3-animate-left" style="display:none">
+		  <h2>How to Switch to Employee Module</h2>
+		  <p>1. To switch from Payroll Module to Employee Module, click on the <b>Down</b> icon  beside the name of the user.</p>
+		  <p>2. Click the <b>Employee Module</b> link, the user will be directed to the default screen of the Employee Module.</p>
+
+		</div>
+	 
+	  <div id="user2" class="w3-container page w3-animate-left" style="display:none">
+		  <h2>How to Switch to ERMS</h2>
+		  <p>1. To switch from HRMIS to ERMS, click on the <b>Down</b> icon  beside the name of the user.</p>
+		  <p>2. Click the ERMS link, the user will be directed to the default screen of ERMS.</p>
+		  <div class="alert alert-warning alert-dismissible fade show" role="alert" style="font-size: 10px;">
+			<strong>Note:</strong>The ERMS link is only available if there is DOST-CO ERMS installed in the system.
+			<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+		  </div>
+		</div>
+	 
+		
+  
+		<div id="user3" class="w3-container page w3-animate-left" style="display:none">
+		  <h2>How to Switch to PMS</h2>
+		  <p>1. To switch from HRMIS to PMS, click on the <b>Down</b> icon  beside the name of the user.</p>
+		  <p>2. Click the <b>PMS</b> link, the user will be directed to the default screen of PMS.</p>
+		  <div class="alert alert-warning alert-dismissible fade show" role="alert" style="font-size: 10px;">
+			<strong>Note:</strong>The PMS link is only available if there is DOST-CO PMS installed in the system.
+			<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+		  </div>
+		</div>
+  
+		<div id="user4" class="w3-container page w3-animate-left" style="display:none">
+		  <h2>Update PDS Request</h2>
+		  <p>1. To logout from the system, click on the <b>Down</b> icon  beside the name of the user.</p>
+		  <p>2. Click the <b>Logout</b> link, the user will be directed to the main page of HRMIS.</p>
+		</div>
+  
+
+		<div id="Appendix" class="w3-container page w3-animate-left" style="display:none">
+			<h2>Appendix A: HRMIS Reports</h2>
+			<br>
+			<p>A.1 Daily Time Record</p>
+			<div class="img-content">
+				<img src="assets/images/A1.png" alt="" class="center">
+			</div>	
+
+		  </div>
+
+		  <div id="Appendix1" class="w3-container page w3-animate-left" style="display:none">
+			<h2>Appendix A: HRMIS Reports</h2>
+			<br>
+			<p>A.1 Daily Time Record</p>
+			<div class="img-content">
+				<img src="assets/images/A1.png" alt="" class="center">
+			</div>	
+
+		  </div>
+
+		  <div id="Appendix2" class="w3-container page w3-animate-left" style="display:none">
+			<h2>Appendix A: HRMIS Reports</h2>
+			<br>
+			<p>A.2 Employee Payslip</p>
+			<div class="img-content">
+				<img src="assets/images/A2.png" alt="" class="center">
+			</div>	
+
+		  </div>
+
+
+		  <div id="Appendix3" class="w3-container page w3-animate-left" style="display:none">
+			<h2>Appendix A: HRMIS Reports</h2>
+			<br>
+			<p>A.3 Payroll Register</p>
+			<div class="img-content">
+				<img src="assets/images/A3.png" alt="" class="center">
+			</div>	
+
+		  </div>
+		  
+		  <div id="Appendix4" class="w3-container page w3-animate-left" style="display:none">
+			<h2>Appendix A: HRMIS Reports</h2>
+			<br>
+			<p>A.4 Funding Requirements</p>
+			<div class="img-content">
+				<img src="assets/images/A4.png" alt="" class="center">
+			</div>	
+
+		  </div>
+		  
+		  <div id="Appendix5" class="w3-container page w3-animate-left" style="display:none">
+			<h2>Appendix A: HRMIS Reports</h2>
+			<br>
+			<p>A.5 MC Benefits Register</p>
+			<div class="img-content">
+				<img src="assets/images/A5.png" alt="" class="center">
+			</div>	
+
+		  </div>
+		  
+		  <div id="Appendix6" class="w3-container page w3-animate-left" style="display:none">
+			<h2>Appendix A: HRMIS Reports</h2>
+			<br>
+			<p>A.6 Deduction Register</p>
+			<div class="img-content">
+				<img src="assets/images/A6.png" alt="" class="center">
+			</div>	
+
+		  </div>
+		  
+		  <div id="Appendix7" class="w3-container page w3-animate-left" style="display:none">
+			<h2>Appendix A: HRMIS Reports</h2>
+			<br>
+			<p>A.7 Lates and Absences Deduction</p>
+			<div class="img-content">
+				<img src="assets/images/A7.png" alt="" class="center">
+			</div>	
+
+		  </div>
+		  
+		  <div id="Appendix8" class="w3-container page w3-animate-left" style="display:none">
+			<h2>Appendix A: HRMIS Reports</h2>
+			<br>
+			<p>A.8 Overtime Payroll Register</p>
+			<div class="img-content">
+				<img src="assets/images/A8.png" alt="" class="center">
+			</div>	
+
+		  </div>
+		  
+		  <div id="Appendix9" class="w3-container page w3-animate-left" style="display:none">
+			<h2>Appendix A: HRMIS Reports</h2>
+			<br>
+			<p>A.9 Overtime Funding Requirements</p>
+			<div class="img-content">
+				<img src="assets/images/A9.png" alt="" class="center">
+			</div>	
+
+		  </div>
+		  
+		  <div id="Appendix10" class="w3-container page w3-animate-left" style="display:none">
+			<h2>Appendix A: HRMIS Reports</h2>
+			<br>
+			<p>A.10 Employee Remittances</p>
+			<div class="img-content">
+				<img src="assets/images/A10.png" alt="" class="center">
+			</div>	
+
+		  </div>
+		  
+		  <div id="Appendix11" class="w3-container page w3-animate-left" style="display:none">
+			<h2>Appendix A: HRMIS Reports</h2>
+			<br>
+			<p>A.11 Employee Loan Balance</p>
+			<div class="img-content">
+				<img src="assets/images/A11.png" alt="" class="center">
+			</div>	
+
+		  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--ToastMessage-->	  
+<div class="position-fixed bottom-0 end-0 p-3" style="z-index: 5">
+	<div role="alert" aria-live="assertive" aria-atomic="true" class="toast" data-bs-autohide="false">
+		<div class="toast-header">
+		  <img src="assets/logo.png" class="rounded me-2" alt="..." style="width: 20px; height: 20px;">
+		  <strong class="me-auto">DOST</strong>
+		  <small>Online Help</small>
+		  <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+		</div>
+		<div class="toast-body" id="text-body">
+		</div>
+	  </div>
+</div>
+
+
+<!--endDisplaycontent-->
+</div>
+
+<!--endContent-->
+</div>
+
+
+
+
+
+
+
+	<script src="app.js"></script>
+</body>
+</html>
