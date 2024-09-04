@@ -72,6 +72,34 @@ class ReportTO_rpt_model extends CI_Model {
 			$this->fpdf->Cell(0, 5, 'Binirayan Hills, San Jose, Antique', 0, 0, "C");	
 			$this->fpdf->Image('assets/images/PRIME_HRM_LOGO.png',175,10,25,25,'PNG');
 
+		elseif($sec_code[0]['sectionCode'] == "SNP"):
+
+			$this->fpdf->SetFont('Arial', "B", 12);
+			$this->fpdf->Cell(0, 5, "DEPARTMENT OF ENVIRONMENT AND NATURAL RESOURCES", 0, 1, "C");	
+			$this->fpdf->Cell(0, 5, "PROVINCIAL ENVIRONMENT AND NATURAL", 0, 1, "C");
+			$this->fpdf->Cell(0, 5, "RESOURCES OFFICE", 0, 1, "C");
+			$this->fpdf->Cell(0, 5, "Province of Antique", 0, 1, "C");	
+			$this->fpdf->Cell(0, 5, 'SIBALOM NATURAL PARK', 0, 1, "C");	
+			$this->fpdf->Image('assets/images/DENR-LOGO.png',10,10,25,25,'PNG');
+			$this->fpdf->SetFont('Arial', "", 12);
+			$this->fpdf->Ln(1);
+			$this->fpdf->Cell(0, 5, 'Brgy. Imparayan, Sibalom, Antique', 0, 0, "C");	
+			$this->fpdf->Image('assets/images/PRIME_HRM_LOGO.png',175,10,25,25,'PNG');
+
+		elseif($sec_code[0]['sectionCode'] == "NPPNP"):
+
+			$this->fpdf->SetFont('Arial', "B", 12);
+			$this->fpdf->Cell(0, 5, "DEPARTMENT OF ENVIRONMENT AND NATURAL RESOURCES", 0, 1, "C");	
+			$this->fpdf->Cell(0, 5, "PROVINCIAL ENVIRONMENT AND NATURAL", 0, 1, "C");
+			$this->fpdf->Cell(0, 5, "RESOURCES OFFICE", 0, 1, "C");
+			$this->fpdf->Cell(0, 5, "Province of Antique", 0, 1, "C");	
+			$this->fpdf->Cell(0, 5, 'NORTHWEST PANAY PENINSULA NATURAL PARK', 0, 1, "C");				
+			$this->fpdf->Image('assets/images/DENR-LOGO.png',10,10,25,25,'PNG');
+			$this->fpdf->SetFont('Arial', "", 12);
+			$this->fpdf->Ln(1);
+			$this->fpdf->Cell(0, 5, 'Sitio San Juan, Brgy. San Roque, Libertad, Antique', 0, 0, "C");	
+			$this->fpdf->Image('assets/images/PRIME_HRM_LOGO.png',175,10,25,25,'PNG');
+
 		elseif($sec_code[0]['sectionCode'] == "CCULASI"):
 
 			$this->fpdf->SetFont('Arial', "B", 12);

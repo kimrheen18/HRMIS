@@ -100,7 +100,7 @@ class ServiceRecord_model extends CI_Model {
 	function generate($arrData)
 	{		
 		
-		//print_r($arrData);exit(1);
+		print_r($arrData);exit(1);
 		
 		$rs=$this->getSQLData($arrData['strSelectPer']==1?$arrData['empno']:'',$arrData['strSelectPer']==2?$arrData['ofc']:'');
 		for($i=0;$i<sizeof($rs);$i++) {

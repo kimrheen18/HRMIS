@@ -225,11 +225,11 @@
             <?=form_close()?>
         </div>
     </div>
+    </div>
 </div>
-
 <!-- begin modal update/add character references -->
 <div class="modal fade in" id="add_character_refs" tabindex="-1" role="full" aria-hidden="true">
-    <div class="modal-dialog">
+    <div class="modal-dialog" style="width: 90%;">
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
@@ -259,7 +259,6 @@
                 <button type="submit" class="btn green">Save</button>
             </div>
             <?=form_close()?>
-        </div>
     </div>
 </div>
 <!-- end modal update/add character references -->
